@@ -1,0 +1,1043 @@
+Assessment submission form_modular 
+Assessment Submission Form 
+Student Name Shreya Narayanan, Nitasha Manjunath Shastry,Abasibiangake Essienubong,Wenzheng Huang, 
+Yanfei Wang, Sreepa Sumesh, Aditya Manish Chauhan, Zihan Xu
+Student Number 23211611, 23200847, 23206779,23205583, 23201350, 23208600, 23203702, 23205419
+Assessment Title User Centered Design - Design Project
+Module Title User Centered Design 
+Module Co-ordinator Dr Madeleine Steeds
+Tutor (if applicable)  
+Date Submitted 
+OFFICE USE ONLY 
+Date Received 
+
+OFFICE USE ONLY 
+Grade/Mark 
+A SIGNED COPY OF THIS FORM MUST ACCOMPANY ALL SUBMISSIONS FOR ASSESSMENT. 
+STUDENTS SHOULD KEEP A COPY OF ALL WORK SUBMITTED.  
+Procedures for Submission and Late Submission 
+Ensure that you have checked the School’s procedures for the submission of assessments.  
+Note: There are penalties for the late submission of assessments. For further information please see 
+the University’s Policy on Late Submission of Coursework , (http://www.ucd.ie/registrar/ ) 
+Plagiarism:  the unacknowledged inclusion of another person’s writings or ideas or works, in any 
+formally presented work (including essays, examinations, projects, laboratory reports or 
+presentations). The penalties associated with plagiarism designed to impose sanctions that reflect the seriousness of University’s commitment to academic integrity.  Ensure that you have read the University’s Briefing for Students on Academic Integrity  and Plagiarism  and the UCD Plagiarism  
+Statement, Plagiarism Policy and Procedures , (http://www.ucd.ie/registrar/
+) 
+Declaration of Authorship 
+I declare that all material in this assessment is my own work except where there is clear acknowledgement and appropriate reference to the work of others.  
+
+
+Signed……………………………………… ……….  Date ……………………………………………
+07/12/2023
+Representing members of Group 201
+Building Legal Understanding: 
+A User Centered Approach to 
+Accessible Legal Aid In Ireland
+By Group 202 Group 20 Members
+Student Name Student Number
+Shreya Narayanan 23211611
+ Nithasha Manjunath Shastry 23200847
+Abasibiangake Essienubong 23206779
+Wenzheng Huang 23205583
+Yanfei Wang 23201350
+Sreepa Sumesh 23208600
+Aditya Manish Chauhan 23203702
+Zihan Xu 232054193Index
+1) Research and requirement gathering 
+ Overview
+ Background
+` Project scope
+ Design and HCI considerations
+ Survey analysis
+ Target interview
+ Legal Aid Board member interview
+ User Persona
+2) Creative design and lo-fi prototype
+ Card sorting 
+ User flow
+ Information architecture
+ Lo-fi prototype 1
+  User Story 1
+ Lo-fi prototype 2
+  User story 2
+ Lo-fi 1 vs Lo-fi 2
+3) Hi-fi prototype
+ Lo-fi wireframe of hi-fi prototype
+ Images of hi-fi prototype
+4) Evaluation 
+ App analysis according to Nielsens Heuristics & user testing
+ Future scope of improvement
+ Limitations of this evaluation 
+ 
+5) Conclusion 
+6) References
+7) Appendices 
+ Appendix A- Summary poster
+ Appendix B- Survey questions
+ Appendix C- Target interview questions
+ Appendix D- Legal Aid Board interview qestions
+ Apeendix E- Colour theory and typography
+ 4
+145
+155
+166
+17
+586
+18
+587
+19
+595210
+20
+62532411
+21
+63552412
+22
+6455
+55
+56274
+Research & 
+Requirement Gathering5Overview
+The amalgamation of technology and user-centred design offers remarkable opportunities to address chal -
+lenges such as accessibility issues and information gaps faced by individuals seeking legal assistance in the 
+ever-changing realm of legal services. This project aims to develop an app for both international visitors and 
+residents in Ireland so they can be aware and be ensured a thorough understanding of their civil and consti -
+tutional rights and facilitate access to affordable legal aid.
+The solution offered here is also a way to address goal 16 of the 17 sustainable development goals drafted by 
+the United Nations, which is to foster Peace, Justice and Strong Institutions. This goal entails promoting the 
+provision of peaceful and inclusive societies for sustainable development while providing access to justice 
+for all and building effective, accountable and inclusive institutions at all levels (Goal 16 | Department of 
+Economic and Social Affairs, n.d.). 
+Background
+Navigating a foreign country’s legal complexity can be a difficult and daunting task, especially for internation -
+al civilians residing or visiting Ireland. And this is because concepts in different legal systems do not always 
+map perfectly to each other whether it is in the structure of the judicial system or in the language (Allison, 
+2023). Access to legal aid is hampered by the complexities of civil and constitutional rights, as well as unfa -
+miliarity with the Irish legal system. But apart from that people in general, frequently struggle to understand 
+legal jargon. Non-lawyers find it difficult to understand legal language because it is perceived as specialised, 
+technical, and elevated (Hahn, 2023). The excessive detail, complicated sentence structures and the use of spe -
+cific legal terminology are part of any legal language which further complicates one’s ability to comprehend 
+and get familiar with what the law entails. And this is experienced by both nationals and non-nationals in any 
+country. 
+Another issue that emerges from accessing legal assistance is the affordability of these services. For those with 
+limited financial means, the cost of legal services becomes an enormous challenge and hindrance to accessing 
+assistance and exercising their rights. Legal services in Ireland are prohibitively expensive, including consul -
+tations, representation, and court fees. Charges can be anywhere between 200 to 400 euros an hour and this 
+makes access to justice a privilege rather than a right (“‘Few Practise Law for Fun, Fame or Philanthropy’: 
+Ireland’s Legal Costs Problem,” n.d.).
+This affordability issue is felt strongly by a diverse range of people, including immigrants, low-income fam -
+ilies, and marginalised communities, who may require legal assistance but are unable to bear the associated 
+costs. This challenge has far-reaching consequences, affecting individuals’ ability to defend their rights, seek 
+justice, or navigate legal complexities in critical areas such as immigration, family law, and housing.
+While there are state-funded services such as Legal Aid that exist to offer as the name suggests aid to those in 
+need; the selection process is strict and these agencies are also overburdened with the amount of cases they 
+need to deal with. (Vicious Cycle of Low Pay and Overwork Undermines Legal Aid, n.d.)
+One such test - the means test which is used to determine eligibility for legal aid frequently focuses on income 
+and assets, including other financial resources such as investments to assess if one really needs financial aid 
+or can pay for their own representation. However, the eligibility only focuses on offering this service to those 
+experiencing a serious charge. This traps those who do not qualify, experiencing what is deemed as not-so-se -
+rious charges while in uncertain financial situations. As a result, people experiencing complex legal issues may 
+be forced to navigate the legal system without proper representation, risking unjust outcomes and perpetuating 
+a cycle of legal disenfranchisement. (Citizensinformation.Ie, n.d.-b)6Addressing the affordability of legal services is critical to creating a more just and equitable legal system. 
+Initiatives that seek to broaden the reach of legal aid, streamline the means test process, and raise awareness 
+about available resources are critical steps towards removing barriers that prevent all people from having equal 
+access to justice. While these are initiatives that must be addressed from a policy perspective by policymakers 
+and Judiciaries, what can facilitated is improving access to information and resources, building knowledge, 
+and increasing affordability through not-for-profit initiatives that reduce individual dependence on publicly 
+funded resources at the initial level. 
+It is bearing this information and context in mind that this project recognises the need for an all-inclusive solu -
+tion that bridges this knowledge gap while also facilitating affordable access to legal services. 
+Project Scope
+T  he primary goal of this project is to create a user-centric app that serves as a comprehensive legal companion 
+for people unfamiliar with the Irish legal system. The app aims to achieve four primary goals:
+To provide clear and accessible information on civil and constitutional rights
+Affordable legal aid options 
+Guidance through the legal system’s complexities and nuances
+Connecting with legal service providers 
+The app is designed with the specific needs of international visitors and residents in mind. Still, the non-dis -
+criminatory nature of the laws and bureaucracy itself (citizensinformation.ie, n.d.) allows for this app to be 
+employed as a valuable resource for everyone. 
+Since this project deals with very personal and human issues, it was important for us to employ an approach 
+that prioritises the needs of our users and their experience. It is recommended that there is continuous user 
+involvement in any software development life cycle (SDLC) for a successful system implementation. (Majid 
+et al., 2009) It calls for not just considering functionality in design but also non-functional elements such as 
+personal pains, culture, inhibitions etc. And with an issue such as the legal rights of an individual, it is impos -
+sible to ignore such empathetic criteria. 
+It is with this criterion in mind that we decide to use the Design Thinking framework to direct our process 
+with the development of this app. It is our understanding from past learning and research that design thinking 
+can be an essential methodology for creating an inclusive design that is iterative and uses a methodology that 
+keeps the user at the core of the development. (“What Is Design Thinking?”),   (Murauer, 2018). 
+Another aspect that guided us through our design process was the chapter on designing applications for mobile 
+devices by Lupanda, I. S., & Janse van Rensburg, J. T. (2021). This chapter highlights popular HCI principles 
+and design principles for mobile applications considering that the application we designed is meant for mobile 
+use, the guidelines outlined here became the governing factor of our design methodology.Design Process and HCI Considerations7Through both these methodologies we utilised the following tools and  aspects of HCI to define our process of 
+creating a holistic user-centered app: 
+• Usability and accessibility
+• User-centred design
+• Information Architecture
+• User flow 
+• Card Sorting 
+• Prototyping
+• User feedback and Iterative design 
+Fig 1 Double diamond illustration of our design process, (made by 
+the team)
+In this phase, we aimed to understand our target users as well as explore the affordances and limitations of the 
+Legal Aid Board that aims to offer legal assistance in civil cases under the Civil Legal Aid Act 1995 (Office of 
+the Attorney General, n.d.). To do so we created a survey and conducted interviews & conversations with both 
+a target audience and with a member of the Legal Aid Board.Discover 8The survey  covered:
+Aspects of their background - age, geographical origin and state, and language familiarity. The results were 
+as follows:
+• Age: 18- 45
+• Geography Origin: China, India, Europe
+• English Language Familiarity: Fluent and Fluent but not proficient (fig 2.1) 
+• Occupation: Students, Tech professionals & Finance professionals (fig 2.2, 2.3)
+Fig 2.1 Survey graph: Language Proficiency
+Fig 2.2 Survey graph: Occupation
+Fig 2.3 Survey graph: Occupation Sector9In the next set of questions we aimed to understand the necessity of an app that makes legal aid and knowledge 
+more accessible and we found that: 
+• 43.8% of responders needed some form of assistance. (Fig 3.1)
+• Most of the areas where assistance was primarily needed were issues related to Visa and migra -
+tion, Employment and Tax, and Housing and rental agreements among others. (Fig 3.2) 
+Fig 2.4 Survey graph: App Necessity
+Fig 2.5 Survey graph: Legal Concerns
+In the next set of questions, we tried to identify the features and design aspects that our users may want which 
+gave us the base ground of features that we would have included in its interface. The key takeaways were: 
+• Information and resources (fig 4.1, 4.2)
+• Language Translation 
+• Anonymous contacting for privacy issue 
+• Finding Lawyers
+• Connecting with lawyers
+• Virtually via text, call, and video 10
+Fig 2.6 Survey graph: App Necessity
+Fig 2.7 Survey graph: Legal Concerns
+Target Audience Interview Takeaway
+Following the survey we conducted an interview with a willing participant to understand issues they faced 
+with respect to their housing contract. Our participant is post postgraduate student who had moved to Ireland 
+from China. 
+They detailed pain points from their experience in finding adequate housing but especially pain points related 
+to the legal implications of contracts or the lack thereof. Upon insistence from their landlord, our participant 
+moved into the house without signing a contract even though requesting for one. This is because they were 
+denied and even pressured into accepting the offer due to the implication of offer withdrawal if they insisted 
+on having a legally binding contract. Considering that the accommodation came from the assurance of the 
+reliable nature of the accommodation listing agency and referral, they felt okay with proceeding with the ac -
+commodation. 
+But the lack of a contract caused them many issues, including biased treatment, invasion of privacy, insuffi -
+cient access to amenities such as heating which was promised during the initial conversations and the most 
+serious of all untimely notice to evict when there was a dispute of the tenants staying in the house during the 
+winter holiday festivities. 11Based on these experiences the participant offered the following insights: 
+• Need for clarity in housing and contract rules
+• More control and restraint on the actions of landlords will prevent such unethical practices
+• Making contracts a requisite in any tenancy. 
+• Simplified presentation of information on legal implications of housing agreements such as language, 
+infographics and video explanations for ease of understanding
+• The presence of a community feature should there be technology or applications developed to address 
+legal parameters such as housing contracts. 
+Our participant’s experience further cemented the need for an app that considered non-functionality elements 
+such as background, culture, and fear all of which had contributed to their decision-making. 
+Legal Aid Board Interview Takeaway:
+Our conversion and further resources provided by a member of the research function from the Legal Aid 
+Board gave us an understanding of the available assistance that can be found through the organisation. They 
+are as follows: 
+The Legal Aid Board’s activities are governed by legislation Civil Legal Aid Act 1995 and associated regula -
+tions. These legal frameworks outline the scope, eligibility criteria, and other aspects of legal aid provision.
+The Legal Aid Board covers civil legal aid (divorce, child care, damages, contract breach, employment mat -
+ters) and three of the four criminal legal aid schemes. These are non-statutory Criminal Legal Aid Schemes, 
+namely: The Garda Station Legal Advice Revised Scheme. The Legal Aid – Custody Issues Scheme. The 
+Criminal Assets Bureau Ad-hoc Legal Aid Scheme. (Criminal Legal Aid & Ad-hoc Schemes - Further Infor -
+mation, n.d.)
+IP (internationally protected) clients approach the Legal Aid Board through various sources, including the In -
+ternational Protection Office, NGOs, and the Garda Síochána. Legislation guides the entitlement of IP clients 
+to access the Board.
+Accommodation to language restraints is addressed through leaflets in multiple languages available on the 
+Legal Aid Board’s website. The “Common Legal Problems” page outlines the main areas of work in an easily 
+understood manner.
+However, the legal aid board does not deal with small claims. 
+Services of the legal aid board are only offered to those who pass the eligibility check and have merits to their 
+case. 
+We found the need to have such a conversation just so we could understand the current availability and limita -
+tions of publicly funded resources so we could better tailor the app to the needs of our target.
+Define User Personas
+Based on our interviews and survey findings we were able to create our user personas.12
+BIOGRAPHY
+GOALS AND OBJECTIVES
+CHALLENGESMOTIVATIONS
+EXPECTATIONS FROM THE
+SOLUTIONTECHNOLOGY FAMILIARITY  PERSONALITY
+TASTES AND HOBBIES
+ART PHOTOGRAPHY TRAVEL SYMPOSIUM  Creative                 
+Sentimental
+ExtrovertMethodical
+Thoughtful
+IntrovertMaya Iyer
+Marketing Specialist
+Age: 35 years
+Sex: Female
+Marital status: MarriedNationality: Indian 
+Education: Graduate
+Occupation: Graphic Designer
+Maya moved to Dublin w ith her husband, who is
+working in the tech industry, about two years ago. She
+moved here as a student of Visual Design at a graduate
+level. While they are both comfortable in new places,
+they find themselves in a new country, navigating
+various aspects of life, including understanding legal
+systems with respect to employment housing, and
+ensuring their visas are in order.
+Maya is keen on understanding the legal systems in
+Ireland, particularly in areas related to visas and
+employment laws, to ensure compliance and make
+informed decisions.
+Maya is in the process of searching for a permanent
+residence. She wants to understand Irish housing
+laws, rental agreements, and tenant rights to secure
+stable housing for her and her husband.
+Cultural Unfamiliarity: Maya is adjusting to the
+cultural landscape and nuances of Ireland, and
+owing to her introvertedness is underconfident in
+navigating visa and employment law issues.
+Her unfamiliarity with the judicial system and jargon
+also makes her research with online sources difficult
+to navigate. Maya is motivated by the desire for stability,
+both in terms of her legal status in Ireland and
+her housing situation. She is driven to build a
+successful career while ensuring a comfortable
+life for herself and her husband in their new
+home.
+She values resources that simplify legal
+information, offer guidance on housing matters,
+and provide insights into career advancement
+opportunities. An app that addresses her specific
+concerns, is user-friendly, and respects her time
+constraints would greatly support her in her
+journey of settling down in Ireland.
+VOLUNTEERINGMaya is tech-savvy and relies on her
+smartphone for most daily tasks. She prefers
+apps that are user-friendly, visually
+appeal ing, and provide clear information.13
+BIOGRAPHY
+GOALS AND OBJECTIVES
+CHALLENGESMOTIVATIONS
+EXPECTATIONS FROM THE
+SOLUTIONTECHNOLOGY FAMILIARITY  PERSONALITY
+TASTES AND HOBBIES
+HIKING MUSIC SOCIALISATION READING  Creative                 
+Sentimental
+ExtrovertMethodical
+Thoughtful
+IntrovertIvan Polunin
+Pharm asist
+Age: 30 years
+Sex: Male
+Marital status: SingleNationality: Ukranian
+Education: Graduate
+Occupation: Pharmasist
+Ivan is a Ukranian refugee who soug ht asylum in
+Ireland due to the ongoing war in his home country. He
+arrived in Dublin six months ago and is currently
+navigating the challenges of establishing a new life in a
+foreign land. Having worked as a pharmacist in Ukraine
+Ivan is determined to rebuild his life and contribute to
+his new community.
+Ivan’s primary goal is to secure legal stability in
+Ireland. Understanding his rights, obligations, and
+the asylum process is crucial to him.
+ is eager to find employment in Ireland.
+Understanding his rights in the Irish job market and
+understanding how he can find employment under
+his visa status
+Ivan is proficient in Ukrainian and English, but he is
+not fluent and the legal and bureaucratic language in
+Ireland can be challenging. Simplified and translated
+information would greatly assist him.
+As a refugee, Ivan faces financial constraints, making
+it challenging to afford legal representation or
+support services.Ivan is motivated by the desire to rebuild his life
+in Ireland. He seeks stability, both legally and
+personally, and is eager to contribute to his new
+community through employment and
+community engagement.
+Ivan is a resilient and determined individual
+navigating the complexities of star ting afresh in a
+foreign country. He values resources that simplify
+legal information, provide guidance, visa and
+employment and foster a sense of community. An
+app that addresses his specific concerns, respects
+cultural differences, and offers a supportive
+network would greatly assist him
+ACTIVISMIvan has a smartphone that he uses for
+communication and accessing essential
+information. An app that is user- friendly and
+provides valuable legal information in his
+native language would be highly beneficial.14
+Creative Design and
+ Lo-fi Prototypes 15Develop: Card Sorting 
+Having secured our data from the survey results and visualised our user audience. We took to identifying all the 
+features and elements we wanted in our app so as to better understand how to sketch our Lo-fi prototype. So 
+for this, we decided to conduct a card sorting exercise amongst ourselves. Card sorting can be a really useful 
+methodology to inform the development of information architecture, determine hierarchy in applications, and 
+organize displays and controls on interfaces. (Baxter, 2015) As we aimed to create a navigation structure that 
+would be most natural for our users and to make their experience using the app better, we felt this exercise 
+would be insightful to us. 
+We chose the closed card sorting method because we already had our main categories from section 3 of our 
+survey. We identified the following features necessary and that we wanted to include in the interface of our app.
+Fig 3 Card Sorting Activity (made by the team) 16User Flow
+We decided to map a user flow as it is the path that a user takes while navigating through 
+a website or application is referred to as user flow. It describes the steps and interactions 
+that a user takes to complete a specific task or goal. (Goel et al., 2022) This would help 
+us visualise the potential way in which our users interact and navigate the app. 
+Fig 4 User Flow Chart (made by the team) 
+Information Architecture
+Information architecture in design is essentially the organization and structure of information within a system 
+or application. It involves the arrangement and labelling of content, navigation, and interaction design to en -
+sure that users can easily find and understand the information they need. (Hannah, 2023) 
+We are designing the information architecture so we can create a seamless experience for our users navigating 
+through the app.17
+Prototyping 
+Based on what we identified during the Card-Sorting process, User Flow and Information Architecture, we be -
+gan designing our Lo-fi prototypes. To do so we split ourselves into two groups to come up with two versions 
+of the Lo-fi prototypes that stemmed from our interpretations of the requirements. Fig 5 Information Architecture  (made by the team) 18Lo-fi Prototype 1
+This was our first Lo-fi prototype. And the team working on this was inspired by the community and support 
+segment of our card-sorting activity. With this, we envisioned a community-driven post-comment system with -
+in the app where users can share their legal concerns, seek advice, and receive insights from others who may 
+have experienced similar situations.
+We tried to have a forum-like system where community members can articulate their concerns, and get in -
+sights, resources and advice from fellow community members. This would also allow them to get an informed 
+perspective on their situation or one similar to theirs by other legal professionals lending their voice to the 
+discussion. 
+The idea behind the community space was also to offer a preliminary space for information gathering. The 
+community-driven approach would allow for different perspectives and make legal insights more accessible, 
+particularly for those who may be hesitant to immediately contact a lawyer. 
+Apart from this, prototype 1 also has features such as: 
+• Sign-up page 
+• Finding a lawyer 
+• Navigating through lawyer profiles that would highlight their expertise, experience, and availability using 
+a streamlined interface.
+•  A chat feature with said lawyer who can give you advice on your situation. 
+• Searching for precedences with filters such as case subject (employment, housing etc.)  
+• Current news in the field
+• Legal Resources such as document templates, law terms etc. 
+• Language setting/translation 19User Story
+I want to post my housing-related legal concerns on the app’s community forum feature.
+I want to utilize the app’s community forum feature to gain insights into employment contract terms in Ireland 
+especially due to my visa status as an asylum seeker.By engaging with the community and accessing shared resources, I aim to make informed decisions regarding 
+my housing situation.
+Through this process, I aim to make informed decisions about the job offer and navigate employment-related 
+legalities with confidence.Maya:
+Ivan:20Lo-fi Prototype 2
+21The team working on Lo-fi prototype 2 was inspired by the connecting with lawyers segment of the card sort -
+ing process and aimed to develop a communication mechanism that needs to be established between the user 
+and legal service provider. 
+The design is centred on facilitating effective communication between legal professionals and users seeking 
+assistance.
+ 
+We envisioned a service where users could connect with lawyers or consultants based on their concerns. The 
+app would suggest lawyers who had relevant experience in the legal field of the user’s problem and Users could 
+easily navigate through these suggested profiles and establish contact with their lawyer of choice. This would 
+allow for a higher rate of success in establishing a better fit and seamless connection between those in need of 
+legal advice and professionals who can provide it. 
+The feature was further extended to monetize consultation at a subsidised rate to the market fee of a lawyer 
+where as opposed to a no-limits chat feature, a person seeking advice would be allowed three free interactions 
+to understand the lawyer/consultant’s approach to helping them with their issue. This would allow users to 
+weigh their options and make an informed decision about whose service they’d like to employ in working 
+through their issue.
+Apart from this, prototype 2 also has features such as: 
+• Marketing slides that summarised the core functioning of the app
+• Sign-up page 
+• Hot topics, or frequently asked assistance on specific subject matter 
+• Current news in the field
+• Legal knowledge glossary
+• Finding a legal service based on location 
+• Search feature
+User Story
+ I want to sublet an apartment in Dublin but I need to familiarize myself as the process is different to my home 
+country. So I aim to use the app to learn more about my housing-related legal concerns. Maya:22 My goal is to use the app to gain insight into the employment contract terms, especially concerning my visa 
+status for my new job opportunity. Ivan:
+Lo-fi 1 vs Lo-fi 2
+We had two users test the prototypes and acess its features, which allowed us to dermine the pros and cons of 
+the application
+Lo-fi 1
+Table 1 Advantages and Disadvantages of Lo-fi 1  (made by the team) 23Lo-fi 2
+Table 1 Advantages and Disadvantages of Lo-fi 2  (made by the team) 24
+Hi-fi  
+Prototype25The designs of both Lo-fi prototypes 1 and 2 imagined the app as more than just an information hub but rather 
+a collaborative ecosystem where legal insights and support from both users and legal communities converged. 
+And this essentially becomes the ethos of the app. 
+While the features from Lo-fi prototype 1 addressed many issues and had the potential to address many aspects 
+of the spectrum of legal issues one can face, Lo-fi prototype 2 had some unique features that made the app 
+holistic and protected both lawyers and users. 
+So for our Hi-fi prototype, we decided to combine features of both the Lo-fi prototypes and make a third Lo-
+fi rendition of our ideas. We also noticed that the key issue of privacy was not addressed in either of the two 
+prototypes so that was added in this one. 
+Considering this the final prototype had the following features:
+• Marketing slides summarising  app services 
+• Sign up or Login page
+• Search bar 
+• Search filters: Location, topic, relevance, date
+• Write/ post your question or case
+• Community forum- post-comment system
+• User profile- Anonymous posting and identity
+• Lawyer profile 
+• Chat feature with end-to-end encryption to protect privacy
+• 3 times free and then the paid consultation scheme
+• Resources section- Document templates, Legal glossary, Find a legal service near me
+• Personal settings page- Logout, profile, anonymity settings, app display settings, language settings, privacy 
+consent, 
+• App developers details- Contact details, helpHi-fi Prototype 
+We have attached below the images of our Hi-fi prototype. But you may access the interactive prototype here 
+or at this link: 
+https://www.figma.com/proto/XSsl40Z5r68NE9I2dRzxQv/Lawmate-Final-App? -
+type=design&node-id=0-21&t=ibivNRj7rpvdpc4O-1&scaling=min-zoom&page-id=0%3A1&start -
+ing-point-node-id=0%3A21&mode=design26Lo-fi Wireframe of Hi-fi Prototype 
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+Evaluation 53S.no Heuristic Implication App Evaluation 
+1Visibility of system statusThe interface must provide 
+users with updates on the 
+system’s connection status 
+and the level of security 
+protection.Users did not routinely experience instances 
+that demanded system feedback on specific 
+pages. Nevertheless, the app designers ad -
+dressed some of these concerns by integrating 
+loading icons and symbols into certain pages.
+2Match between the system 
+and the real worldThe system should utilise 
+language familiar to users 
+and refrain from using tech -
+nical terms, aligning with 
+everyday language 
+conventions. The app makes use of simple vocabulary and 
+icons that match their real-world conversations 
+and interactions.
+3 User control and freedomUsers should be given the 
+freedom to customise the 
+interface, especially securi -
+ty features, and be provided 
+with a clear option to reset 
+settings to default. This pro -
+motes transparency in secu -
+rity rather than relying on 
+hidden measureUsers expressed appreciation for the function -
+ality of the “exit” and “back” buttons featured 
+on the app’s pages. Nevertheless, they reported 
+issues with the navigation buttons, citing un -
+responsiveness or sluggishness, which forced 
+them to resort to alternative clicking pathways.
+4 Consistency and standardsAvoid causing ambiguity 
+among users regarding the 
+consistency of meanings, 
+terms, or actions across var -
+ious situations. Adhere to 
+standardised conventions 
+consistently across different 
+platforms.At no point did users raise concerns about not 
+understanding a symbol or toolIn 1990, Jakob Nielsen and Rolf Molich introduced ten guidelines aimed at UI development. Drawing 
+from years of work experience and observations, they formulated these heuristics to assist in user inter -
+face design (Aela, 2022). Utilising Nielsen’s heuristics, our assessment focused on the UI and UX aspects 
+experienced by our users. The evaluation was carried out by observing two different users. The users 
+were asked to openly note their pain points without fear of judgement. Subsequently, participants were 
+queried about their encounter, and both individuals chose to revisit to address specific inquiries raised by 
+the evaluator. At the end of both sessions, the users highlighted commendable design elements as well as 
+identified areas necessitating enhancements. This report aims to delineate these improvement areas in no 
+particular order.Evaluation54S.no Heuristic Implication App Evaluation 
+5 Error preventionFurnish users with compre -
+hensive security error noti -
+fications devoid of specific 
+codes, followed by facilitat -
+ing straightforward 
+recovery methods.Users were not required to interact with spe -
+cific error messages due to the app’s abridged 
+functionality.
+6Recognition rather than 
+recallOffer users guidance on 
+utilising the service func -
+tionalities and security
+ measures.Right from the start page, instructional guide -
+lines for app usage were prominently displayed 
+and readily accessible.
+7Flexibility and efficiency of 
+useThe system needs to strike 
+a balance by offering ade -
+quate information for begin -
+ners without overwhelming 
+experienced users. Empha -
+sising the ease of learning 
+and remembering security 
+actions is crucial, under -
+scoring the system’s imper -
+ative need for user-friendli -
+ness and accessibility to all 
+levels of users.Both participants, despite being first-time us -
+ers, did not report encountering any difficul -
+ties while navigating the app. It is worth not -
+ing, however, that the individuals had attained 
+Bachelor’s and Master’s degrees, respectively, 
+as their highest completed educational levels.
+8Aesthetic and minimalist 
+designThe interface and dialogue 
+should exclusively present 
+pertinent system and securi -
+ty details, devoid of any un -
+suitable advertising content.Participants praised the app’s simplicity and di -
+rectness in design. Nonetheless, they expressed 
+apprehensions regarding the size of certain text 
+elements. One user remarked that the colours 
+were “too cool” for her taste, suggesting a pref -
+erence for a more vibrant or engaging visual 
+palette.
+9Recognition, diagnosis, and 
+recovery from errorsYour designs should aid 
+users in recognizing and 
+resolving potential issues 
+and errors effectively. Use 
+straightforward, jargon-free 
+error messages that eluci -
+date the problem and pro -
+pose potential solutions.Once more, users did not encounter specific er -
+ror messages owing to the app’s limited func -
+tionality. However, one user expressed appreci -
+ation for the “or speak to a lawyer” button on 
+the post page which prompted her to consid -
+er whether she preferred to publicly (though 
+anonymously) disclose her legal issue or seek 
+advice from a lawyer in private.
+10 Help and documentationProvide clear documen -
+tation to aid users in task 
+completion. While other 
+heuristics aim to prevent er -
+rors and ensure independent 
+navigation, ongoing assis -
+tance remains crucial for 
+users at all times.The app contained options for help on the user 
+profile page.55While affirming our commitment to user privacy, users suggested incorporating a passcode  or fingerprint lock 
+at the application’s entry point would make them feel more secure. This additional security feature empowers 
+users to maintain control over their privacy, particularly when their devices are unattended.
+Furthermore, users highlighted the default font size as petite. While we acknowledge the potential for font 
+adjustment within the “settings” section, we recognize how the default font size can affect users- especially 
+first-time users and recommend a magnification.
+Additionally, within certain frames, the coexistence of the “me” button below and the profile avatar at the 
+screen’s top section has the potential to cause confusion. Merging these buttons into a singular function could 
+optimise space utilisation, potentially accommodating other designated sections like “communities” or “menu” 
+on the navigation bar.
+The user feedback also raised concerns regarding the responsiveness of button clicks. Acknowledging this 
+issue, we recognize the constraints of our team’s reliance on available free resources. It’s apparent that en -
+hancing this aspect would necessitate access to more comprehensive resources and advance team skill sets for 
+possible improvement. Lastly, while acknowledging the minimalist design approach, there exists scope for 
+enhancing the app’s aesthetic appeal. 
+The assessment of the Lawmate app encountered several limitations that must be acknowledged.
+• Absence of a Specialized Evaluation Team: Ideally, a specialised evaluation team, unconnected to the 
+app’s design process, would have provided an unbiased analysis.
+• Constrained Audience Sampling: Time and accessibility constraints confined the evaluation to two ran -
+domly selected users thereby recognizing the potential for unidentified issues as the app reaches a broader 
+and more diverse user base.
+• Scope of App Design: The hi-fi evaluated in this study has limited coverage, with certain pages underde -
+veloped. The app was designed solely for study purposes to provide an overview of its design and flow. To 
+achieve functional usability, extensive design, testing, and evaluation of multiple subpages are necessary.
+Overall, the application was well received by the users. They commended the wealth of information, the app 
+structure for anonymity and the affordability of consultation. With additional research and testing substantial 
+enhancements, more indicators can be identified to increase the application’ s overall performance.Limitations of this Evaluation
+Conclusion 
+In summary, the development of the Lawmate application has been a significant stride towards democ -
+ratising legal access in Ireland. This user-centred approach, aiming to deliver affordable legal aid, has 
+revealed crucial insights into user experiences, preferences, and concerns. Through an iterative design 
+process, incorporating user feedback and interface adjustments, the application’s usability, accessibility, 
+and functionality have been optimised. However, acknowledging the multifaceted nature of legal aid and 
+the diverse user base, ongoing enhancements and user-centred updates remain imperative. The collabora -
+tive effort between developers, legal experts, and users has set a precedent for user-centric innovation in 
+the realm of legal assistance, ensuring that the app continually aligns with the evolving needs of its users 
+while striving for accessibility and affordability in legal understanding.56References
+1. Allison, N. (2023). From semantic weight to legal ontology via classification of concepts in legal texts. The Law 
+Teacher, 57(2), 201–217. https://doi.org/10.1080/03069400.2023.2173918
+2. Baxter, K. (2015). Card sorting. In Elsevier eBooks (pp. 302–337). https://doi.org/10.1016/b978-0-12-800232-
+2.00011-0
+3. Citizensinformation.Ie. (n.d.-a). Legal aid and advice. https://www.citizensinformation.ie/en/justice/le -
+gal-aid-and-advice/#:~:text=The%20Legal%20Aid%20Board%20provides,be%20merit%20in%20the%20case.& -
+text=An%20explanation%20of%20civil%20legal,able%20to%20avail%20of%20it
+4. Citizensinformation.Ie. (n.d.-b). Representation in court. https://www.citizensinformation.ie/en/justice/civil-law/
+representation-in-court/
+5. Civil legal aid and advice. (n.d.). https://www.legalaidboard.ie/en/our-services/legal-aid-services/how-do-i-apply-
+for-civil-legal-aid-/
+6. Criminal Legal Aid & Ad-hoc Schemes - Further information. (n.d.). https://www.legalaidboard.ie/en/our-services/
+criminal-legal-aid/criminal-legal-aid-and-ad-hoc-schemes-further-information/#:~:text=The%20Criminal%20
+Legal%20Aid%20Section,Ad%2Dhoc%20Legal%20Aid%20Scheme
+7. Family problems. (n.d.). https://www.legalaidboard.ie/en/our-services/legal-aid-services/common-legal-problems/
+8. ‘Few practise law for fun, fame or philanthropy’: Ireland’s legal costs problem. (n.d.). Business Post. https://www.
+businesspost.ie/news-focus/few-practise-law-for-fun-fame-or-philanthropy-irelands-legal-costs-problem/#:~:tex -
+t=Rates%20charged%20by%20the%20big,also%20be%20discounted%20or%20negotiated.
+9. Goal 16 | Department of Economic and Social Affairs. (n.d.). https://sdgs.un.org/goals/goal16
+10. Goel, G., Tanwar, P., & Sharma, S. (2022). UI-UX design using User Centred Design (UCD) method. 2022 In -
+ternational Conference on Computer Communication and Informatics (ICCCI). https://doi.org/10.1109/icc -
+ci54379.2022.9740997
+11. Hahn, J. A. (2023). Challenging legal incomprehension. In Oxford University Press eBooks (pp. 109-C5N49). 
+https://doi.org/10.1093/oso/9780197674246.003.0005
+12. Hannah, J. (2023, November 22). What is information architecture? - UX Design Institute. UX Design Institute. 
+https://www.uxdesigninstitute.com/blog/what-is-information-architecture/
+13. Hongdao, Q., Bibi, S., Khan, A., Ardito, L., & Khaskheli, M. B. (2019). Legal Technologies in Action: The future of 
+the legal market in light of disruptive innovations. Sustainability, 11(4), 1015. https://doi.org/10.3390/su11041015
+14. Lupanda, I. S., & Janse van Rensburg, J. T. (2021). Design guidelines for mobile applications. In Proceedings of the 
+15th International Conference on Interfaces and human-computer interaction 2021 and 14th International Confer -
+ence on Game and Entertainment Technologies (pp. 92-99).
+15. Majid, R. A., Noor, N. L. M., Adnan, W. a. W., & Mansor, S. (2009). A survey on HCI considerations in the software 
+development life cycle. Association for Computing Machinery, 21–24. https://doi.org/10.1145/1655925.1655929
+16. Mania, K. (2022). Legal Technology: Assessment of the legal tech industry’s potential. Journal of the Knowledge 
+Economy, 14(2), 595–619. https://doi.org/10.1007/s13132-022-00924-z
+17. Mueller, V ., Billings, L., Mogues, T., Peterman, A., & Wineman, A. (2017). Filling the legal void? Impacts of a com -
+munity-based legal aid program on women’s land-related knowledge, attitudes, and practices. Oxford Development 
+Studies, 46(4), 453–469. https://doi.org/10.1080/13600818.2017.1414174
+18. Murauer, N. (2018). Design Thinking: Using Photo Prototyping for a user-centered Interface Design for Pick-by-
+Vision Systems. Association for Computing Machinery. https://doi.org/10.1145/3197768.3201532
+19. Nielsen’s heuristics: 10 usability principles to improve UI design - aela school. Aela School - Where Ambitious De -
+signers Thrive. (2022, September 2). https://aelaschool.com/en/interactiondesign/10-usability-heuristics-ui-design/ 
+20. Office of the Attorney General. (n.d.-a). Civil Legal Aid Act, 1995. (C) Houses of the Oireachtas Service. https://
+www.irishstatutebook.ie/eli/1995/act/32/enacted/en/html
+21. Office of the Attorney General. (n.d.-b). Refugee Act, 1996. (C) Houses of the Oireachtas Service. https://www.
+irishstatutebook.ie/eli/1996/act/17/enacted/en/html5722. Office of the Attorney General. (n.d.-c). Social Welfare Consolidation Act 2005. (C) Houses of the Oireachtas Ser -
+vice. https://www.irishstatutebook.ie/eli/2005/act/26/enacted/en/html
+23. On-Line Financial Eligibility Indicator. (n.d.). https://www.legalaidboard.ie/en/our-services/legal-aid-services/
+on-line-financial-eligibility-indicator/
+24. Shibboleth Authentication Request. (n.d.-a). https://heinonline-org.ucd.idm.oclc.org/HOL/Page?lname=Parisot -
+to&handle=hein.journals/appeal24&collection=&page=79&collection=journals
+25. Shibboleth Authentication Request. (n.d.-b). https://heinonline-org.ucd.idm.oclc.org/HOL/LuceneSearch?other_
+cols=yes&collection
+26. Vicious cycle of low pay and overwork undermines legal aid. (n.d.). https://www.lawsociety.ie/gazette/top-sto -
+ries/2023/february/vicious-cycle-of-low-pay-and-overwork-undermines-legal-aid58Appendix A- Summary Poster
+Surveys 
+Interviews 
+Customer PersonaResearch  
+LAWMATE
+Development & Design Process
+Ideate 
+To better define the user interface of our app,
+we used three tools:
+Card sorting: We used this to identify and
+organize all the features and elements we
+wanted in the app.
+User flow:  This illustrated the potential steps
+our users would take to navigate through the
+app
+Information archetype: This helped map out
+the interaction design of our application
+system. Research & Requirements
+User Flow, Inf ormation Architect ure  &
+Card Sorting
+Lofi Wireframes
+Design Guide
+Brown denotes warmness, stability, comfort,
+wisdom, trustworthiness, and simplicity.
+Orange  is a colour of optimism, warmth,
+cheeriness, speed, confidence, success,
+bravery, and sociability.
+Ivory  is a calm colour,  with some of the
+pureness associated with white, though it’s a
+bit warmer, it can lend a sense of elegance
+and calm to a site.  
+ 
+Lato typography:  We chose this font for its
+readability on digital platforms and its clean &
+and contemporary lookLow-fidelity prototypes: We used paper-
+based prototyping and no user
+interactions were allowed. We designed
+two sets of hand-drawn mock-ups. After
+doing a user testing on the mockup we
+combined the best features to create final
+low fidelity prototype.#263238 #F06103 #6A3E21 #F5F0EC
+Colour
+TypographyLATO  
+Hifi Prototype
+The high-fidelity prototype is a polished
+simulation of the final product. Made use of
+design guidelines, colour theory and Lato
+Typography to design our application.
+We have added key features like explore
+page, joining communities, consulting
+lawyers and checking for legal resourc es.
+There are other features as well:  
+Marketing slides summarising app
+services 
+Sign up or Login page
+Search bar 
+Search filters: Location, topic, relevance,
+date
+Write/ post your question or case
+Community forum- post-comment system
+User profile- Anonymous posting and
+identity
+Lawyer profile 
+Chat feature with end-to-end encryption
+to protect privacy
+3 times free and then the paid
+consultation scheme
+Resources section- Document templates,
+Legal glossary, Find a legal service near
+me
+Personal settings page- Logout, profile,
+anonymity settings, app display settings,
+language settings, privacy consent,  
+App developers details- Contact details,
+helpTesting  & Evaluation The idea for the app came from the UN SDG goal
+16 which is to foster peace justice and strong
+institutions. 
+As international students ourselves, we have often
+struggled with understanding legalities in
+employment, housing contracts or even visas and
+so we wanted to come up with a solution that
+makes accessing legal information on such issue
+easier and affordable.This phase was carried out in 4 steps:
+Research:  we researched literature on both
+best design practices and Legal issues & and the
+availability of legal aid. 
+Survey:  We conducted an online survey for 2
+months which gave us insight into the target
+demographic, experiences, pain points and
+expectations  from this app.  
+Interviews:  Interviews were conducted on both
+the target audience and a member of the Legal
+Aid Board. This was to understand the problem
+from both perspectives.
+Customer persona:  The above information
+allowed us to create User personas to better
+empathise with our target.
+The results from the above steps gave us the
+information that the app had to allow access to
+legal services and personnel, is affordable, user-
+friendly and has to involve community support.  
+We conducted the evaluation of our design by using
+both Nielsen's Heuristics and User testing with two
+objective participants. 
+While conducting the evaluation we identified certain
+areas that could be improved and have outlined a way to
+improve them:  
+Security Enhancement:  Users suggest adding a
+passcode or fingerprint lock for enhanced privacy
+and control.
+Font Size Adjustment: Users recommend
+implementing a magnification feature for better font
+size adjustment.
+Navigation Bar Optimisation: Users propose merging
+the "me" button and profile avatar for improved
+space utilisation.
+Button Click Responsiveness:  Users express
+concerns about button click responsiveness, noting
+resource constraints.
+Aesthetic Appeal Enhancement:  Users see potential
+for enhancing the app's aesthetic appeal within a
+minimalist design approach.59Appendix A- Survey Questions
+1) What is your age?
+   - Under 18
+   - 18-24
+   - 25-34
+   - 35-44
+   - 45-54
+   - 55-64
+   - 65 and over
+2) What is your gender?
+   - Male
+   - Female
+   - Non-binary
+   - Prefer not to say
+3) What is your Nationality? 
+4) What is your English language proficiency?    
+   - Fluent in English
+   - Proficient but not fluent in English
+   - Limited English proficiency
+   - Other (please specify)
+5) Are you a working professional or a student in Ireland? 
+   I am a Student
+   I am a Working Professional
+6) If Student, what is your Level of study? 
+Undergraduate
+Postgraduate
+Phd
+Other (please specify)
+7) If working professional, what industry or sector do you work in?
+Healthcare
+Technology
+Education
+Finance
+Manufacturing
+Retail60Government
+Law and Order
+Other (please specify):
+8) Have you ever needed legal advice or assistance while living in Ireland?
+   - Yes
+   - No
+9) If yes, What were the main challenges you faced when seeking legal advice in Ireland?
+10) Have you ever interacted with a lawyer in Ireland?
+   - Yes
+   - No
+11) What legal issues or concerns do you typically need assistance with as an international civilian in Ireland? (Select 
+all that apply)
+   - Visa and residence, immigration
+   - Rental, Housing & tenancy
+   - Employment and tax
+   - Health insurance and medical
+   - Civil and Constitutional rights
+   - Contract and legally binding documents
+   - Union rights
+   - Traffic and Road laws
+12) What features do you consider most important in a legal advice app? (Select all that apply)
+   - Legal information and resources
+   - Connecting with pro bono lawyers
+   - Real-time chat with lawyers
+   - Language support and translation
+   - User support and guidance
+   - Easy navigation and search
+   - Other (please specify)
+13) How do you prefer to communicate with a lawyer through the app?
+   - Text chat
+   - Audio call
+   - Video call
+   - Prefer not to interact directly6114) Would you consider paying for additional and advanced services such as consultation?
+   - Yes
+   - No
+15) If yes, how much would you pay? (scalable question)
+16) How important is it for you that the app is accessible to individuals with disabilities?
+   - Very important
+   - Somewhat important
+   - Not very important
+   - Not important at all
+17) How concerned are you about the security of your personal information and legal interactions within the app?
+   - Very concerned
+   - Somewhat concerned
+   - Not very concerned
+   - Not concerned at all
+18) How would you rate the necessity of an app that offers legal aid?
+19) Do you have any additional comments, suggestions, or concerns regarding an app that offers legal advice and sup -
+port for international civilians in Ireland?
+20) If you would like to be involved in user testing or stay updated on the app’s development, please provide your email 
+address:62Appendix C- Target Interview Questions
+1. To start, could you please share a bit about your background and experience in Ireland?
+2. In terms of housing, have you faced any difficulties or uncertainties regarding Irish housing laws or rent -
+al agreements?
+3. How confident do you feel in your understanding of your rights and obligations outlined in your housing 
+contract?
+4. Have you sought legal advice or assistance to clarify aspects of your housing contract?
+5. Have you ever been involved in a dispute related to your housing contract? If so, how was it resolved?
+6. Were there instances where you felt your rights outlined in the contract were not adequately protected?
+7. What resources, such as online platforms, legal guides, or community support, have you used to navigate 
+housing contract issues?
+8. Do you feel there is sufficient information available to tenants about their rights and responsibilities?
+9. Based on your experiences, what advice would you give to someone navigating housing contracts in 
+Ireland?
+10. If you could change one thing about the process of dealing with housing contract issues, what would it 
+be?
+11. How do you think information on visas, housing, and employment laws could be made more accessible 
+and understandable for immigrants like yourself?
+12. If we have an app or a resource to assist immigrants like yourself with such legal matters, what features 
+or information do you think would be most beneficial?63Appendix D- Legal Aid Interview Questions
+1. Could you tell me briefly about your organization? 
+2. I want to understand the kind of services that are offered by the Legal Aid Board. Could you explain it to 
+me?
+3. Who qualifies for Legal aid? And how is it measured? 
+4. What are kinds of cases you usually deal with? 
+5. How can one access the services of the Legal Aid Board?
+6. In your experience, what are some common challenges faced by immigrants and asylum seekers in ac -
+cessing legal aid, and how does the Legal Aid Board address these challenges?
+7. Are there any innovative approaches or solutions that the Legal Aid Board has implemented to better 
+serve the immigrant and asylum-seeking community?
+8. How does the Legal Aid Board engage in community outreach to ensure that immigrants and asylum 
+seekers are aware of available legal aid services?
+9. In your opinion, what impact does legal aid have on the lives of immigrants and asylum seekers?
+10. Can you share insights into the capacity of the Legal Aid Board to handle an increasing number of cases, 
+especially those related to immigration?
+11. What resources, including personnel and technology, are currently allocated to addressing cases involv -
+ing immigrants and asylum seekers?
+12. Are there specific challenges related to resource allocation, and what strategies are in place to optimize 
+the efficiency of case handling?
+13. Are there specific criteria or methods for prioritizing cases, especially when dealing with a high volume 
+of requests?
+14. Are there measures in place to ensure that individuals in urgent situations receive timely legal assis -
+tance?
+15. Are there partnerships or collaborations with community organizations that enhance the reach and effec -
+tiveness of the Legal Aid Board’s services?
+16. Are there technologies or innovations being explored to streamline processes and reduce the administra -
+tive burden associated with a large number of cases? And is there a future scope for employing the same?64Appendix E- Colour Theory and TypographyA  u ser  f o w  is a se x  o o  in x er acaons x ha x  describe x he x ypic al or  ideal se x  o o  sx ep s needed x o ac c oap lish a c oaaon x ask pero oraed w ix h a 
+pr odu cx . M ap ping u ser  f o w s enables u s x o u nder sx and u ser  na vig a aon p a p erns,  allo w ing  u s x o d esign aor e in x u iav e in x ero ac e ans siap lio y  
+u ser  jou rne y
+U ser  g oes x o 
+hoae p ag eR eg isx er s/L o g s I nS elec x s w ha x  u ser  
+w an x s x o do x oda y /
+S kipVisang  x he 
+“Eeplor e ”  p ag eChec ks x he p osx s o o  
+anon yaou s u ser s and  
+can e v en c oaaen x  on 
+x hea
+C r ea x e a p osx
+D oes u ser  w an x  x o 
+c onsu lx  a la w y ernC114C oap ar e la w y er s 
+on x heir  pr o fleS elec x  a la w y er  and 
+fr sx  x hr ee 
+c onsu la aon o r eeJ oin c oaau niaesEeplor e docu aen x  
+x eap la x es and  o x her  
+leg al r esou r c esP a y  x he La w y erD oes u ser  w an x s 
+x o c on anu e 
+c onsu la aonD oes u ser  
+w an x s x o cr ea x e 
+a posx nC114S TA R T
+ENDYe s
+Ye sYe sN o
+N o
+263238 F 5F 0E C F 06103 6A3E21263238F 5F 0E CF 061036A3E21
+T ypo g r aph y  : La x oT ypo g r aph y  : La x o
+T he c hoic e o o  c olor s in design, inclu ding o or  ou r  ap p,  in v olv es a c oabina aon o o  aesx he ac p r e o er enc es, p s y cholo gic al 
+associa aons,  and c onsider a aons o or  u sab ilix y . /C28 er e ar e soae r easons w h y  x hese c olor s w er e c onsider ed su ix able o or  ou r  la w  
+ap p/C26
+/C52/C22 P r o o essionalisa and  S ophisaca aon/C26
+/C23 T he c olor  c oabina aon o o  or ang e shad e /C18 br o w n cr eae c on v e y  a sense o o  pr o o essionalisa and sop hisac a aon. I n x he 
+c on x e ex  o o  a la w  app , w her e x ru sx  and  cr edibilix y  ar e c ru cial, a sophisaca x ed  c olor  p ale p e c an help  esx ab lish a seriou s 
+and r eliable iaag e/C22
+/C19/C22 /C39 ara x h and A p pr oachabilix y/C26
+/C23/C14 r o w n and  cr eae x ones o /C44 en e v ok e w ara x h and app r oac habilix y . I n x he feld o o  la w , w her e u ser s aa y  be seeking 
+assisx anc e or  in o oraa aon in po x en aally  sx r essou l six u a aons, a w ara and in viang c olor  scheae can c on x ribu x e x o a aor e 
+u ser /C18 o riendly  e ep erienc e/C22
+/C32/C22 C onnecaon x o T r adiaonal E leaen x s/C26
+/C23/C14 r o w n, especially  d ark er  shades,  can be associa x ed  w ix h x r adiaon and sx abilix y . F or  a la w  ap p,  x his can cr ea x e a link x o 
+x he x r adiaonal and esx ablished na x u r e o o  legal pr acac es, o osx ering  a sense o o  r eliab ilix y /C22
+/C7/C22 /C6 ender /C18 N eu x r al and I nc lu siv e/C26
+/C23 T he c oabina aon o o  or ang e/C18 br o w n cr eae is g ener ally  g ender /C18 neu x r al, w hich c an c on x ribu x e x o inclu sivix y . I n x he legal 
+feld, w her e d iv er se au dienc es aa y  eng ag e w ix h x he ap p, u sing c olor s x ha x  ar e app ealing x o a br oad  spec x ru a o o  u ser s is 
+bene fc ial/C22
+/C5/C22 R eadab ilix y  and A c c essib ilix y/C26
+/C23 C r eae c olor s, w hen u sed in app r op ria x e c on x r asx , c an enhanc e x e ex  r ead abilix y . I n a la w  app  w her e u ser s ar e lik ely  x o 
+engag e w ix h a lo x  o o  x e ex u al c on x en x , a c olor  sc heae x ha x  su pp orx s eas y  r eading is essen aal /C22
+/C51/C22 /C14r and D i /C2 er en aa aon/C26
+/C23 U sing an or ang e/C18 br o w n cr eae c olor  sc heae can help  x he la w  app  sx and ou x  o r oa c oap e ax or s. Choosing  a u ni/C15 u e c olor  
+pale p e c an c on x ribu x e x o b r and  di/C2 er en aa aon and aak e x he app aor e aeaor ab le/C22
+/C0/C22 P s y cholo g ical Associa aons/C26
+/C23 C olor s c an e v ok e sp ecifc ps y c holo g ical associa aons. F or  e eaaple, or ang e is o /C44 en associa x ed w ix h w ara x h and ener g y , 
+w hile br o w n is assoc ia x ed w ix h sx abilix y  and  r eliabilix y . C oabining x hese w ix h c r eae can cr ea x e a balanc ed  and 
+haraoniou s o eel.Choosing  a o on x  o or  app  d esign is a c ru c ial decision x ha x  can iapacx  x he o v er all u ser  
+e eperienc e and visu al id en ax y  o o  x he app . /C91 L ax o /C91  is a pop u lar  x ype o ac e/C93
+/C91 L ax o /C91  is kno w n o or  ix s e e c ellen x  r eadabilix y , bo x h in prin x  and on scr eens. I x s clean and 
+siaple desig n aak es ix  eas y  o or  u ser s x o r ead c on x en x  w ix hou x  sx r aining x heir  e y es. T his  
+is esp ecially  iap orx an x  in ap ps w her e u ser s c onsu ae a sig nifc an x  aaou n x  o o  x e ex /C93
+T he design o o  /C91 L ax o /C91  g iv es ix  a aodern and  c on x eap or ary  aesx he ac. I x s r ou nded 
+le p ero oras and open spac ing c on x ribu x e x o a clean and o r esh look,  w hic h can b e 
+ap pealing  in aod ern ap p desig n/C93
+/C91 L ax o /C91  is op aai/C59ed o or  b o x h w eb and aobile app lica aons. I x s desig n x ak es in x o 
+c onsider a aon x he r e/C15 u ir eaen x s o o  digix al displa y s, ensu ring  clarix y  and leg ib ilix y  ac r oss 
+v ariou s scr een si/C59es and  r esolu aons.

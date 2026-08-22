@@ -1,0 +1,906 @@
+R e v olutioniSing 
+P A TIENT C ARE
+-W ang Y anf ei
+232067 7 9
+Human Comput er Int er action
+Ho w might w e de v elop a secur e syst em of 
+aler ting doct ors of an ur gent lab r esult?Do yleDr .Mae v e
+Head of Depar tment and Lead Consultant in Education and 
+T raining at UHW
+
+Clinical Lead f or P ost graduat e Education and T raining at UHW .
+
+Clinical Lead f or t he T rainer Pr oject at RCPI
+Pr e vious Leadership R olesDir ect or of Education and T raining, Faculty of Pat hology , RCPI
+
+National Specialty Dir ect or f or Clinical Micr obiologyK e y ContributionsOUR P ARTNER                                         r epr esent s Ir eland on t he UEMS section f or 
+Medical Micr obiology , contribut ed t o t he Eur opean curriculum, and 
+pla y ed a k e y r ole in t he Eur opean Medical Micr obiology e xaminations. 
+
+She collaborat es wit h Univ ersity College Dublin and Cork Institut e of 
+T echnology . Her e xt ensiv e e xperience in medical education, clinical 
+micr obiology , and leadership has significant ly influenced medical 
+training and practice nationally and int ernationally .
+0102Dr Grace Chan is a Consultant Clinical Micr obiologist 
+curr ent ly w orking at t he Sout h East R egional 
+Micr obiology Laborat or y at Univ ersity Hospital 
+W at er f or d, ha ving obtained her medical degr ee fr om 
+Univ ersity College Dublin.Dr .Gr aceChan
+Dr Chan is a F ello w of R o y al College of Ph ysician 
+Ir eland (FRCPI) and F ello w of R o y al College of 
+Pat hologist UK (FRCPat h). She is curr ent ly t he 
+Sout h East R egional Antimicr obial St ewar dship Lead 
+and t he Secr etar y of t he Irish Society of Clinical 
+Micr obiologist s (ISCM).
+
+Dr Chan leads t he implementation of antimicr obial 
+st ewar dship and laborat or y diagnostics initiativ es in 
+tackling global public healt h t hr eat of antimicr obial 
+r esistance in t he Sout h East R egion of Ir eland.
+Her clinical int er est lies in optimising laborat or y 
+diagnostics t o impr o v e clinical decision making in 
+t he management and pr e v ention of comple x 
+bact erial, viral and fungal inf ections
+OUR P ARTNER
+0304Let’ s meet theTeam3W ang Y anf ei 
+Pr oduct Manager
+Y uet ong
+Zhao UX R esear cherJiang Y uxuan 
+Softwar e De v eloperT anushri Kakad 
+UI UX DesignerDhruv Parmar 
+UI UX DesignerABOUT US
+0506CHALLENGEHo w might w e de v elop a secur e syst em of 
+aler ting doct ors of an ur gent lab r esult?
+Eff ectiv e communication of ur gent lab r esult s is critical in Clinical 
+Micr obiology Management. The timely r epor ting of t hese r esult s 
+can lead t o mor e timely clinical int er v entions, impr o v ed tr eatment 
+out comes. The communication of critical laborat or y r esult s must be 
+secur e and r eliable. As per t he insight s fr om our pr oject par tner t he 
+curr ent met hods of using BLIP syst em and t elephonic 
+communication ha v e along waiting time, leading t o slo w er r eponses 
+and t her eb y endangering patient.Consider ations
+The syst em must ensur e timely and secur e communication while 
+being user -friendly and easily int egrat ed int o hospital w orkflo ws. It 
+is also essential t o adher e t o priv acy and data pr ot ection 
+r egulations.
+Challenge1Ho w might w e de v elop an adaptiv e 
+comput er -based t est f or a Eur opean Ex am?
+adjust t heir operations and cont ent based on users' needs and 
+beha viors, ar e widely used in fields lik e education, r ecommendation, 
+and personaliz ed healt hcar e. Ev aluating t hese syst ems is crucial t o 
+ensur e t heir eff ectiv eness and user satisf action, but it is a comple x 
+and challenging task. It em R esponse Theor y (IRT) and it s 
+adv ancement s ser v e as t he f oundation f or man y adaptiv e 
+assessment s [2, 3].Considerations
+Considerations f or Challenge 1 include ensuring t he r equir ed 
+compet ency le v els f or CM practice ar e met [4]. It is also crucial t o 
+adher e t o Eur opean healt hcar e standar ds [4], while taking int o 
+account individual back gr ounds and div ersity [5]. Additionally , 
+int egrating wit h curr ent electr onic healt h r ecor d syst ems [6] is 
+essential f or eff ectiv e and efficient practice.Challenge2
+0 708LITERA TURE REVIEWSecur e Communication Pr ot ocols in Healt hcar e
+Secur e communication pr ot ocols ar e vital in healt hcar e t o saf eguar d patient 
+data and enable eff ectiv e communication among pr o viders. A study [15] 
+implement ed Hospital Inf ormation Syst em (HIS) t hat significant ly boost ed 
+pr oductivity b y r educing medication deliv er y time and enhancing patient 
+satisf action. It also impr o v ed communication and data v alidation, allo wing 
+patient s t o r eceiv e timely lab r esult s via SMS notifications and online 
+access.Ho w might w e de v elop a secur e syst em of aler ting doct ors of an ur gent lab r esult?
+Secur e messaging is eff ectiv e f or critical v alue 
+aler t s in healt hcar e. R esear ch at Geisinger Medical 
+Cent er sho w ed it r educed lab r esult communication 
+time b y almost 8 minut es compar ed t o traditional 
+met hods. Additionally , 85% r epor t ed t hat secur e 
+t e xt messaging f or critical v alue notifications 
+incr eased efficiency , 95% f ound it mor e eff ectiv e 
+t han pager -phone-call syst ems and 83% said it 
+enabled bett er , f ast er patient car e [16]. 0910
+Healt hcar e Communication Syst emsHospital communication syst ems, including softwar e and t echnologies, 
+f acilitat e inf ormation e x change among hospital staff t o impr o v e patient 
+car e and operational efficiency . K e y syst ems include Electr onic Healt h 
+R ecor ds (EHRs), emails, nurse call syst ems, intranet s, messaging 
+platf orms, public addr ess syst ems, pagers, t elehealt h, and staff 
+messaging t ools. Eff ectiv e communication is crucial f or patient saf ety , 
+especially f or ur gent lab r esult s, as dela ys or err ors can jeopar diz e 
+patient w ell-being and compr omise car e quality . Secur e communication 
+is essential f or patient saf ety , priv acy , and o v erall car e eff ectiv eness [12, 
+13].LITERA TURE REVIEWHo w might w e de v elop a secur e syst em of aler ting doct ors of an ur gent lab r esult?
+Secur e Aler ting Syst emsDe v eloping secur e aler t syst ems f or ur gent lab r esult s 
+is crucial in clinical micr obiology . These syst ems 
+should pr o vide r eal-time aler t s f or critical r esult s and 
+include a f eedback mechanism t o confirm r eceipt [14].
+1112ST A TE OF ARTHo w might w e de v elop a secur e syst em of aler ting doct ors of an ur gent lab r esult?
+Digital Syst ems in Pr actice
+Digital syst ems f or aler ting doct ors of ur gent lab r esult s ha v e 
+e v olv ed significant ly , incorporating v arious t echnologies t o enhance 
+efficiency and security . One such syst em is t he use of aut omat ed 
+pat hwa ys t hat int egrat e shor t messaging syst ems (SMS), aut o-
+escalation, and manual t elephone backup. This appr oach has been 
+sho wn t o impr o v e t he rat e and speed of ph ysician ackno wledgment 
+and int er v ention compar ed t o manual met hods alone [17].Desir ed F eatur es and Security Concerns
+k e y f eatur es desir ed in t hese syst ems include clear aler t t hr esholds, dir ect 
+communication wit h ph ysicians, and tight timelines f or ackno wledgment and 
+int er v ention. Aut omation, combined wit h manual backup, has been f ound t o 
+be eff ectiv e in ensuring timely r esponses wit hout adv ersely aff ecting 
+int er v ention rat es [17]. Security concerns, such as ensuring t he 
+confidentiality and int egrity of patient data, ar e paramount. Use of secur e 
+communication channels and r obust aut hentication mechanisms ar e 
+essential t o addr ess t hese concerns and GDPR compliance.
+1314LITERA TURE REVIEWThe Eur opean Cont e xt
+Eur opean Union of Medical Specialist s (UEMS) has established pr of essional 
+standar ds f or clinical micr obiology t hr ough t he de v elopment of Eur opean 
+curriculum and implementation of Eur opean e xamination in medical 
+micr obiology . A sur v e y conduct ed in 2021 in v olving 21 Eur opean countries 
+sho w ed t hat all countries had structur ed clinical micr obiology training 
+pr ograms wit h a curriculum, dedicat ed trainers, and a r ecor d of training 
+activities. 15 countries r equir ed trainees t o pass an e xit e xamination, and 
+o v er 60% of countries par ticipat ed in continuous w orkplace-based 
+assessment [8]. Ho w might w e de v elop an adaptiv e comput er -based t est f or a Eur opean Exam?
+Statistics and 
+Motiv ationsImpr o v ed patient satisf action, 
+r educed err ors, lo w er cost s, and 
+trust building can be achie v ed 
+t hr ough eff ectiv e communication. 
+Communication t ools should enable 
+clear , instantaneous inf ormation 
+sharing among healt hcar e t eams.1615
+Curr ent A ssessment and Ev aluation 
+MechanismsCurr ent ly , clinical micr obiology assessment in Eur ope ar e combination of 
+f ormativ e and summativ e assessment s. F ormativ e assessment s, such as 
+logbooks and continuous w orkplace-based e v aluations, ar e used t o monit or 
+trainees’ pr ogr ess t hr oughout t heir training. Summativ e assessment s, 
+including e xit e xaminations, ar e emplo y ed t o ensur e t hat trainees ha v e 
+achie v ed t he necessar y kno wledge, skills, and attitudes t o practice as 
+specialist s in clinical micr obiology . The Eur opean e xamination in medical 
+micr obiology , de v eloped b y UEMS in par tnership wit h ESCMID , is based on a 
+compr ehensiv e curriculum and best practice guidelines.LITERA TURE REVIEWHo w might w e de v elop an adaptiv e comput er -based t est f or a Eur opean Exam?
+
+Impor tance of A daptiv e T estingThe use of open-sour ce softwar e can k eep cost s lo w and 
+r educe man-hours and ot her e xpenses. Design considerations 
+lik e user access contr ol, data priv acy , and t he ability t o manage 
+lar ge w orkloads in depar tment s lik e laborat or y and radiology , 
+will ensur e efficient and secur e operations.
+1817ST A TE OF ARTHo w might w e de v elop an adaptiv e comput er -based t est f or a Eur opean Exam?
+
+Int egrating Machine Learning int o CA T in v olv es optimizing 
+component s such as cognitiv e diagnosis models, question 
+bank construction, and t est question selection. This 
+inclusiv e appr oach pr omises a futur e of adaptiv e t esting 
+t hat is mor e int er disciplinar y and compr ehensiv e [11].Machine Learning P erspectiv eDigital syst ems such as t he UEMS-ESCMID Eur opean Examination 
+in Medical Micr obiology emplo y online platf orms wit h r emot e 
+in vigilation t o ensur e accessibility and security . These syst ems ar e 
+designed t o align wit h t he Eur opean T raining R equir ement s and 
+best practice guidelines, incorporating multiple-choice questions 
+and ot her assessment f ormat s t o e v aluat e t he kno wledge and 
+skills of candidat es eff ectiv ely . These inno v ations ar e crucial f or 
+maintaining t he rigor and r ele v ance of high-stak es e xams in 
+clinical micr obiology [8 , 10].A dv ancement s in A daptiv e T esting f or t he 
+Eur opean Clinical Micr obiology Ex am
+2019KEY T AKEA W A YS
+T h e  i m p o rt a n c e  o f  e f f e c t i v e  c o m m u n i c a t i o n  i n  
+h e a l t h c a r e  [ 1 3 ]
+I m p r o v e d  p a t i e n t  s a t i s f a c t i o n ,  r e d u c e d  e r r o r s ,  l o w e r  
+c o s t s ,  a n d  t r u s t  b u i l d i n g  c a n  b e  a c h i e v e d  t h r o u g h  
+e f f e c t i v e  c o m m u n i c a t i o n .  C o m m u n i c a t i o n  t o o l s  
+s h o u l d  e n a b l e  c l e a r ,  i n s t a n t a n e o u s  i n f o r m a t i o n  
+s h a r i n g  a m o n g  h e a l t h c a r e  t e a m s .
+T h e  c o m m u n i c a t i o n  o f  c r i t i c a l  a n d  u n e x p e c t e d  
+p a t h o l o g y  r e s u l t s  [ 1 4 ]
+S y s t e m s  n e e d  t o  b e  s c a l a b l e  a n d  c o s t - e f f e c t i v e  t o  
+q u i c k l y  c o m m u n i c a t e  t h e  r e s u l t s .  A u t o m a t e d  
+e l e c t r o n i c  s y s t e m s  f o r  r e a l - t i m e  a l e r t s  c a n  b o o s t  
+e f f i c i e n c y  a n d  c u t  c o s t s .  A d a p t a b i l i t y  t o  l o c a l  n e e d s ,  
+a v o i d i n g  s y s t e m  o v e r l o a d ,  a n d  m a i n t a i n i n g  d i a g n o s t i c  
+a c c u r a c y  a n d  c o l l a b o r a t i o n  w i t h  s t a k e h o l d e r s  a r e  
+v i t a l  i n  t h e  s y s t e m  d e s i g n .I n - P a t i e n t  M e d i c a t i o n  D e l i v e r y  i n  M o b i l e  A p p  a n d  O u t  
+P a t i e n t  O n l i n e  L a b  R e s u l t s  f o r  H o s p i t a l s  [ 1 5 ]
+T h e  u s e  o f  o p e n - s o u r c e  s o f t w a r e  c a n  k e e p  c o s t s  l o w  
+a n d  r e d u c e  m a n - h o u r s  a n d  o t h e r  e x p e n s e s .  D e s i g n  
+c o n s i d e r a t i o n s  l i k e  u s e r  a c c e s s  c o n t r o l ,  d a t a  p r i v a c y ,  
+a n d  t h e  a b i l i t y  t o  m a n a g e  l a r g e  w o r k l o a d s  i n  
+d e p a r t m e n t s  l i k e  l a b o r a t o r y  a n d  r a d i o l o g y ,  w i l l  e n s u r e  
+e f f i c i e n t  a n d  s e c u r e  o p e r a t i o n s .S e c u r e  M e s s a g i n g  E n h a n c e s  C r i t i c a l  V a l u e  
+A l e rt s  [ 1 6 ]
+S e c u r e  t e x t  m e s s a g i n g  ( S T M )  i s  m o r e  s c a l a b l e  
+a n d  c o s t -  e f f e c t i v e  t h a n  t r a d i t i o n a l  m e t h o d s  l i k e  
+p h o n e  c a l l s  a n d  p a g e r s .  M o d e r n ,  s e c u r e  
+c o m m u n i c a t i o n  t e c h n o l o g i e s  w i l l  i m p r o v e  
+w o r k f l o w  a n d  e f f i c i e n c y  i n  h e a l t h c a r e .I n n o v a t i v e  s t r a t e g y  f o r  e f f e c t i v e  c r i t i c a l  l a b o r a t o r y  
+r e s u l t  m a n a g e m e n t :  e n d - t o - e n d  p r o c e s s  u s i n g  
+a u t o m a t i o n  a n d  m a n u a l  c a l l  c e n t r e  [ 1 7 ]
+A u t o m a t e d  f e a t u r e s  l i k e  S M S  n o t i f i c a t i o n s  a n d  a u t o -
+e s c a l a t i o n  i m p r o v e d  t h e  s p e e d  a n d  r a t e  o f  p h y s i c i a n  
+r e s p o n s e s  c o m p a r e d  t o  m a n u a l  m e t h o d s .  S c a l a b i l i t y  o f  
+t h i s  s y s t e m ,  u s i n g  e x i s t i n g  h o s p i t a l  s y s t e m s  a n d  m o b i l e  
+t e c h n o l o g y ,  w i l l  r e d u c e  m a n u a l  l a b o r  a n d  c o s t s .  
+C o m b i n i n g  a u t o m a t i o n  w i t h  h u m a n  o v e r s i g h t  w i l l  d e l i v e r  
+a n  e f f i c i e n t  a n d  r e l i a b l e  C L R  m a n a g e m e n t  s y s t e m s2221Our decision t o 
+mo v e ahead wit h 
+Challenge 1
+A f t e r  c o n d u c t i n g  a  t h o r o u g h  r e v i e w  o f  l i t e r a t u r e  a n d  
+s t a t e - o f -  t h e - a r t  r e s e a r c h  o n  b o t h  d e s i g n  c h a l l e n g e s ,  
+w e  e n g a g e d  i n  d i s c u s s i o n s  v i a  e m a i l  w i t h  o u r  p r o j e c t  
+p a r t n e r ,  D r .  M a e v e  D o y l e .  O u r  r e v i e w  c o v e r e d  a d a p t i v e  
+c o m p u t e r - b a s e d  t e s t s ,  p a r t i c u l a r l y  f o c u s i n g  o n  t h e i r  
+i m p l e m e n t a t i o n  a n d  r e l e v a n c e  i n  t h e  E u r o p e a n  
+h e a l t h c a r e  c o n t e x t ,  a n d  s e c u r e  s y s t e m s  f o r  u r g e n t  l a b  
+r e s u l t  c o m m u n i c a t i o n .
+C o n s i d e r i n g  t h e  c o m p l e x i t y  o f  d e s i g n i n g  a n  a d a p t i v e  
+a s s e s s m e n t  s y s t e m  w i t h i n  o u r  f i n a l  s e m e s t e r ’ s  l i m i t e d  
+t i m e ,  w e  f o u n d  i t  i m p r a c t i c a l  t o  a d d r e s s  t h a t  c h a l l e n g e  
+f u l l y .  O n  t h e  o t h e r  h a n d ,  t h e  n e e d  f o r  a  s e c u r e  s y s t e m  t o  
+a l e r t  d o c t o r s  a b o u t  c r i t i c a l  l a b  r e s u l t s  i n  I r e l a n d  i s  a  m o r e  
+f e a s i b l e  a n d  i m p a c t f u l  p r o j e c t .  T h e r e f o r e ,  w e  d e c i d e d  t o  
+m o v e  f o r w a r d  w i t h  D e s i g n  C h a l l e n g e  2 ,  a i m i n g  t o  
+d e v e l o p  a  s e c u r e ,  r e l i a b l e ,  a n d  s u i t a b l e  s o l u t i o n  f o r  
+c o m m u n i c a t i n g  u r g e n t  l a b  r e s u l t s .2 423C A SE STUD Y
+Initiation of t he message. Ale x can see t hat Gurmukh Singh is a v ailable 
+(indicat ed b y t he gr een dot wit h check marks ne xt t o t he name).
+Indicat es t hat Gurmukh Singh r eceiv ed and opened t he message, as 
+indicat ed b y t he open en v elope on t he right side of t he blue message bo x.
+Scr eenshot s fr om t he
+Impriv ata Cor t e x secur e messaging app
+When r ecipient ackno wledges t he message.
+Optimizing Critical Labor at or y V alue 
+R epor ting wit h Secur e Messaging: A 
+“Cor t e xt ” Case Study [3]
+Cor t e xt is a secur e messaging syst em f or communication of 
+pr ot ect ed healt h inf ormation (PHI). The app is designed t o r eplace 
+pagers and is usable in comput ers and on smar tphones. All of t he 
+ pr o viders, including in-house staff members, can be contact ed b y 
+secur e messaging t hr ough t his app.
+
+Cor t e xt maintains t he r ecor d of communications; t hose r ecor ds 
+ar e r etrie v able t hr ough t he electr onic medical r ecor d, as needed.
+
+The r ecor ds include
+Patient identit
+The identities of t he persons r epor ting and r eceiving t he 
+messag
+The dat e and time of communicatio
+R ecor d of r eceipt and r eading of t he message.Case Srudy - 1
+2625Is Comput eriz ed Notification Syst em 
+Eff ectiv e? [4]
+The hospital clinical inf ormation syst em (HCIS) ( e-Healt h Solutions 
+Medical Softwar e, de v eloped b y GMD , v ersion 3 . 8 , Noematica, 
+Bologna, Italy) int egrat es medical and administrativ e IT syst ems, 
+suppor ting clinical w orkflo ws.
+It handles clinician r equest s and assembles inf ormation fr om 
+diagnostic ser vices ( clinical laborat or y , imaging) along wit h 
+supplying clinicians wit h r eal-time lab r esult s fr om laborat or y 
+inf ormation syst em (LIS).Case Srudy - 2CASE STUD YA v erage Notification Time:
+11 minut es (r eceipt and confirmation).
+
+Unsuccessful Notifications:
+10 . 9% (notification wit hout confirmation wit hin 1 hour).Comput eriz ed Notification Syst em
+A v erage Notification Time:
+30 minut es. (looking up t he number , dialing, finding t he 
+clinician, r ela ying inf ormation, and r eading back)
+
+Unsuccessful Notifications:
+Ov er 50% (notification made aft er mor e t han 1 hour).T elephone call syst emR esult s
+Comparison of successful 
+notifications wit hin 1 hour , 
+f or t he traditional phone 
+pr ocess wit h t hose of t he 
+comput eriz ed syst em
+ Critical V alues N otification :  U pon v alidation b y a clinical pat holo g ist, an email is sent 
+fr om LIS  t o H C IS
+A ctions T ri gg er ed 
+SMS  N otification :  S ent t o t he cell phone of t he r ef errin g  ph ysician 
+V ideo A ler t :  F lashin g  aler t on t he monit or of t he or derin g  clinician, t hat st ops only aft er 
+60  minut es or upon confirmation 
+P ri v acy Compliance :  M essa g es include patient ID  codes, critical analyt e, and la b  
+contact 
+D ocumentation :  H C IS  lo g s t he status of notifications, indicatin g  success or f ailur e 
+S uccess :  L o gg ed wit h g r een color codin g
+F ailur e :  I ndicat ed wit h r ed color codin g  and t he t erm " e x pir ed, "  f ollo w ed b y t elephone 
+communication .P r ocess
+2827DESIGN PROCESS
+Empat hiz eInitial meetings wit h Dr . Mae v e Do yle
+Understanding t he pr oblem
+Understanding t he curr ent pain point s of doct ors, staff 
+and patient s.T estConduct usability t esting wit h tar get users
+Collect and analyz e f eedback on pr ot otypes
+It erat e based on t est r esult s.DefineConduct lit eratur e r e view and find stat e of t he ar t
+Understand t he insight s in t he domain
+Synt hesiz e k e y tak eawa ys fr om t he r e view 
+Select one challenge.Pr ot otypeCr eat e a r ough draft of t he solution
+De v elop high-fidelity pr ot otypes
+Collect f eedback fr om Dr . Mae v e and T eam.
+A ssessDe v elop t he final pr oduct based on t he r efined 
+pr ot otypes
+Implement t he solution in a pilot en vir onment
+Monit or per f ormance and gat her f eedback f or fur t her 
+impr o v ement.Ideat eBrainst orm ideas wit h t eam
+Generat e multiple design solutions
+Cr eat e lo w-fidelity pr ot otypes.3029P ARTNER 
+INTER VIEWDuring our Zoom int er view wit h Dr . Grace Chan, 
+w e gained v aluable insight s f or our design 
+pr oject. W e t hor oughly underst ood t he curr ent 
+pr ocess f or communicating ur gent lab r esult s, 
+which r elies on a pager /BLIP syst em and 
+manual phone calls t o GPs—a met hod t hat is 
+bot h t edious and inefficient. Dr . Chan 
+highlight ed t he pain point s and challenges 
+f aced b y doct ors and shar ed her e xpectations 
+and desir ed f eatur es f or t he new syst em w e ar e 
+designing. Additionally , w e r e view ed t he WHO's 
+Laborat or y Quality St ep wise Implementation 
+(L QSI) t ool, which off ers a structur ed plan and 
+guidelines f or implementing a quality 
+management syst em.Clear w orkflo w: Sepsis patient s ar e e v aluat ed and tr eat ed wit h a 
+clear timeframe, making it easy t o define application r equir ement s.3231Simplified management: By f ocusing on one sample type, t he 
+scope of t he pr oject is mor e f ocused and easier t o manage.Criticality: Blood cultur e samples f or sepsis ar e time sensitiv e and 
+r equir e ur gent att ention.High impact: Sepsis is a lif e-t hr eat ening disease, commonly 
+r epor t ed in t he news, and of high impor tance.Scalability: Aft er t he syst em's success wit h blood cultur e samples, 
+it can be applied t o ot her sample types.D emon s tr ation of v al u e: I mpr o v ed communication of k e y r esult s 
+can pr o vide str ong e vidence f or widespr ead adoption of t he 
+application.Dr .  Gr ace r ecommends f ocusing t he pr oject on blood cultur e samples 
+f or Sepsis f or t he f ollo wing r easons:Challenges wit h Sat ellit e Hospital
+Communication r equir es going t hr ough hospital 
+operat ors
+Can't dir ect ly page doct ors in ot her hospitals
+Significant dela ys in r eaching t he right person.Manual Pr ocesse
+R eliance on phone calls and callbacks
+Time-consuming and pr one t o err ors
+No aut omatic tracking of whet her 
+r esult s ha v e been communicat ed.
+Phone Calls f or Critical GP R esult 
+Lab staff call GP office landlines
+Oft en f ace long wait times due t o aut omat ed 
+messages and r eceptionist s
+GPs ma y be una v ailable, leading t o fur t her 
+dela ys.P ager /Beep Syst e
+Doct ors r eceiv e pages wit h e xt ension numbers t o 
+call back
+No inf ormation about t he natur e of t he call or 
+patient details
+Oft en leads t o dela ys in communication
+Multiple att empt s ma y be needed t o r each t he 
+corr ect t eam.CURRENT ST A TUS
+Lack of Electr onic Healt h R ecor d
+Most hospitals don't ha v e compr ehensiv e electr onic syst ems
+Difficult t o access patient hist or y and pr e vious r esult s quickly .Healt hlink f or N on -U r g ent R e su lt 
+ E lectr onic transmission syst em f or r outine r esult s t o GP s
+ N ot used f or critical or ur g ent r esult s.D ata P r ot ection C oncern
+ L imit ed use of personal phones due t o data security issues
+Difficulty in secur ely transmittin g  patient inf ormation.
+343337SUR VEYStatisticalTakeawayThematic AnalysisBackgroundIntr oductionThis sur v e y aims t o gat her insight s fr om healt hcar e pr of essionals on t heir 
+e xperiences, challenges, and pr ef er ences r egar ding aler t syst ems t o 
+impr o v e t he wa y ur gent laborat or y r esult s ar e communicat ed t o doct ors, 
+wit h a f ocus on incr easing t he speed, efficiency , and saf ety of curr ent 
+notification syst ems.Met hodologyGoogle F ormFORCurr ent Syst em Ov er vie w
+lab Staffmicr obiologist
+88 . 89%
+T e xt MessagePhone Call
+Doct or
+44 .44% (4/9) rat ed syst em as 2 ( eff ectiv e)
+
+33 . 33% (3/9) rat ed syst em as 3(neutral )
+
+22.22% (2/9) rat ed syst em as 5 (v er y ineff ectiv e)Most r espondent s e xpect ed t o r eceiv e ur gent 
+lab r esult s wit hin 1 hour (33 . 33%) or wit hin 30 
+minut es (22.22%).Ur gent lab r esult s 
+communication met hond11 . 11%BA CK GOUND
+38ST A TISTICAL ANAL YSISChallenges and P ain P oint sThe most fr equent ly mentioned challenge was 
+,  
+cit ed b y 88 . 9% of r espondent s. This highlight s a critical ar ea wher e 
+timely inf ormation flo w is essential but curr ent ly lacking, pot entially 
+leading t o significant dela ys in patient car e. Ot her notable challenges 
+include a Lack of clear r esponsibility (33 . 3%), Incomplet e inf ormation 
+(22.2%), and Missed aler t s (11 . 1%). These issues indicat e br oader 
+syst emic pr oblems t hat contribut e t o inefficiencies and err ors in t he 
+curr ent aler t syst em.Dela ys in communication
+88 . 9%11 . 1%33 . 3%22.2%
+44 .4%66 . 7%44 .4%33 . 3%11 . 1%
+3940Security Concerns
+33 .
+33%55 . 6
+%22.2
+%11 . 1
+%11 . 1
+%The most pr essing security issue highlight ed was 
+cit ed b y 55 . 6% of par ticipant s, indicating a 
+substantial risk t o patient confidentiality . Unaut horiz ed access was 
+anot her major concern, mentioned b y 33 . 3% of r espondent s, 
+r eflecting f ears about who might ha v e access t o sensitiv e 
+inf ormation. Additionally , Lack of encr yption (22.2%) and 
+Insufficient aut hentication (11 . 1%) w er e identified as vulnerabilities 
+t hat could pot entially compr omise t he security of t he syst em. 
+Notably , one par ticipant r epor t ed ha ving no security concerns.Data br eaches,  
+This data suggest s t hat while t her e is some confidence in t he 
+curr ent syst em’ s security measur es, a significant pr opor tion of users 
+eit her see r oom f or impr o v ement or ar e unsur e about t he syst em’ s 
+ability t o saf eguar d sensitiv e inf ormation. These findings emphasiz e 
+t he need f or a mor e secur e and r obust aler t syst em t hat addr esses 
+t hese vulnerabilities, 
+.ensuring t hat patient data is 
+adequat ely pr ot ect ed fr om br eaches and 
+unaut horiz ed access4 142ST A TISTICAL ANAL YSIST echnology and Usability
+Deskt op comput ers ar e t he most commonly utiliz ed t echnology , wit h 
+7 7 . 8% of r espondent s incorporating t hem int o t heir daily w orkflo w . This 
+is f ollo w ed b y Lapt ops, used b y 55 . 6% of r espondent s. Smar tphones ar e 
+utiliz ed b y 11 . 1% of par ticipant s, while T ablet s ar e not used at all. The 
+widespr ead use of deskt op comput ers and lapt ops suggest s t hat 
+, 
+alt hough t he pr esence of smar tphone usage indicat es 
+an y ne w syst em should be optimiz ed f or t hese 
+platf orms
+a need f or mobile compatibility as w ell.The sur v e y also r e v ealed t hat most r espondent s ar e comf or table wit h 
+adopting new t echnologies, indicating a general r eadiness f or syst em 
+upgrades. When ask ed about t he k e y usability f eatur es t he y desir e in a 
+new aler t syst em, r espondent s emphasiz ed t he impor tance of
+ of use (88 . 9%),  (7 7 . 8%), and
+(100%). These 
+pr ef er ences highlight t he need f or a user -friendly , f ast, and seamlessly 
+int egrat ed solution t hat fit s int o t he e xisting t echnological en vir onment 
+of healt hcar e pr of essionals. 
+ease speed  
+int egr ation wit h e xisting syst ems 
+88 . 9
+%7 7 . 8
+%100
+%22.2
+%11 . 1
+%
+11 . 1%
+7 7 . 8%55 . 6%ST A TISTICAL ANAL YSIS
+4344Desir ed F eatur es f or Ne w Aler t Syst emApp notifications and Phone calls w er e t he most pr ef err ed met hods of 
+r eceiving ur gent lab r esult s, each select ed b y 44 .4% of r espondent s. 
+One par ticipant e xpr essed a pr ef er ence f or SMS and App notifications 
+specifically if r eceipt can be confirmed, highlighting t he need f or a 
+r eliable ackno wledgment syst em. Additionally , anot her r espondent 
+suggest ed using a Lab Inf ormation Syst em (LIS), a met hod not originally 
+included in t he sur v e y options, indicating 
+a demand f or int egr ation wit h e xisting lab 
+syst ems.R espondent s also str essed t he impor tance of prioritizing t he inf ormation 
+pr o vided in ur gent aler t s. The most critical element s identified w er e 
+Patient identification details and Lab r esult specifics. These w er e 
+f ollo w ed in impor tance b y t he Ur gency le v el and R ecommended actions, 
+wit h Contact inf ormation f or f ollo w-up being t he last priority . This 
+f eedback underscor es t he necessity f or an aler t syst em t hat not only 
+deliv ers notifications t hr ough pr ef err ed channels but also 
+clearly or ganiz es and prioritiz es critical 
+inf ormation t o ensur e swift and eff ectiv e 
+action.
+11 . 1%
+11 . 1%22.2%44 .4%44 .4%
+11 . 1%ST A TISTICAL ANAL YSIS
+4546ST A TISTICAL ANAL YSISEfficiency Issues: The data sho ws t hat t he curr ent syst em has a lo w efficiency 
+scor e, especially f or pr of essionals who e xpect t o r eceiv e r esult s f ast er . This 
+sho ws t hat t he curr ent syst em is insufficient in t erms of timeliness and accuracy .
+Security Issues: Security is a major concern. The sur v e y sho w ed t hat man y 
+pr of essionals ar e dissatisfied wit h t he security of t he curr ent syst em and ar e 
+concerned about unaut horiz ed access and data leakage. 
+Impr o v e timeliness: Data sho ws t hat man y pr of essionals e xpect t o r eceiv e 
+emer gency r esult s f ast er . Ther ef or e, t he new syst em needs t o optimiz e t he 
+notification pr ocess and r educe dela ys
+Enhance security: Accor ding t o t he sur v e y r esult s, t he new syst em must 
+addr ess t he shor t comings of t he curr ent syst em in t erms of security . Adopt mor e 
+stringent aut hentication and encr yption measur es t o ensur e t he secur e 
+transmission of patient inf ormation
+User -friendliness: Pr of essionals ha v e high r equir ement s f or t he syst em's ease 
+of use and int egration wit h e xisting syst ems. The new syst em needs t o be 
+designed t o be mor e user -friendly and seamlessly int egrat ed int o t he e xisting 
+hospital inf ormation syst em.Doct ors & Lab Staff vs. Micr obiologist s: Diff er ent pr of essional r oles ha v e 
+diff er ent needs and e v aluations of t he syst em. Doct ors (a v er age e v aluation: 
+2. 6) and labor at or y staff (a v er age e v aluation: 2. 5) ha v e a higher e v aluation of 
+t he syst em,  while micr obiologist s (a v er age e v aluation: 1 . 5) ha v e a r elativ ely 
+lo w e v aluation of t he syst em. This suggest s t hat w e need t o consider t he 
+specific needs of diff er ent pr of essional r oles when designing a new syst em
+The Impact of Y ears of Ser vice: Pr of essionals wit h mor e y ears of ser vice ar e 
+mor e satisfied wit h t he syst em, indicating t hat t he y ma y be mor e adapt ed t o t he 
+curr ent syst em or ha v e mor e e xperience in dealing wit h t he shor t comings of t he 
+syst em. This r equir es impr o v ement s in training and suppor t, especially f or 
+pr of essionals wit h f ew er y ears of ser vice:0- 2 y ears:   A v er age Ev aluation 2. 
+3-5 y ears:   A v er age Ev aluation 2.
+6-10 y ears: A v er age Ev aluation 2. 5Syst em Status A ssessment
+Syst em Impr o v ement Dir ectionNeeds of Diff er ent Pr of essional R oles
+4747ST A TISTICAL ANAL YSISWhat is t he most critical f eatur e t hat an aler t syst em must ha v e t o 
+ensur e patient saf ety and eff ectiv e communication?
+Do y ou ha v e an y concerns or suggestions t hat w e ha v en’ t co v er ed?Ackno wledgement of r eceipt of aler t b y clinical t ea
+R ead r eceipt s t o ensur e it has been seen b y t he person who needs t o see i
+Timely and r eliable communicatio
+Corr ect r esult t o corr ect patient in a timely mannerBy Doct or
+That message has been r eceiv ed ( confirmation
+R eceiv er ackno wledgement of r esult, secur e transmission of r esult, timely and 
+aut omat ed pr ocessBy Consultant Micr obiologist
+GDPR complianceBy Consultant Micr obiologistThat corr ect r esult is communicat ed t o t eam wit h clinical r esponsibility f or t he 
+patient, i.e. t hat person r eceiving r esult s is f amiliar wit h patient's case.By Lab Staff
+V er y difficult t o contact war d on call, people not willing t o tak e r esult s
+R esult s can be ur gent/non ur gent depending on patient situation. Oft en not enough 
+back gr ound inf ormation on patient t o kno w whet her a r esult is impor tant until 
+discussed wit h r equesting t eam.By Lab StaffPriority Notification ManagementNew syst ems still need t o include clear priority tagging capabilities ( e.g., r ed, y ello w , 
+gr een )  t o help doct ors quickly identify t he ur gency of lab r esult s. This priority 
+management syst em ensur es t hat t he most critical aler t s r eceiv e t he immediat e 
+att ention t he y need, ensuring patient saf ety and eff ectiv e communication.E choing Pr e vious F indings
+Notification A c k no wledgement and T r ac k ingAckno wledgement of R eceipt :  As emphasised b y t hese r espondent s, an 
+ackno wledgement syst em is critical. This f eatur e ensur es t hat clinical t eams 
+ackno wledge r eceipt of aler t s, r educing t he risk of missed notifications.T imely and R elia b le C ommunicationSending t he Right R esult s t o t he Right Patient :  Aler t syst ems must ensur e t hat t he 
+right r esult s ar e sent t o t he right patient s in a timely manner . This accuracy is 
+critical f or eff ectiv e patient car e and minimises t he risk of err ors in t he 
+communication pr ocess.Concerns about communication barriers :  A notable concern raised b y laborat or y 
+staff was t he difficulty in contacting t he on - call war d, as people ar e oft en r eluctant 
+t o r eceiv e r esult s. This barrier can significant ly dela y t he communication pr ocess 
+and impact patient out comes.U n v eiling Ne w I nsight s
+4950USER PERSONAJonat han Ha y es
+Laborat or y AssistantHe is r esponsible f or o v erseeing lab t est s and communicating critical r esult s. 
+Kno wn f or his att ention t o detail, he w orks closely wit h healt hcar e t eams t o 
+ensur e timely and accurat e r epor ting of critical v alues.BioEnsur e swift and accurat e communication of critical v alue aler t s
+Enhance patient saf ety t hr ough timely r esult r epor ting
+Str eamline t he aler t pr ocess t o impr o v e lab efficiency .GoalsDifficulty r eaching t he right healt hcar e pr of essionals quickly 
+Time-consuming manual st eps in t he aler t pr ocess
+Challenges wit h int egrating aler t syst ems int o e xisting hospital w orkflo ws
+Security concerns r egar ding patient data confidentiality .P ain P oint s:
+Fast, r eliable aler t syst em int egration
+User -friendly int er f ace wit h seamless int egration
+R ead r eceipt s and ackno wledgment f eatur es
+Str ong security measur es f or patient data pr ot ection.Needs
+Dr .  Emily Car t er
+Micr obiologistShe is an e xperienced Micr obiologist r esponsible f or ackno wledging critical 
+lab aler t s and coor dinating patient tr eatment. Kno wn f or her clinical e xper tise 
+and f ocus on timely communication, she pla ys a k e y r ole in patient car e.BioQuickly ackno wledge critical lab aler t s
+Pr o vide accurat e tr eatment plans based on lab r esult s
+Impr o v e coor dination betw een lab and clinical t eams.GoalsDela ys in r eceiving aler t s impact patient car e
+Difficulty accessing complet e patient inf ormation quickly 
+Managing a high v olume of aler t s while ensuring accuracy 
+Ensuring secur e communication of patient data.P ain P oint s:
+R eliable and pr ompt aler t notification syst em
+Easy access t o patient inf ormation and lab r esult s
+User -friendly int er f ace f or quick action
+Secur e communication channels.Needs
+5152A ctionsT ouchpoint sP ain P oint sOppor tunitiesStages
+Implement bar coding f or 
+sample tracking.Aut omat e r esult flagging 
+based on crit eria.Int egrat e aler t s wit h EHR f or 
+seamless access.R egularly updat e t he syst em.Use encr ypt ed messaging.Use electr onic logs f or sample 
+status tracking.Implement quality checks.Pr o vide action summaries in 
+aler t s.Engage stak eholders in 
+impr o v ement.Prioritise aler t s b y ur gency 
+and cont e xt.23451Lab t echnician pr ocesses t he 
+sample.Lab t echnicians t est and 
+gener at e r esult s.F lagged ur gent r esult s trigger 
+a syst em aler t.C ollect f eedback about t he 
+aler t syst em.R esult s ar e r e view ed and 
+flagged if ur gent.D oct or ackno w ledges t he aler t.T he aler t is secur ely sent t o 
+t he doct or .A nalyse data f or 
+impr o v ement ar eas.D oct or accesses t he full lab 
+r epor t.D oct or tak es necessar y action 
+( e.g. ,  contact patient ,  pr escribe 
+tr eatment ) .Lab inf ormation syst ems.H ospital ' s E H R syst em.S ur v e ys ,  f eedback f orms.Lab staff communication.S ecur e messaging apps.U sage analytics.Patient - lab t echnician 
+int eraction.S ecur e communication 
+platf orms.S ample transpor tation and 
+logging.Doct or's de vices.S ample collection dela ys.R esult gener ation dela ys .Communication security .T imely ackno wledgment and 
+r esponse t o aler t s.G at hering honest f eed b ack.S ample misla b eling or loss.Human err or in ur gent r esult 
+flagging.D oct or aler t f atigue .Q uick access t o full patient 
+details.Implementing f eedback -
+driv en changes.F ee db ac k  an d  
+Im pr o v e m entD oct or ' s R espons e
+t o A l er tR esu l t G ener ation 
+an d  I nitia l  R e v ie wSa m p l e C o ll ection 
+an d  Ana l y sisA l er t S y st e m  
+A cti v ationUSER  JOURNEY
+535412345
+Cat egorise Aler t (A,  B,  or C)Assign a priority cat egor y t o t he lab r esult:
+Cat egor y A: Immediat e danger , notify 
+wit hin 2 hours.
+Cat egor y B: Significant, notify wit hin 2 4 
+hours.
+Cat egor y C: Impor tant, notify b y ne xt 
+w orking da y .
+Send Secur e Aler tEnt er r ele v ant details of t he 
+lab r esult and select t he 
+r eceiving doct or(s).
+Compose Aler tSend t he aler t t hr ough a secur e, 
+encr ypt ed channel ( e.g., secur e 
+email, app notification) based on 
+t he priority .
+Select Ur gent R esultThe lab scientist identifies t he 
+ur gent lab r esult and v erifies it s 
+accuracy bef or e selecting it f or aler t 
+notification.
+Login (Secur ely)Lab scientist secur ely logs 
+int o t he lab r esult syst em.USER FL O W‘Lab Scientist’
+55561234
+Aut henticat e (Secur ely)Doct or secur ely logs int o t he syst em 
+using tw o-f act or aut hentication t o 
+access patient data and ensur e 
+inf ormation security .R eceiv e Notification 
+(Wit h Priority Le v el)Doct or r eceiv es an aler t on t heir pr ef err ed 
+de vice (smar tphone, tablet, comput er), 
+indicating t he ur gency le v el (A, B, or C) and 
+t he type of critical lab r esult.‘Doctors’
+Vie w Ur gent R esultDoct or accesses and r e views t he ur gent 
+lab r esult immediat ely , assessing it s 
+criticality and det ermining necessar y 
+actions f or patient car e.
+A ckno wledge R eceiptDoct or ackno wledges r eceipt of t he 
+aler t b y clicking a confirmation butt on 
+or sending a message, ensuring t he lab 
+kno ws t he r esult has been r e view ed.USER FL O W
+5758ARCHITECTUREF r ont ed Component sMobile Application
+W eb Management platf ormBack end Component s
+Cloud Ser vices
+EXPO“Cr oss-platf orm (iOS & Andr oid)”
+“Pr o vides an int er f ace f or managing 
+data and oper ations. ”R eactVit eT ailwind CSSSwiftK ot linR eactiv e Nativ e
+Node.jsNest.js“handles API r equest s fr om t he fr ont end”
+MongoDB“st or e application data. ”
+“hosting,  st or age,  and additional functionalities. ”Ser v er
+Database
+5960PRO T O TYPE
+T anushriLed b y T anushri, our t eam collaborat ed closely t o complet e t he pr ot otype. I was primarily r esponsible f or 
+deliv ering t he lo w-fidelity wir eframes, while T anushri and Dhrux, bot h pr of essional UI designers, pr oduced t he 
+high-fidelity pr ot otypes. W e all activ ely contribut ed our f eedback t hr oughout t he pr ocess.
+6162R estrict ed A ccess f or Lab T echnicians:
+Lab t echnicians cannot sign up dir ect ly . The y must use t heir HSE email ID .V erification Link: 
+Upon ent ering t heir HSE email ID , a v erification link is sent t o t heir email.V erification and P assw or d Setup:
+Users click t he v erify butt on in t he email, which r edir ect s t hem back t o t he 
+w eb app t o set t heir passw or d.A ccount A ctiv ation: 
+Aft er setting t heir passw or d, users can log int o t he app using t heir new 
+cr edentials, ensuring secur e and v erified access.Sign Up P age
+6364Sign In wit h HSE Email:
+Users can sign in using t heir HSE email ID and t he passw or d 
+t he y cr eat ed during r egistration.F or got P assw or d:
+The f or got passw or d pr ocess f ollo ws t he same st eps as t he 
+sign-up flo w , ensuring users can secur ely r eset t heir passw or ds.Login P age
+6566Header 
+The header section f eatur es a Pr ofile Icon, wher e users can access Pr ofile 
+Settings and T erms & Conditions. Ne xt t o it is t he Notification Butt on, which 
+displa ys new or updat ed aler t s f or quick r ef er ence.Main A ction 
+The Cr eat e Aler t CT A is pr ominent ly displa y ed, allo wing users t o initiat e t he 
+cr eation of a new aler t wit h ease.Filt ers and Sear ch 
+Users can filt er aler t s using t he Ongoing & Complet ed Aler t s Filt er t o swit ch 
+betw een activ e and past aler t s. The Priority Filt er helps prioritiz e tasks b y 
+ur gency le v els (A, B, or C). Additionally , t he Sear ch T ab enables users t o 
+quickly find aler t s b y ent ering patient names or t est details.Aler t s T able
+The aler t s table includes se v eral k e y columns such as Ur gency , which 
+displa ys t he priority le v el (A, B, or C) of each aler t, Patient Details wit h 
+inf ormation about t he patient, T est Details wit h specifics about t he t est, 
+and Sample Details about t he collect ed sample. GP Details pr o vide 
+inf ormation about t he General Practitioner . Users can view or edit aler t 
+details using t he View and Edit CT As. Pagination contr ols at t he bott om of 
+t he table allo w na vigation t hr ough multiple pages of aler t s.H o m e p a g e
+6768C r e a t e  U r g e n c y  
+A l e r t  P a g e
+A ction CT A
+The Actions section includes a Cancel CT A, which tak es lab t echnicians 
+back t o t he homepage wit hout sa ving an y changes, and a Send CT A, 
+which submit s t he aler t and r edir ect s users t o t he homepage.Input Fields
+The Cr eat e Aler t Page f or lab t echnicians includes t e xt input fields f or 
+ent ering t he patient's inf ormation under Patient Details, and allo ws 
+t echnicians t o select t he ur gency le v el of t he aler t (A, B, or C) under 
+Ur gency Selection. It pr o vides fields f or ent ering details about t he 
+collect ed sample in t he Sample Details section, and f or ent ering 
+contact inf ormation f or t he General Practitioner in t he GP Contact 
+Details section. Additionally , fields f or ent ering details about staff 
+members under t he General Practitioner ar e included under Staff 
+Under GP Contact Details.
+697 0Pr ofile Section
+Locat ed at t he t op right, t he pr ofile icon allo ws users t o access t heir 
+personal details, t erms and conditions, and app settings.Notifications T ab
+Ne xt t o t he pr ofile icon, t he notifications tab aler t s users t o an y new 
+updat es or messages r elat ed t o t heir ongoing aler t s.T abs 
+The homepage f eatur es t hr ee main tabs f or easy na vigation: Ongoing, 
+which displa ys activ e aler t s t hat r equir e immediat e att ention; Unr esolv ed, 
+wher e aler t s t hat ha v e not y et been addr essed or need fur t her action ar e 
+list ed; and Complet ed, containing aler t s t hat ha v e been fully addr essed and 
+r esolv ed.Aler t s Car ds
+Each aler t is pr esent ed in a small car d f ormat, displa ying critical inf ormation 
+such as t he cat egor y of ur gency (A, B, or C), patient ID , specimen number , t est 
+name, and t he laborat or y t hat issued t he aler t. The car ds also sho w t he time t he 
+aler t was sent and allo w users t o int eract wit h t hem b y opening t he aler t f or 
+mor e details or marking t hem as r e view ed or new .Sear ch and Filt ers
+A sear ch bar is a v ailable f or users t o quickly locat e specific aler t s b y 
+patient ID , specimen number , or t est name. Filt ers can also be applied t o 
+sor t and or ganiz e aler t s accor ding t o diff er ent crit eria, making it easier t o 
+manage and r espond t o t hem efficient ly .H o m e p a g e
+7172A L E R T  D E T A I L  
+P A G E
+Labor at or y Details Section
+List s t he name of t he laborat or y t hat pr ocessed t he sample and t he 
+name of t he r epor ting laborat or y t echnician.A ction Butt on
+A "Mark as R e view ed" butt on is a v ailable at t he bott om, allo wing t he 
+user t o confirm t hat t he aler t has been ackno wledged and addr essed.Cat egor y Label
+A color -coded "Cat egor y A - Aler t" label at t he t op, indicating t he 
+ur gency le v el of t he aler t.P atient Details Section
+Displa ys essential patient inf ormation, including Patient ID , Name, 
+Gender , Dat e of Bir t h, contact numbers, and addr ess.Sample Details Section
+Pr o vides inf ormation about t he specimen, including Specimen 
+Number , Sample T ype, T est Name, T est Dat e and Time, along wit h 
+an y additional comment s fr om t he lab. It also includes a link t o an 
+attached PDF r epor t, which can be view ed but not edit ed.
+7 37 4CONCLUSIONThese e xperiences ha v e sharpened m y ability t o 
+empat hiz e wit h users, allo wing me t o mor e eff ectiv ely 
+identify and addr ess t heir challenges wit hin t he 
+pr oduct e xperience. This newf ound sensitivity t o user 
+e xperience has been transf ormativ e, not only in m y 
+pr of essional appr oach but also in m y e v er y da y lif e. I 
+can no w obser v e and empat hiz e wit h t he nuances of 
+user int eractions mor e acut ely .
+Looking ahead, I aspir e t o become a public 
+infrastructur e pr oduct designer . Since mo ving t o 
+Ir eland, I ha v e been deeply impr essed b y t he societal 
+inclusivity t o war ds people wit h ph ysical disabilities. 
+Public spaces ar e t houghtfully designed wit h f eatur es 
+such as designat ed ar eas f or wheelchair users on 
+buses and ramps t o f acilitat e easy boar ding. In 
+contrast, in m y home countr y , it is rar e t o see people 
+wit h ph ysical disabilities in public spaces because t he 
+en vir onment is primarily designed f or t hose wit hout 
+disabilities, making it unsaf e f or t hem.I hope t o contribut e t o t his ar ea b y designing solutions t hat bring about 
+meaningful change,  ensuring t hat public spaces ar e accessible and saf e f or 
+e v er y one,  r egar dless of ph ysical ability .  This pr oject has been a st epping 
+st one in m y journe y t o war d making a diff er ence in t he w orld of inclusiv e 
+design.As a pr oduct manager , m y e xperience has 
+primarily f ocused on designing B2B pr oduct s, 
+wher e m y priority was ensuring t hat t he 
+pr oduct's functionality was compr ehensiv e and 
+f eatur e-rich. Ho w e v er , t his pr oject has 
+pr of oundly shift ed m y perspectiv e, allo wing me 
+t o f ocus mor e on people rat her t han just t he 
+pr oduct. Thr oughout t his y ear , I ha v e learned t o 
+design wit h t he user at t he cent er—considering 
+t he needs and pain point s of doct ors, 
+laborat or y staff , and e v en patient s who ar e 
+impact ed b y t he curr ent notification syst em.
+7 57 6CONCLUSION
+  Utiliz e pr oject management t ools t o track tasks, 
+deadlines, and communication.   De v elop a detailed pr oject timeline t hat includes 
+milest ones and deadlines. All t eam members should agr ee 
+on t his timeline and be awar e of each ot her ’ s a v ailability .   A t t he star t of t he pr oject, Appoint a pr oject leader and 
+clearly define t he r oles and r esponsibilities of each t eam 
+member . My R eflectivity
+- Wit h r emot e w ork becoming incr easingly common, online 
+communication is una v oidable. T o k eep t he t eam aligned, it ’ s 
+essential t o schedule r egular t eam meetings t o discuss pr ogr ess 
+and addr ess an y challenges. These meetings should be 
+consist ent, such as w eekly or bi-w eekly , t o maintain momentum.T ask Division Issues
+Communication IssuesIn t his pr oject, what I car ed about most was understanding and meeting 
+t he true needs of t he users aff ect ed b y t he curr ent notification syst em. 
+My primar y f ocus was on impr o ving t heir e xperience b y identifying pain 
+point s and designing solutions t hat genuinely impact t heir daily 
+w orkflo w .
+I applied m y empat h y and user -cent er ed design principles t hr oughout 
+t he pr oject. My back gr ound as a pr oduct manager taught me t o 
+prioritiz e functionality , but t his pr oject pushed me t o go be y ond t hat 
+and consider t he human aspect of design. Thr ough gr oup discussions, 
+par tner int er views, and sur v e ys, I ensur ed t hat our design solutions 
+w er e not only practical but also user -friendly and easily accept ed.
+I must admit t hat our gr oup collaboration on t his pr oject was not as 
+smoot h as it could ha v e been. W e could ha v e spent mor e time on gr oup 
+discussions t o r efine our pr oject, but unf or tunat ely , w e didn’ t. W e r elied 
+t oo hea vily on online communication, which, unlik e f ace-t o-f ace 
+int eractions, is not as immediat e or eff ectiv e and oft en led t o dela ys. 
+The diff ering schedules of each t eam member fur t her e xacerbat ed 
+t hese dela ys. Additionally , our gr oup lack ed clear division of tasks fr om 
+t he beginning. Looking back, w e didn’ t e v en select a gr oup leader , 
+which ine vitably led t o some task a v oidance and unclear 
+r esponsibilities, ultimat ely aff ecting t he t eam’ s cohesion.
+Her e ar e some of m y t hought sIt is crucial t o supplement online communication wit h r eal-time 
+discussions whene v er possible. If in-person meetings ar e not 
+f easible, consider using video calls f or mor e int eractiv e 
+discussions. Additionally , establishing clear communication 
+pr ot ocols (such as r esponse times) can help r educe dela ys.7 77 8R ef er ence List[1] K eit h Farringt on. 2018 . HIGHER SPECIALIST TRAINING IN CLINICAL MICROBIOL OG Y . R etrie v ed fr om 
+https://r cpi-liv e-cdn.s3 .amaz onaws.com/wp-cont ent/uploads/2018/09/Clinical-Micr obiology-
+Curriculum- 2018_ 19 _Printable- V ersion.pdf
+
+[2] Se vv andi Kandanaarachchi and Kat e Smit h-Miles. 2023 . Compr ehensiv e Shift P or tf olio Ev aluation 
+using It em R esponse Theor y . arXiv (Cornell Univ ersity) (Januar y 2023). https://doi.or g/10 .48550/
+ar xiv .230 7 .25508
+
+[3] Jill-Ann Vie, Fabrice P opineau, Éric Bruillar d, and Y olande Bouda. 2017 . A r e view of r ecent adv ances 
+in adaptiv e assessment. Studies in Syst ems, Decision and Contr ol (Januar y 2017), 113-134 . https://
+doi.or g/10 . 100 7/9 7 8- 3- 319-529 7 7-6 _ 4
+
+[4] H. Humphr e ys, E. Nagy , G. Kahlmet er , and O . J . H. M. Ruijs. 2010 . The need f or Eur opean pr of essional 
+standar ds and t he challenges f acing clinical micr obiology . Eur opean Journal of Clinical Micr obiology & 
+Inf ectious Diseases 29 , 6 (Mar ch 2010), 617–621 . https://doi.or g/10 . 100 7/s10096-010-0908- 2
+
+[5] Amenah Manzarabad, Farhad Naighi, Sabeen Tiwana, Ja v ed Siddiqi, Jeffr e y Dhing, Imrana T an vir , 
+and Faisal Khosa. 202 4 . Adv ancing Div ersity in Micr obiology: A 55- Y ear R etr ospectiv e Analysis. Cur eus 
+(Januar y 202 4). https://doi.or g/10 . 7 7 59/cur eus. 52528
+
+[6] P . Coor e vit s, M. Sundgr en, G. O . Klein, A. Bahr , B. Claerhout, D . Daniel, M. Dugas, D . Dupont, A. 
+Schmidt, P . Singlet on, G. De Moor , and D . Kalra. 2013 . Electr onic healt h r ecor ds: new oppor tunities f or 
+clinical r esear ch. Journal of Int ernal Medicine 27 4 , 6 (Oct ober 2013), 547–560 . https://doi.or g/10 . 1111/
+joim. 12119
+
+[7] Jolanta K isielewska, Paul Millin, Neil Rice, Jose Miguel Espe y o, St e v en Burr , Michael No wak o wski, 
+and Thomas Gale. 2023 . Medical student s' perspectiv es on a no v el int ernational adaptiv e pr ogr ess t est. 
+Education and Inf ormation T echnologies (Oct ober 2023). https://doi.or g/10 . 100 7/s10639-023-12269- 4
+
+[8] Mae v e Do yle, Br eida Bo yle, Caoimhe Br ennan, Jane Holland, Alber t Mif sud, Markus Hell, F rank V an 
+Tiel, and T ruls Michael Leegaar d. 2021 . Specialist training in medical micr obiology acr oss Eur ope in 2021
+—an updat e on t he actual training situation based on a sur v e y . Clinical Micr obiology and Inf ection 27 , 11 
+(No v ember 2021), 157 6–1580 . https://doi.or g/10 . 1016/j.cmi.2021 . 06 . 027
+
+[9] Carlos F ernando Galdes and Dario Cecilio-F ernandes. 2018 . When I sa y … comput erised adaptiv e 
+t esting. Medical Education 53 , 2 (August 2018), 116–115 . https://doi.or g/10 . 1111/medu. 13844
+
+[10] Eur opean Exam | UEMS Section of Medical Micr obiology . R etrie v ed fr om https://uems-smm.eu/
+eur opean-e xam
+
+[11] Qi Liu, Y an Zhang, Hao y ang Bi, Zhenshu Huang, W eijie Huang, Jidong Liu, Zirui Liu, Zirui Hu, Y uting 
+Hong, Zachar y A. Par dos, Haiping Ma, Mengxiao Zhu, Shijin W ang, and Enhong Chen. 202 4 . Sur v e y of 
+Comput eriz ed Adaptiv e T esting: A Machine Learning P erspectiv e. arXiv (Cornell Univ ersity) (Mar ch 
+202 4). https://doi.or g/10 .48550/ar xiv .2 404 . 00 712.
+
+[12] Jeff er y L. Schnipper , Eleanor Fitall, K endall K. Hall, and Br y an Gale. 2020 . Appr oach t o impr o ving 
+patient saf ety: communication. PSNet. R etrie v ed fr om https://psnet.ahr q.go v /perspectiv e/appr oach-
+impr o ving-patient -saf ety-communication[13] Pr of essional De v elopment Blog, Univ ersity of Phoenix. 202 4 . The impor tance of eff ectiv e 
+communication in healt hcar e. Pr of essional De v elopment Blog | Univ ersity of Phoenix. R etrie v ed 
+fr om https://www .phoenix.edu/pr of essional-de v elopment/blog/t he-impor tance-of -eff ectiv e-
+communication-in-healt hcar e/
+
+[14] Bernie Cr oal and Aber deen R o y al Infirmar y . 2017 . The communication of critical and 
+une xpect ed pat hology r esult s. R etrie v ed fr om https://www .r cpat h.or g/static/
+bb86b37 0-1545- 4c5a-b5826a2c431934f5/The-communication-of -critical-and-une xpect ed-
+pat hology-r esult s.pdf
+
+[15] Mar y Jane C. Sarmient o, Rhianna Case y D . Millan, John Michael P . Belarmino, W esle y Y . 
+Cor t es, and John Ace V . Dela Calzada. 2018 . In-Patient Medication Deliv er y in Mobile App and 
+Out -Patient Online Lab R esult s f or Hospitals. ICSET 2018: Pr oceedings of t he 2nd Int ernational 
+Conf er ence on E-Society , E-Education and E- T echnology (August 2018). https://
+doi.or g/10 . 1145/3268808 . 3268825
+
+[16] Will O'Connor . 2020 . Secur e T e xt Messaging Enhances Critical V alue Aler t s | TigerConnect. 
+TigerConnect.com. R etrie v ed fr om https://tiger connect.com/r esour ces/blog-ar ticle/secur e-
+messaging-enhances-critical-v alue-aler t s/
+
+[17] Lan Kah Ti, Sophia Lee Sang Ang, Sarah Lo w , Sunil K umar Set hi, and James W L Yip. 2012. 
+Inno v ativ e strat egy f or eff ectiv e critical laborat or y r esult management: combined aut o-f ax and 
+manual call centr e. BMJ Quality & Saf ety 21 , 8 (August 2012), 662–667 . https://doi.or g/10 . 1136/
+bmjqs- 2011-00049 7
+
+[18] Richar d M. Ry an and Edwar d L. Deci. 2017 . Self -Det ermination Theor y: Basic Psy chological 
+Needs in Motiv ation, De v elopment, and W ellness. Guilf or d Pr ess. https://
+doi.or g/10 . 1521/9 7 8 . 14625/28806
+
+[19] Kar en St ephens. 2019 . Communicating ur gent pat hology t est r esult s - MD A National. 
+www .mdanational.com.au. R etrie v ed fr om https://www .mdanational.com.au/advice-and-
+suppor t/librar y /ar ticles-and-case-studies/2019/06/ur gent -pat hology-t est -r esult s
+
+[20] Annabel Cannon. 2014 . T ODDLER TRA GED Y : Blood t est s w er e dela y ed, cor oner t old. 
+geelongadv er tiser . R etrie v ed fr om https://www .geelongadv er tiser .com.au/news/geelong/
+t oddler -tragedy-blood-t est s-w er e-dela y ed-cor oner -t old/news-
+st or y /922b4f abdade47 7 387 d7 6f d9ff18bfb8
+
+[21] Geor gia Diebelius. 2018 . Dad died aft er t o xic cancer r esult s w er e f ax ed t o wr ong number . 
+Metr o. R etrie v ed fr om https://metr o.co.uk/2018/05/11/dad-died-t o xic-cancer -r esult s-f ax ed-
+wr ong-number - 7 539471/
+
+[22] Leonar d Berlin. 2009 . Communicating R esult s of All Outpatient Radiologic Examinations 
+Dir ect ly t o Patient s: The Time Has Come. American Journal of R oent genology 192, 3 (Mar ch 
+2009), 571–57 3 . DOI:https://doi.or g/10 .2214/ajr . 08 . 19854ge Structur e.[23] Edwar d B Liebo w , James H Derz on, John F ontanesi, Alessandra M Fa v or ett o, Rich Ann 
+Beatz, Colleen Shaw , Pamela Thompson, Diana Mass, R ober t Christ enson, Paul Epner , and 
+Susan R Sn y der . 2012. Eff ectiv eness of aut omat ed notification and cust omer ser vice call cent ers 
+f or timely and accurat e r epor ting of critical v alues: A laborat or y medicine best practices 
+syst ematic r e view and meta-analysis. Clinical Biochemistr y 45 , 13–14 (Sept ember 2012), 9 7 9–
+987 . https://doi.or g/10 . 1016/j.clinbiochem.2012. 06 . 023
+
+[2 4] Ale x Cla vijo, Da vid Falla v ollita, Philip Colle, and Gurmukh Singh. 2019 . Communication of 
+Critical Laborat or y V alues: Optimization of t he Pr ocess t hr ough Secur e Messaging. Laborat or y 
+Medicine 51 , 1 (August 2019), e6-e11 . https://doi.or g/10 . 1093/labmed/lmz047
+
+[25] Elisa Piv a, Laura Sciaco v elli, Mar tina Zaninott o, Michael Laposata, and Mario Plebani. 2009 . 
+Ev aluation of eff ectiv eness of a comput eriz ed notification syst em f or r epor ting critical v alues. 
+American Journal of Clinical Pat hology 131 , 3 (Mar ch 2009), 432–44 1 . https://doi.or g/10 . 1309/
+ajcp ys80buc xtuh
+
+[26] Homepage | Laborat or y Quality St ep wise Implementation t ool. R etrie v ed fr om https://
+e xtranet.who.int/lqsi/
+
+[27] Healt hlink. R etrie v ed fr om https://www .healt hlink.ie/
+
+[28] Jason Bolstad. 2014 . HL7 T ut orial Par t T w o: Understanding HL7 Message Structur e.
+
+[29] Lab int egration wit h MediBRIDGE. DMF Syst ems. R etrie v ed fr om https://dmf syst ems.ie/
+pr oduct s/laborat or y-communication/
+
+[30] 2019 . MediBRIDGE F ootprint In Ir eland - Blog - List of MediBridge sit es in Ir eland. DMF 
+Syst ems. R etrie v ed fr om https://dmf syst ems.ie/medibridge-f ootprint -in-ir eland/Visual IdentificationAaSecondar y: Int er 
+W eight: 16
+ABCDEFGHIJKLMNOPQRSTUVWXYZ 
+abcdef ghijklmnopqrstuvwxyz
