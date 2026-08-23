@@ -24,6 +24,7 @@ const EYE_H = 189
 
 // ---- 默认人物参数（用户调定）----
 const DEFAULT_CHAR = { x: 163, y: 366, scale: 0.55 }
+const COMPACT_CHAR = { x: 960, y: 630, scale: 0.27 }
 
 // ---- 人物缩放范围 ----
 const SCALE_MIN = 0.05
@@ -55,6 +56,7 @@ function angleToDirection(angleDeg: number): string {
 
 // ---- 打开文件夹后：人物收缩到左下 + bg2 淡出 ----
 const OPENED_CHAR = { x: 25, y: 1039, scale: 0.23 }
+const COMPACT_OPENED_CHAR = { x: 800, y: 980, scale: 0.2 }
 
 // ---- popwindow 默认大小/位置 ----
 const DEFAULT_POP = { width: 1277, titlebarH: 53, contentH: 700, contentW: 1200, left: 61, top: 48 }
@@ -92,6 +94,11 @@ const FOLDERS: FolderDef[] = [
 ]
 
 const DEFAULT_FOLDER_POS = Object.fromEntries(FOLDERS.map(f => [f.key, { x: f.x, y: f.y }])) as Record<FolderKey, { x: number; y: number }>
+const COMPACT_FOLDER_POS: Record<FolderKey, { x: number; y: number }> = {
+  research: { x: 1050, y: 460 },
+  work: { x: 1280, y: 240 },
+  aboutme: { x: 1500, y: 460 },
+}
 
 // ---- 弹窗内容 ----
 type ContentBlock =
@@ -316,6 +323,7 @@ export default function IntroScreen() {
   charRef.current = char
   const [openedChar, setOpenedChar] = useState(OPENED_CHAR)
   const svgRef = useRef<SVGSVGElement>(null)
+  const layoutModeRef = useRef<'desktop' | 'compact' | null>(null)
   const charGroupRef = useRef<SVGGElement>(null)
   const isDraggingRef = useRef(false)
   const dragStartRef = useRef({ vbX: 0, vbY: 0, charX: 0, charY: 0 })
@@ -350,39 +358,31 @@ export default function IntroScreen() {
   const displayCharRef = useRef(displayChar)
   displayCharRef.current = displayChar
 
-  // 小屏适配：窗口变窄（slice 裁左右）时，缩小人物并移入可见区
+  // 窄屏使用独立构图；回到桌面布局时，恢复桌面默认参数而非沿用缩小后的状态。
   useEffect(() => {
-    const fitCharacter = () => {
+    const updateLayout = () => {
       const svg = svgRef.current
       if (!svg) return
       const rect = svg.getBoundingClientRect()
       if (rect.width === 0 || rect.height === 0) return
-      const r = rect.width / rect.height
-      const viewR = VB_W / VB_H
-      const visibleW = r < viewR ? VB_W * (r / viewR) : VB_W
-      const visibleLeft = (VB_W - visibleW) / 2
-      const visibleRight = visibleLeft + visibleW
+      const compact = rect.width < 1000 || rect.width / rect.height < 1.1
+      const nextMode = compact ? 'compact' : 'desktop'
+      if (layoutModeRef.current === nextMode) return
+      layoutModeRef.current = nextMode
 
-      const fit = (c: { x: number; y: number; scale: number }) => {
-        const maxW = visibleW * 0.7
-        let scale = c.scale
-        if (CHAR_IMG_W * scale > maxW) scale = maxW / CHAR_IMG_W
-        let x = c.x
-        const minX = visibleLeft + visibleW * 0.03
-        const maxX = visibleRight - CHAR_IMG_W * scale - visibleW * 0.03
-        if (maxX > minX) {
-          if (x < minX) x = minX
-          if (x > maxX) x = maxX
-        }
-        return { ...c, x, scale }
+      if (compact) {
+        setChar(COMPACT_CHAR)
+        setOpenedChar(COMPACT_OPENED_CHAR)
+        setFolderPos(COMPACT_FOLDER_POS)
+      } else {
+        setChar(DEFAULT_CHAR)
+        setOpenedChar(OPENED_CHAR)
+        setFolderPos(DEFAULT_FOLDER_POS)
       }
-
-      setChar(prev => fit(prev))
-      setOpenedChar(prev => fit(prev))
     }
-    fitCharacter()
-    window.addEventListener('resize', fitCharacter)
-    return () => window.removeEventListener('resize', fitCharacter)
+    updateLayout()
+    window.addEventListener('resize', updateLayout)
+    return () => window.removeEventListener('resize', updateLayout)
   }, [])
 
   // 当前打开的文件夹内容 + 选中的条目
