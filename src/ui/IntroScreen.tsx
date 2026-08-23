@@ -58,11 +58,16 @@ function angleToDirection(angleDeg: number): string {
 const OPENED_CHAR = { x: 25, y: 1039, scale: 0.23 }
 
 function getOpenedChar(viewportWidth: number, viewportHeight: number) {
+  if (viewportWidth < 600) return { x: 0, y: 0, scale: 0 }
+
   const aspect = viewportWidth / viewportHeight
   const visibleW = Math.min(VB_W, VB_H * aspect)
   const visibleLeft = (VB_W - visibleW) / 2
   const compact = viewportWidth < 1000 || aspect < 1.1
-  const scale = compact ? 0.17 : 0.23
+  const preferredScale = compact ? 0.17 : 0.23
+  const svgScale = Math.max(viewportWidth / VB_W, viewportHeight / VB_H)
+  const maxScaleForGutter = (viewportWidth * 0.2) / (CHAR_IMG_W * svgScale)
+  const scale = Math.min(preferredScale, maxScaleForGutter)
 
   return {
     x: Math.round(visibleLeft + visibleW * 0.025),
@@ -78,12 +83,14 @@ const DEFAULT_POP = { width: 1277, titlebarH: 53, contentH: 700, contentW: 1200,
 const defaultPopGeom = () => {
   const vw = typeof window === 'undefined' ? 1440 : window.innerWidth
   const vh = typeof window === 'undefined' ? 900 : window.innerHeight
-  const w = Math.min(DEFAULT_POP.width, Math.round(vw * 0.85))
+  const characterGutter = Math.round(vw * 0.24)
+  const rightMargin = Math.max(16, Math.round(vw * 0.035))
+  const w = Math.min(DEFAULT_POP.width, vw - characterGutter - rightMargin)
   const h = Math.min(DEFAULT_POP.titlebarH + DEFAULT_POP.contentH + 2, Math.round(vh * 0.92))
   return {
     w,
     h,
-    x: Math.max(0, Math.round(vw * 0.95 - w)),
+    x: Math.max(characterGutter, vw - rightMargin - w),
     y: Math.max(0, Math.round((vh - h) / 2)),
   }
 }
