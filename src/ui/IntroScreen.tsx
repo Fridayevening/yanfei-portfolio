@@ -24,7 +24,7 @@ const EYE_H = 189
 
 // ---- 默认人物参数（用户调定）----
 const DEFAULT_CHAR = { x: 163, y: 366, scale: 0.55 }
-const COMPACT_CHAR = { x: 960, y: 630, scale: 0.27 }
+const COMPACT_CHAR = { x: 400, y: 680, scale: 0.27 }
 
 // ---- 人物缩放范围 ----
 const SCALE_MIN = 0.05
@@ -56,7 +56,20 @@ function angleToDirection(angleDeg: number): string {
 
 // ---- 打开文件夹后：人物收缩到左下 + bg2 淡出 ----
 const OPENED_CHAR = { x: 25, y: 1039, scale: 0.23 }
-const COMPACT_OPENED_CHAR = { x: 800, y: 980, scale: 0.2 }
+
+function getOpenedChar(viewportWidth: number, viewportHeight: number) {
+  const aspect = viewportWidth / viewportHeight
+  const visibleW = Math.min(VB_W, VB_H * aspect)
+  const visibleLeft = (VB_W - visibleW) / 2
+  const compact = viewportWidth < 1000 || aspect < 1.1
+  const scale = compact ? 0.17 : 0.23
+
+  return {
+    x: Math.round(visibleLeft + visibleW * 0.025),
+    y: Math.round(VB_H - CHAR_IMG_H * scale - 12),
+    scale,
+  }
+}
 
 // ---- popwindow 默认大小/位置 ----
 const DEFAULT_POP = { width: 1277, titlebarH: 53, contentH: 700, contentW: 1200, left: 61, top: 48 }
@@ -351,7 +364,7 @@ export default function IntroScreen() {
   const [openItem, setOpenItem] = useState<string | null>(null)
   const [essayText, setEssayText] = useState<string | null>(null)
 
-  const [popGeom] = useState(defaultPopGeom)
+  const [popGeom, setPopGeom] = useState(defaultPopGeom)
 
   // 人物实际显示位（打开文件夹后收缩到左下）
   const displayChar = openFolder ? openedChar : char
@@ -367,16 +380,19 @@ export default function IntroScreen() {
       if (rect.width === 0 || rect.height === 0) return
       const compact = rect.width < 1000 || rect.width / rect.height < 1.1
       const nextMode = compact ? 'compact' : 'desktop'
+
+      // 这两项依赖实际视口：每次 resize 都要刷新，不能只在布局模式切换时更新。
+      setOpenedChar(getOpenedChar(rect.width, rect.height))
+      setPopGeom(defaultPopGeom())
+
       if (layoutModeRef.current === nextMode) return
       layoutModeRef.current = nextMode
 
       if (compact) {
         setChar(COMPACT_CHAR)
-        setOpenedChar(COMPACT_OPENED_CHAR)
         setFolderPos(COMPACT_FOLDER_POS)
       } else {
         setChar(DEFAULT_CHAR)
-        setOpenedChar(OPENED_CHAR)
         setFolderPos(DEFAULT_FOLDER_POS)
       }
     }
