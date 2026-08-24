@@ -135,9 +135,10 @@ interface FolderItem {
   id: string
   title: string
   subtitle: string
+  eyebrow?: string
+  tags?: string[]
   metrics?: { value: string; label: string }[]
   blocks?: ContentBlock[]
-  textFile?: string
   storyId?: string
 }
 
@@ -198,16 +199,36 @@ const FOLDER_CONTENT: Record<FolderKey, FolderContent> = {
     title: 'Yanfei\\Research',
     items: [
       {
-        id: 'essay1',
-        title: 'Revolutionising Patient Care',
-        subtitle: 'How might we develop a secure system of alerting doctors of an urgent lab result?',
-        textFile: '/research/essay1.txt',
+        id: 'healthcare-alerting',
+        title: 'Healthcare Alerting System',
+        eyebrow: 'Healthcare HCI · 2024',
+        subtitle: 'Making urgent laboratory results secure, timely and actionable for clinical teams.',
+        tags: ['Clinical interviews', 'Workflow mapping', 'Iterative prototyping'],
+        blocks: [
+          { type: 'heading', text: 'The challenge' },
+          { type: 'paragraph', text: 'How might we help clinical teams receive and act on urgent laboratory results without compromising security, reliability or the realities of hospital workflows?' },
+          { type: 'heading', text: 'Approach' },
+          { type: 'list', items: ['Mapped the current escalation workflow with clinical stakeholders.', 'Translated safety, privacy and acknowledgement requirements into product flows.', 'Iterated prototypes around the moment an urgent result needs action.'] },
+          { type: 'heading', text: 'My contribution' },
+          { type: 'paragraph', text: 'Product management, requirements synthesis and prototype evaluation within a multidisciplinary HCI team.' },
+          { type: 'paragraph', text: 'Full report download will be added here.' },
+        ],
       },
       {
-        id: 'essay2',
-        title: 'User Centered Design — Design Project',
-        subtitle: 'Group design project · Yanfei Wang et al.',
-        textFile: '/research/essay2.txt',
+        id: 'lawmate',
+        title: 'Lawmate: Accessible Legal Aid',
+        eyebrow: 'User-Centred Design · Group Project · 2023',
+        subtitle: 'Helping people in Ireland understand their rights and find appropriate, affordable legal support.',
+        tags: ['User research', 'Information architecture', 'Usability testing'],
+        blocks: [
+          { type: 'heading', text: 'The challenge' },
+          { type: 'paragraph', text: 'Accessing legal support can be especially difficult for international residents and visitors who face unfamiliar systems, information gaps and affordability concerns.' },
+          { type: 'heading', text: 'Approach' },
+          { type: 'list', items: ['Synthesised survey findings, stakeholder interviews and user needs.', 'Developed personas, card sorting and an information architecture for the service.', 'Created and evaluated prototypes using usability and heuristic review.'] },
+          { type: 'heading', text: 'My contribution' },
+          { type: 'paragraph', text: 'Research synthesis, information architecture and product-design collaboration as part of Group 202.' },
+          { type: 'paragraph', text: 'Full report download will be added here.' },
+        ],
       },
     ],
   },
@@ -243,9 +264,6 @@ function StoryDetail({ story }: { story: WorkStory }) {
           ))}
         </h2>
         <p className="ws-hero-desc">{story.heroDesc}</p>
-        <div className="ws-hero-image" style={{ backgroundColor: story.coverBg }}>
-          <img src={story.cover} alt={story.kicker} />
-        </div>
         <div className="ws-metrics">
           {story.metrics.map((m, i) => (
             <div key={i} className="ws-metric">
@@ -342,6 +360,44 @@ function StoryDetail({ story }: { story: WorkStory }) {
   )
 }
 
+function AboutMe() {
+  return (
+    <div className="about-me">
+      <p className="about-me__kicker">Senior Product Manager · B2B SaaS, Enterprise Platforms & AI</p>
+      <h2 className="about-me__name">Yanfei Wang</h2>
+      <p className="about-me__location">Dublin, Ireland</p>
+      <p className="about-me__intro">
+        I turn complex operational problems into products that teams can ship, users can adopt and businesses can scale.
+        Over seven years, I have led 0→1 work across connected hardware, cloud SaaS, mobile and AI workflows.
+      </p>
+
+      <section className="about-me__section">
+        <h3>What I do</h3>
+        <ul>
+          <li>Shape product strategy and turn ambiguity into a clear delivery path.</li>
+          <li>Lead discovery, requirements and cross-functional delivery from 0→1 to scale.</li>
+          <li>Combine user research, operational context and measurable outcomes in product decisions.</li>
+        </ul>
+      </section>
+
+      <section className="about-me__proof" aria-label="Selected experience">
+        <div><strong>7+ years</strong><span>product leadership</span></div>
+        <div><strong>2,409</strong><span>enterprise clients</span></div>
+        <div><strong>294K</strong><span>monthly active users</span></div>
+        <div><strong>16</strong><span>markets supported</span></div>
+      </section>
+
+      <p className="about-me__education">MSc Human-Computer Interaction, UCD · PMP certified</p>
+
+      <div className="about-me__links">
+        <a href="mailto:wyf024326@gmail.com">Email me</a>
+        <a href="https://www.linkedin.com/in/fayewang0602" target="_blank" rel="noreferrer">LinkedIn</a>
+        <span aria-label="CV download coming soon">CV download · coming soon</span>
+      </div>
+    </div>
+  )
+}
+
 export default function IntroScreen() {
   const [char, setChar] = useState(DEFAULT_CHAR)
   const charRef = useRef(char)
@@ -350,6 +406,8 @@ export default function IntroScreen() {
   const svgRef = useRef<SVGSVGElement>(null)
   const layoutModeRef = useRef<'desktop' | 'compact' | null>(null)
   const layoutTransitionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const returnStartTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const returnEndTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const charGroupRef = useRef<SVGGElement>(null)
   const isDraggingRef = useRef(false)
   const dragStartRef = useRef({ vbX: 0, vbY: 0, charX: 0, charY: 0 })
@@ -373,17 +431,39 @@ export default function IntroScreen() {
   // ---- 人物拖拽中（用于关闭位移动画） ----
   const [dragging, setDragging] = useState(false)
   const [layoutTransitioning, setLayoutTransitioning] = useState(false)
+  const [isReturning, setIsReturning] = useState(false)
 
   // ---- 窗口内导航：打开的条目（列表 → 详情） ----
   const [openItem, setOpenItem] = useState<string | null>(null)
-  const [essayText, setEssayText] = useState<string | null>(null)
 
   const [popGeom, setPopGeom] = useState(defaultPopGeom)
 
   // 人物实际显示位（打开文件夹后收缩到左下）
-  const displayChar = openFolder ? openedChar : char
+  const displayChar = openFolder || isReturning ? openedChar : char
   const displayCharRef = useRef(displayChar)
   displayCharRef.current = displayChar
+
+  const openFolderWindow = useCallback((key: FolderKey) => {
+    if (returnStartTimerRef.current) clearTimeout(returnStartTimerRef.current)
+    if (returnEndTimerRef.current) clearTimeout(returnEndTimerRef.current)
+    const rect = svgRef.current?.getBoundingClientRect()
+    if (rect && rect.width > 0 && rect.height > 0) {
+      setOpenedChar(getOpenedChar(rect.width, rect.height))
+    }
+    setIsReturning(false)
+    setOpenFolder(key)
+    setOpenItem(null)
+  }, [])
+
+  const closeFolderWindow = useCallback(() => {
+    setOpenFolder(null)
+    setOpenItem(null)
+    setIsReturning(true)
+    if (returnStartTimerRef.current) clearTimeout(returnStartTimerRef.current)
+    if (returnEndTimerRef.current) clearTimeout(returnEndTimerRef.current)
+    returnStartTimerRef.current = setTimeout(() => setOpenedChar(charRef.current), 180)
+    returnEndTimerRef.current = setTimeout(() => setIsReturning(false), 1380)
+  }, [])
 
   // 窄屏使用独立构图；回到桌面布局时，恢复桌面默认参数而非沿用缩小后的状态。
   useEffect(() => {
@@ -418,6 +498,8 @@ export default function IntroScreen() {
     return () => {
       window.removeEventListener('resize', updateLayout)
       if (layoutTransitionTimerRef.current) clearTimeout(layoutTransitionTimerRef.current)
+      if (returnStartTimerRef.current) clearTimeout(returnStartTimerRef.current)
+      if (returnEndTimerRef.current) clearTimeout(returnEndTimerRef.current)
     }
   }, [])
 
@@ -594,16 +676,6 @@ export default function IntroScreen() {
     return () => el.removeEventListener('wheel', onWheel)
   }, [clientToViewBox, applyScale])
 
-  // ---- 加载 essay 文本 ----
-  useEffect(() => {
-    if (!openFolder || !openItem) { setEssayText(null); return }
-    const it = FOLDER_CONTENT[openFolder].items.find(i => i.id === openItem)
-    if (!it?.textFile) { setEssayText(null); return }
-    let cancelled = false
-    fetch(it.textFile).then(r => r.text()).then(t => { if (!cancelled) setEssayText(t) })
-    return () => { cancelled = true }
-  }, [openFolder, openItem])
-
   return (
     <div className="intro-screen">
       <svg
@@ -646,6 +718,8 @@ export default function IntroScreen() {
             opacity: openFolder && displayChar.scale === 0 ? 0 : 1,
             transition: layoutTransitioning
               ? 'opacity 0.18s ease-out'
+              : isReturning
+                ? 'transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)'
               : dragging
                 ? 'none'
                 : 'transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)',
@@ -670,7 +744,7 @@ export default function IntroScreen() {
               cursor: 'grab',
             }}
             onMouseDown={(e) => { e.stopPropagation(); e.preventDefault(); startFolderDrag(f.key, e.clientX, e.clientY) }}
-            onDoubleClick={() => { setOpenFolder(f.key); setOpenItem(null) }}
+            onDoubleClick={() => openFolderWindow(f.key)}
           >
             <image href={f.icon} x={-FOLDER_SIZE / 2} y={-FOLDER_SIZE / 2} width={FOLDER_SIZE} height={FOLDER_SIZE} />
             <text x="0" y={FOLDER_SIZE / 2 + 44} className="folder-label">{f.label}</text>
@@ -684,7 +758,7 @@ export default function IntroScreen() {
           <div className="popwindow__titlebar" style={{ height: `${DEFAULT_POP.titlebarH}px` }}>
             <span className="popwindow__dots"><span /><span /><span /></span>
             <span className="popwindow__title">{activeItem ? `${activeFolder.title}\\${activeItem.title}` : activeFolder.title}</span>
-            <button className="popwindow__close" onClick={() => setOpenFolder(null)} aria-label="关闭">✕</button>
+            <button className="popwindow__close" onClick={closeFolderWindow} aria-label="关闭">✕</button>
           </div>
           <div className="popwindow__content">
             {activeItem ? (
@@ -706,28 +780,16 @@ export default function IntroScreen() {
                       ))}
                     </div>
                   )}
-                  {activeItem.textFile ? (
-                    essayText == null ? (
-                      <p className="popwindow__p">加载中…</p>
-                    ) : (
-                      <div className="popwindow__essay">
-                        {essayText.split('\n').filter(l => l.trim()).map((line, i) => (
-                          <p key={i} className="popwindow__p">{line}</p>
-                        ))}
-                      </div>
-                    )
-                  ) : (
-                    activeItem.blocks?.map((b, i) => {
-                      if (b.type === 'heading') return <h3 key={i} className="popwindow__h">{b.text}</h3>
-                      if (b.type === 'list') return <ul key={i} className="popwindow__list">{b.items.map((it, j) => <li key={j}>{it}</li>)}</ul>
-                      return <p key={i} className="popwindow__p">{b.text}</p>
-                    })
-                  )}
+                  {activeItem.blocks?.map((b, i) => {
+                    if (b.type === 'heading') return <h3 key={i} className="popwindow__h">{b.text}</h3>
+                    if (b.type === 'list') return <ul key={i} className="popwindow__list">{b.items.map((it, j) => <li key={j}>{it}</li>)}</ul>
+                    return <p key={i} className="popwindow__p">{b.text}</p>
+                  })}
                 </>
               )
             ) : (
-              activeFolder.items.length === 0 ? (
-                <p className="popwindow__p">内容待补充…</p>
+              openFolder === 'aboutme' ? (
+                <AboutMe />
               ) : activeFolder.items.some(it => it.storyId) ? (
                 <div className="work-grid">
                   {activeFolder.items.map(it => {
@@ -758,11 +820,13 @@ export default function IntroScreen() {
                   })}
                 </div>
               ) : (
-                <div className="popwindow__listview">
+                <div className={openFolder === 'research' ? 'research-grid' : 'popwindow__listview'}>
                   {activeFolder.items.map(it => (
-                    <button key={it.id} className="popwindow__listitem" onClick={() => setOpenItem(it.id)}>
+                    <button key={it.id} className={openFolder === 'research' ? 'research-card' : 'popwindow__listitem'} onClick={() => setOpenItem(it.id)}>
+                      {it.eyebrow && <span className="research-card__eyebrow">{it.eyebrow}</span>}
                       <span className="popwindow__listitem-title">{it.title}</span>
                       <span className="popwindow__listitem-sub">{it.subtitle}</span>
+                      {it.tags && <span className="research-card__tags">{it.tags.join(' · ')}</span>}
                       {it.metrics && it.metrics[0] && (
                         <span className="popwindow__listitem-metric">{it.metrics[0].value} <em>{it.metrics[0].label}</em></span>
                       )}
