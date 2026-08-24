@@ -349,6 +349,7 @@ export default function IntroScreen() {
   const [openedChar, setOpenedChar] = useState(OPENED_CHAR)
   const svgRef = useRef<SVGSVGElement>(null)
   const layoutModeRef = useRef<'desktop' | 'compact' | null>(null)
+  const layoutTransitionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const charGroupRef = useRef<SVGGElement>(null)
   const isDraggingRef = useRef(false)
   const dragStartRef = useRef({ vbX: 0, vbY: 0, charX: 0, charY: 0 })
@@ -371,6 +372,7 @@ export default function IntroScreen() {
 
   // ---- 人物拖拽中（用于关闭位移动画） ----
   const [dragging, setDragging] = useState(false)
+  const [layoutTransitioning, setLayoutTransitioning] = useState(false)
 
   // ---- 窗口内导航：打开的条目（列表 → 详情） ----
   const [openItem, setOpenItem] = useState<string | null>(null)
@@ -394,6 +396,9 @@ export default function IntroScreen() {
       const nextMode = compact ? 'compact' : 'desktop'
 
       // 这两项依赖实际视口：每次 resize 都要刷新，不能只在布局模式切换时更新。
+      setLayoutTransitioning(true)
+      if (layoutTransitionTimerRef.current) clearTimeout(layoutTransitionTimerRef.current)
+      layoutTransitionTimerRef.current = setTimeout(() => setLayoutTransitioning(false), 180)
       setOpenedChar(getOpenedChar(rect.width, rect.height))
       setPopGeom(defaultPopGeom())
 
@@ -410,7 +415,10 @@ export default function IntroScreen() {
     }
     updateLayout()
     window.addEventListener('resize', updateLayout)
-    return () => window.removeEventListener('resize', updateLayout)
+    return () => {
+      window.removeEventListener('resize', updateLayout)
+      if (layoutTransitionTimerRef.current) clearTimeout(layoutTransitionTimerRef.current)
+    }
   }, [])
 
   // 当前打开的文件夹内容 + 选中的条目
@@ -635,7 +643,12 @@ export default function IntroScreen() {
           style={{
             transform: `translate(${displayChar.x}px, ${displayChar.y}px) scale(${displayChar.scale})`,
             transformOrigin: '0 0',
-            transition: dragging ? 'none' : 'transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)',
+            opacity: openFolder && displayChar.scale === 0 ? 0 : 1,
+            transition: layoutTransitioning
+              ? 'opacity 0.18s ease-out'
+              : dragging
+                ? 'none'
+                : 'transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)',
             cursor: openFolder ? 'default' : 'grab',
           }}
           onMouseDown={(e) => { if (openFolder) return; e.stopPropagation(); e.preventDefault(); handleDragStart(e.clientX, e.clientY) }}
