@@ -83,14 +83,19 @@ const DEFAULT_POP = { width: 1277, titlebarH: 53, contentH: 700, contentW: 1200,
 const defaultPopGeom = () => {
   const vw = typeof window === 'undefined' ? 1440 : window.innerWidth
   const vh = typeof window === 'undefined' ? 900 : window.innerHeight
+  const narrowViewport = vw < 600
   const characterGutter = Math.round(vw * 0.24)
   const rightMargin = Math.max(16, Math.round(vw * 0.035))
-  const w = Math.min(DEFAULT_POP.width, vw - characterGutter - rightMargin)
+  const w = narrowViewport
+    ? Math.round(vw * 0.92)
+    : Math.min(DEFAULT_POP.width, vw - characterGutter - rightMargin)
   const h = Math.min(DEFAULT_POP.titlebarH + DEFAULT_POP.contentH + 2, Math.round(vh * 0.92))
   return {
     w,
     h,
-    x: Math.max(characterGutter, vw - rightMargin - w),
+    x: narrowViewport
+      ? Math.round((vw - w) / 2)
+      : Math.max(characterGutter, vw - rightMargin - w),
     y: Math.max(0, Math.round((vh - h) / 2)),
   }
 }
