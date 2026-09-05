@@ -4,3 +4,6 @@ dist/
 .DS_Store
 .env
 .env.*
+
+# Original high-res assets kept locally, not part of the build
+source-assets/
