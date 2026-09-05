@@ -1,0 +1,87 @@
+/* Character states are configuration-driven so final layered artwork can replace overlays. */
+.character-art,
+.character-overlay {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.character-mode--desktop {
+  animation: character-breathe 4.8s var(--ease-ui) infinite;
+}
+
+.character-mode--work,
+.character-mode--research,
+.character-mode--aboutme {
+  animation: character-focus 4.2s var(--ease-ui) infinite;
+}
+
+.character-overlay {
+  pointer-events: none;
+  will-change: transform;
+}
+
+.character-overlay--work {
+  transform-origin: 74% 72%;
+  animation: work-overlay-enter 720ms var(--ease-paper) both, work-overlay-idle 3.2s 720ms var(--ease-ui) infinite;
+}
+
+.character-overlay--research {
+  transform-origin: 72% 75%;
+  animation: research-overlay-enter 820ms var(--ease-paper) both, research-overlay-idle 4s 820ms var(--ease-ui) infinite;
+}
+
+.character-overlay--aboutme {
+  transform-origin: 80% 28%;
+  animation: about-overlay-enter 680ms var(--ease-paper) both, about-overlay-idle 3.6s 680ms var(--ease-ui) infinite;
+}
+
+@keyframes character-breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-3px) scale(1.002); }
+}
+
+@keyframes character-focus {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes work-overlay-enter {
+  from { opacity: 0; transform: translate(38px, 26px) rotate(2deg); }
+  to { opacity: 1; transform: translate(0, 0) rotate(0); }
+}
+
+@keyframes work-overlay-idle {
+  0%, 78%, 100% { transform: translateY(0); }
+  84% { transform: translateY(-5px); }
+  90% { transform: translateY(0); }
+  95% { transform: translateY(-3px); }
+}
+
+@keyframes research-overlay-enter {
+  from { opacity: 0; transform: translateY(42px) rotate(-3deg); }
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+@keyframes research-overlay-idle {
+  0%, 72%, 100% { transform: rotate(0); }
+  82% { transform: rotate(-0.7deg); }
+  91% { transform: rotate(0.5deg); }
+}
+
+@keyframes about-overlay-enter {
+  from { opacity: 0; transform: scale(0.72) rotate(-5deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes about-overlay-idle {
+  0%, 74%, 100% { transform: translateY(0) scale(1); }
+  84% { transform: translateY(-8px) scale(1.015); }
+  92% { transform: translateY(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character-art,
+  .character-overlay {
+    animation: none !important;
+  }
+}

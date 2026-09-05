@@ -1,27 +1,31 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { WORK_STORIES, type WorkStory } from '../data/workStories'
+import { AboutMe } from '../components/about/AboutMe'
+import { DesktopScene } from '../components/desktop/DesktopScene'
+import {
+  CHARACTER_HEIGHT,
+  CHARACTER_WIDTH,
+  DESKTOP_FOLDERS,
+  EYE_HEIGHT,
+  EYE_WIDTH,
+  EYE_X,
+  EYE_Y,
+  type FolderKey,
+  VIEWBOX_HEIGHT,
+  VIEWBOX_WIDTH,
+} from '../components/desktop/desktopConfig'
+import { ResearchCard } from '../components/research/ResearchCard'
+import { ResearchDetail } from '../components/research/ResearchDetail'
+import { CaseStudyShell } from '../components/shared/CaseStudyShell'
+import { WorkCard } from '../components/work/WorkCard'
+import { WorkStoryDetail } from '../components/work/WorkStoryDetail'
+import { PortfolioWindow } from '../components/window/PortfolioWindow'
+import { RESEARCH_STORIES } from '../data/researchStories'
+import { WORK_STORIES } from '../data/workStories'
 
 // ================================================================
 // 开场动画：bg1（背景）→ bg2（前景）→ 人物
 // viewBox 与背景图一致（2560×1440，16:9），保证背景铺满、无空白区
 // ================================================================
-const VB_W = 2560
-const VB_H = 1440
-
-// 背景图尺寸（bg1 / bg2 均为 2560×1440，铺满整个画布）
-const BG_W = 2560
-const BG_H = 1440
-
-// 人物画布尺寸（onlygirl.png 的 1x 尺寸，比背景高）
-const CHAR_IMG_W = 2560
-const CHAR_IMG_H = 1696
-
-// 眼睛位置（Figma 1x: dx=1208, dy=527, 524×189；2x 文件 1048×378）
-const EYE_X = 1208
-const EYE_Y = 527
-const EYE_W = 524
-const EYE_H = 189
-
 // ---- 默认人物参数（用户调定）----
 const DEFAULT_CHAR = { x: 163, y: 366, scale: 0.55 }
 const COMPACT_CHAR = { x: 400, y: 680, scale: 0.27 }
@@ -32,15 +36,15 @@ const SCALE_MAX = 2
 
 // ---- 眼睛方向映射 ----
 const DIRECTION_MAP: Record<string, string> = {
-  center:      '/intro/eye-center.png',
-  right:       '/intro/eye-right.png',
-  'up-right':  '/intro/eye-up-right.png',
-  up:          '/intro/eye-up.png',
-  'up-left':   '/intro/eye-up-left.png',
-  left:        '/intro/eye-left.png',
-  'down-left': '/intro/eye-down-left.png',
-  down:        '/intro/eye-down.png',
-  'down-right':'/intro/eye-down-right.png',
+  center:      '/intro/eye-center.webp',
+  right:       '/intro/eye-right.webp',
+  'up-right':  '/intro/eye-up-right.webp',
+  up:          '/intro/eye-up.webp',
+  'up-left':   '/intro/eye-up-left.webp',
+  left:        '/intro/eye-left.webp',
+  'down-left': '/intro/eye-down-left.webp',
+  down:        '/intro/eye-down.webp',
+  'down-right':'/intro/eye-down-right.webp',
 }
 
 function angleToDirection(angleDeg: number): string {
@@ -61,23 +65,23 @@ function getOpenedChar(viewportWidth: number, viewportHeight: number) {
   if (viewportWidth < 600) return { x: 0, y: 0, scale: 0 }
 
   const aspect = viewportWidth / viewportHeight
-  const visibleW = Math.min(VB_W, VB_H * aspect)
-  const visibleLeft = (VB_W - visibleW) / 2
+  const visibleW = Math.min(VIEWBOX_WIDTH, VIEWBOX_HEIGHT * aspect)
+  const visibleLeft = (VIEWBOX_WIDTH - visibleW) / 2
   const compact = viewportWidth < 1000 || aspect < 1.1
   const preferredScale = compact ? 0.17 : 0.23
-  const svgScale = Math.max(viewportWidth / VB_W, viewportHeight / VB_H)
-  const maxScaleForGutter = (viewportWidth * 0.2) / (CHAR_IMG_W * svgScale)
+  const svgScale = Math.max(viewportWidth / VIEWBOX_WIDTH, viewportHeight / VIEWBOX_HEIGHT)
+  const maxScaleForGutter = (viewportWidth * 0.2) / (CHARACTER_WIDTH * svgScale)
   const scale = Math.min(preferredScale, maxScaleForGutter)
 
   return {
     x: Math.round(visibleLeft + visibleW * 0.025),
-    y: Math.round(VB_H - CHAR_IMG_H * scale - 12),
+    y: Math.round(VIEWBOX_HEIGHT - CHARACTER_HEIGHT * scale - 12),
     scale,
   }
 }
 
 // ---- popwindow 默认大小/位置 ----
-const DEFAULT_POP = { width: 1277, titlebarH: 53, contentH: 700, contentW: 1200, left: 61, top: 48 }
+const DEFAULT_POP = { width: 1277, titlebarH: 64, contentH: 700 }
 
 // ---- 窗口默认几何（居右：右边缘距右 5%，垂直居中）----
 const defaultPopGeom = () => {
@@ -101,301 +105,17 @@ const defaultPopGeom = () => {
 }
 
 // ---- 文件夹 ----
-type FolderKey = 'work' | 'research' | 'aboutme'
-const FOLDER_SIZE = 90
-
-interface FolderDef {
-  key: FolderKey
-  label: string
-  icon: string
-  x: number
-  y: number
-}
-
-const FOLDERS: FolderDef[] = [
-  { key: 'research', label: 'Research', icon: '/intro/researchicon.png', x: 588, y: 390 },
-  { key: 'work', label: 'Work', icon: '/intro/workicon.png', x: 988, y: 183 },
-  { key: 'aboutme', label: 'About Me', icon: '/intro/aboutmeicon.png', x: 1452, y: 518 },
-]
-
-const DEFAULT_FOLDER_POS = Object.fromEntries(FOLDERS.map(f => [f.key, { x: f.x, y: f.y }])) as Record<FolderKey, { x: number; y: number }>
+const DEFAULT_FOLDER_POS = Object.fromEntries(DESKTOP_FOLDERS.map(folder => [folder.key, { x: folder.x, y: folder.y }])) as Record<FolderKey, { x: number; y: number }>
 const COMPACT_FOLDER_POS: Record<FolderKey, { x: number; y: number }> = {
   research: { x: 1050, y: 460 },
   work: { x: 1280, y: 240 },
   aboutme: { x: 1500, y: 460 },
 }
 
-// ---- 弹窗内容 ----
-type ContentBlock =
-  | { type: 'heading'; text: string }
-  | { type: 'paragraph'; text: string }
-  | { type: 'list'; items: string[] }
-
-interface FolderItem {
-  id: string
-  title: string
-  subtitle: string
-  eyebrow?: string
-  tags?: string[]
-  metrics?: { value: string; label: string }[]
-  blocks?: ContentBlock[]
-  storyId?: string
-}
-
-interface FolderContent {
-  title: string
-  items: FolderItem[]
-}
-
-const FOLDER_CONTENT: Record<FolderKey, FolderContent> = {
-  work: {
-    title: 'Yanfei\\Work',
-    items: [
-      {
-        id: 'workspace-saas',
-        title: 'Uniubi · International Product Line',
-        subtitle: 'Hardware + software, built from zero · 16 countries',
-        metrics: [
-          { value: '850K+', label: 'employees' },
-          { value: '5,381', label: 'organizations' },
-          { value: '7,610', label: 'devices' },
-        ],
-        storyId: 'workspace-saas',
-      },
-      {
-        id: 'uzhi-space',
-        title: 'U智空间 · China Market Platform',
-        subtitle: 'Validated abroad, then brought it home',
-        metrics: [
-          { value: '294K', label: 'MAU' },
-          { value: '2,409', label: 'enterprise clients' },
-          { value: '15', label: 'admin modules' },
-        ],
-        storyId: 'uzhi-space',
-      },
-      {
-        id: 'ops-analytics',
-        title: 'Operations Analytics & Supply Chain',
-        subtitle: 'The system nobody had on their roadmap',
-        metrics: [
-          { value: '100%', label: 'catalogue managed' },
-          { value: '3', label: 'core dashboards' },
-        ],
-        storyId: 'ops-analytics',
-      },
-      {
-        id: 'kreai',
-        title: 'KreAI · AI Creator Business Platform',
-        subtitle: 'Six versions in six months — then the users ran out',
-        metrics: [
-          { value: '25%', label: 'adoption improvement' },
-          { value: '6', label: 'versions in 6 months' },
-        ],
-        storyId: 'kreai',
-      },
-    ],
-  },
-  research: {
-    title: 'Yanfei\\Research',
-    items: [
-      {
-        id: 'healthcare-alerting',
-        title: 'Healthcare Alerting System',
-        eyebrow: 'Healthcare HCI · 2024',
-        subtitle: 'Making urgent laboratory results secure, timely and actionable for clinical teams.',
-        tags: ['Clinical interviews', 'Workflow mapping', 'Iterative prototyping'],
-        blocks: [
-          { type: 'heading', text: 'The challenge' },
-          { type: 'paragraph', text: 'How might we help clinical teams receive and act on urgent laboratory results without compromising security, reliability or the realities of hospital workflows?' },
-          { type: 'heading', text: 'Approach' },
-          { type: 'list', items: ['Mapped the current escalation workflow with clinical stakeholders.', 'Translated safety, privacy and acknowledgement requirements into product flows.', 'Iterated prototypes around the moment an urgent result needs action.'] },
-          { type: 'heading', text: 'My contribution' },
-          { type: 'paragraph', text: 'Product management, requirements synthesis and prototype evaluation within a multidisciplinary HCI team.' },
-          { type: 'paragraph', text: 'Full report download will be added here.' },
-        ],
-      },
-      {
-        id: 'lawmate',
-        title: 'Lawmate: Accessible Legal Aid',
-        eyebrow: 'User-Centred Design · Group Project · 2023',
-        subtitle: 'Helping people in Ireland understand their rights and find appropriate, affordable legal support.',
-        tags: ['User research', 'Information architecture', 'Usability testing'],
-        blocks: [
-          { type: 'heading', text: 'The challenge' },
-          { type: 'paragraph', text: 'Accessing legal support can be especially difficult for international residents and visitors who face unfamiliar systems, information gaps and affordability concerns.' },
-          { type: 'heading', text: 'Approach' },
-          { type: 'list', items: ['Synthesised survey findings, stakeholder interviews and user needs.', 'Developed personas, card sorting and an information architecture for the service.', 'Created and evaluated prototypes using usability and heuristic review.'] },
-          { type: 'heading', text: 'My contribution' },
-          { type: 'paragraph', text: 'Research synthesis, information architecture and product-design collaboration as part of Group 202.' },
-          { type: 'paragraph', text: 'Full report download will be added here.' },
-        ],
-      },
-    ],
-  },
-  aboutme: {
-    title: 'Yanfei\\About Me',
-    items: [],
-  },
-}
-
-// ---- 行内加粗：把 <strong>…</strong> 转成 React 元素 ----
-function renderInline(text: string) {
-  return text.split(/(<strong>.*?<\/strong>)/g).map((part, i) =>
-    part.startsWith('<strong>') && part.endsWith('</strong>') ? (
-      <strong key={i}>{part.slice(8, -9)}</strong>
-    ) : (
-      part
-    ),
-  )
-}
-
-// ---- 叙事式 Project 详情（数据驱动） ----
-function StoryDetail({ story }: { story: WorkStory }) {
-  return (
-    <div className="work-story">
-      <section className="ws-hero">
-        <p className="ws-kicker">{story.kicker}</p>
-        <h2 className="ws-title">
-          {story.titleLines.map((line, i) => (
-            <span key={i} className="ws-title-line">
-              {line}
-              {i < story.titleLines.length - 1 ? <br /> : null}
-            </span>
-          ))}
-        </h2>
-        <p className="ws-hero-desc">{story.heroDesc}</p>
-        <div className="ws-metrics">
-          {story.metrics.map((m, i) => (
-            <div key={i} className="ws-metric">
-              {m.value ? <span className="ws-metric-value">{m.value}</span> : null}
-              <span className="ws-metric-label">{m.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {story.sections.map((s, i) => {
-        switch (s.kind) {
-          case 'story':
-            return (
-              <section key={i} className="ws-section">
-                <h3 className="ws-h">{s.heading}</h3>
-                {s.context && <p className="ws-context">{s.context}</p>}
-                {s.paragraphs.map((p, j) => (
-                  <p key={j} className="ws-p">{renderInline(p)}</p>
-                ))}
-              </section>
-            )
-          case 'products':
-            return (
-              <section key={i} className="ws-section">
-                <h3 className="ws-h">{s.heading}</h3>
-                {s.desc && <p className="ws-section-desc">{s.desc}</p>}
-                <div className="ws-cards">
-                  {s.items.map((item, j) =>
-                    item.kind === 'connector' ? (
-                      <div key={j} className="ws-connector">
-                        <p>{renderInline(item.text)}</p>
-                      </div>
-                    ) : (
-                      <div key={j} className="ws-card">
-                        <div className="ws-card-icon">{item.icon}</div>
-                        <div className="ws-card-body">
-                          <h4 className="ws-card-title">{item.title}</h4>
-                          {item.type && <p className="ws-card-type">{item.type}</p>}
-                          {item.paragraphs.map((p, k) => (
-                            <p key={k} className="ws-p">{renderInline(p)}</p>
-                          ))}
-                          {item.meta && <p className="ws-card-meta">{item.meta}</p>}
-                        </div>
-                      </div>
-                    ),
-                  )}
-                </div>
-              </section>
-            )
-          case 'decisions':
-            return (
-              <section key={i} className="ws-section">
-                <h3 className="ws-h">{s.heading}</h3>
-                <div className="ws-decisions">
-                  {s.items.map((d, j) => (
-                    <div key={j} className="ws-decision">
-                      <span className="ws-decision-no">{d.number}</span>
-                      <div className="ws-decision-body">
-                        <h4 className="ws-decision-title">{d.title}</h4>
-                        <p className="ws-p">{renderInline(d.text)}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            )
-          case 'outcomes':
-            return (
-              <section key={i} className="ws-section ws-outcomes">
-                <h3 className="ws-h ws-outcomes-h">{s.heading}</h3>
-                {s.grid && (
-                  <div className="ws-outcome-grid">
-                    {s.grid.map((o, j) => (
-                      <div key={j} className="ws-outcome">
-                        <span className="ws-outcome-value">{o.value}</span>
-                        <span className="ws-outcome-label">{o.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                <div className="ws-reflection">
-                  {s.reflections.map((r, j) => (
-                    <p key={j} className="ws-p">{renderInline(r)}</p>
-                  ))}
-                </div>
-              </section>
-            )
-          default:
-            return null
-        }
-      })}
-    </div>
-  )
-}
-
-function AboutMe() {
-  return (
-    <div className="about-me">
-      <p className="about-me__kicker">Senior Product Manager · B2B SaaS, Enterprise Platforms & AI</p>
-      <h2 className="about-me__name">Yanfei Wang</h2>
-      <p className="about-me__location">Dublin, Ireland</p>
-      <p className="about-me__intro">
-        I turn complex operational problems into products that teams can ship, users can adopt and businesses can scale.
-        Over seven years, I have led 0→1 work across connected hardware, cloud SaaS, mobile and AI workflows.
-      </p>
-
-      <section className="about-me__section">
-        <h3>What I do</h3>
-        <ul>
-          <li>Shape product strategy and turn ambiguity into a clear delivery path.</li>
-          <li>Lead discovery, requirements and cross-functional delivery from 0→1 to scale.</li>
-          <li>Combine user research, operational context and measurable outcomes in product decisions.</li>
-        </ul>
-      </section>
-
-      <section className="about-me__proof" aria-label="Selected experience">
-        <div><strong>7+ years</strong><span>product leadership</span></div>
-        <div><strong>2,409</strong><span>enterprise clients</span></div>
-        <div><strong>294K</strong><span>monthly active users</span></div>
-        <div><strong>16</strong><span>markets supported</span></div>
-      </section>
-
-      <p className="about-me__education">MSc Human-Computer Interaction, UCD · PMP certified</p>
-
-      <div className="about-me__links">
-        <a href="mailto:wyf024326@gmail.com">Email me</a>
-        <a href="https://www.linkedin.com/in/fayewang0602" target="_blank" rel="noreferrer">LinkedIn</a>
-        <span aria-label="CV download coming soon">CV download · coming soon</span>
-      </div>
-    </div>
-  )
+const FOLDER_TITLES: Record<FolderKey, string> = {
+  work: 'Yanfei\\Work',
+  research: 'Yanfei\\Research',
+  aboutme: 'Yanfei\\About Me',
 }
 
 export default function IntroScreen() {
@@ -437,6 +157,18 @@ export default function IntroScreen() {
   const [openItem, setOpenItem] = useState<string | null>(null)
 
   const [popGeom, setPopGeom] = useState(defaultPopGeom)
+
+  // 默认方向由 HTML 预加载；其余方向在首屏稳定后进入浏览器缓存。
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      Object.values(DIRECTION_MAP).forEach(src => {
+        if (src === DIRECTION_MAP.center) return
+        const image = new Image()
+        image.src = src
+      })
+    }, 300)
+    return () => window.clearTimeout(timer)
+  }, [])
 
   // 人物实际显示位（打开文件夹后收缩到左下）
   const displayChar = openFolder || isReturning ? openedChar : char
@@ -503,19 +235,25 @@ export default function IntroScreen() {
     }
   }, [])
 
-  // 当前打开的文件夹内容 + 选中的条目
-  const activeFolder = openFolder ? FOLDER_CONTENT[openFolder] : null
-  const activeItem = activeFolder && openItem ? activeFolder.items.find(i => i.id === openItem) : null
-  const activeStory = activeItem?.storyId ? WORK_STORIES.find(s => s.id === activeItem.storyId) : null
+  const activeWorkStory = openFolder === 'work' && openItem
+    ? WORK_STORIES.find(story => story.id === openItem)
+    : undefined
+  const activeResearchStory = openFolder === 'research' && openItem
+    ? RESEARCH_STORIES.find(story => story.id === openItem)
+    : undefined
+  const activeItemTitle = activeWorkStory?.cardTitle ?? activeResearchStory?.title
+  const windowTitle = openFolder
+    ? `${FOLDER_TITLES[openFolder]}${activeItemTitle ? `\\${activeItemTitle}` : ''}`
+    : ''
 
   // ---- client 坐标 → viewBox 坐标（slice 模式：内容铺满并裁边） ----
   const clientToViewBox = useCallback((clientX: number, clientY: number) => {
     const svg = svgRef.current
     if (!svg) return { x: 0, y: 0 }
     const rect = svg.getBoundingClientRect()
-    const s = Math.max(rect.width / VB_W, rect.height / VB_H)
-    const ox = (rect.width - VB_W * s) / 2
-    const oy = (rect.height - VB_H * s) / 2
+    const s = Math.max(rect.width / VIEWBOX_WIDTH, rect.height / VIEWBOX_HEIGHT)
+    const ox = (rect.width - VIEWBOX_WIDTH * s) / 2
+    const oy = (rect.height - VIEWBOX_HEIGHT * s) / 2
     return { x: (clientX - rect.left - ox) / s, y: (clientY - rect.top - oy) / s }
   }, [])
 
@@ -524,17 +262,17 @@ export default function IntroScreen() {
     const svg = svgRef.current
     if (!svg) return { x: 0, y: 0 }
     const rect = svg.getBoundingClientRect()
-    const s = Math.max(rect.width / VB_W, rect.height / VB_H)
-    const ox = (rect.width - VB_W * s) / 2
-    const oy = (rect.height - VB_H * s) / 2
+    const s = Math.max(rect.width / VIEWBOX_WIDTH, rect.height / VIEWBOX_HEIGHT)
+    const ox = (rect.width - VIEWBOX_WIDTH * s) / 2
+    const oy = (rect.height - VIEWBOX_HEIGHT * s) / 2
     return { x: rect.left + ox + vx * s, y: rect.top + oy + vy * s }
   }, [])
 
   // ---- 计算鼠标相对眼睛的方向 ----
   const getDirection = useCallback((clientX: number, clientY: number): string => {
     const c = displayCharRef.current
-    const eyeVbCx = c.x + EYE_X * c.scale + (EYE_W * c.scale) / 2
-    const eyeVbCy = c.y + EYE_Y * c.scale + (EYE_H * c.scale) / 2
+    const eyeVbCx = c.x + EYE_X * c.scale + (EYE_WIDTH * c.scale) / 2
+    const eyeVbCy = c.y + EYE_Y * c.scale + (EYE_HEIGHT * c.scale) / 2
     const eyeScreen = viewBoxToClient(eyeVbCx, eyeVbCy)
     const dx = clientX - eyeScreen.x
     const dy = clientY - eyeScreen.y
@@ -678,165 +416,48 @@ export default function IntroScreen() {
 
   return (
     <div className="intro-screen">
-      <svg
-        ref={svgRef}
-        viewBox={`0 0 ${VB_W} ${VB_H}`}
-        preserveAspectRatio="xMidYMid slice"
-        xmlns="http://www.w3.org/2000/svg"
-        className="intro-svg"
-      >
-        {/* 细微噪点 + 扫描线 */}
-        <defs>
-          <filter id="noise-subtle">
-            <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" stitchTiles="stitch" />
-            <feColorMatrix type="saturate" values="0" />
-          </filter>
-          <pattern id="scan-subtle" width="2" height="5" patternUnits="userSpaceOnUse">
-            <rect width="2" height="1" fill="rgba(0,0,0,0.02)" />
-          </pattern>
-        </defs>
+      <DesktopScene
+        svgRef={svgRef}
+        characterRef={charGroupRef}
+        character={displayChar}
+        characterMode={openFolder ?? 'desktop'}
+        eyeSrc={eyeSrc}
+        folderPositions={folderPos}
+        openFolder={openFolder}
+        dragging={dragging}
+        layoutTransitioning={layoutTransitioning}
+        isReturning={isReturning}
+        onCharacterDragStart={handleDragStart}
+        onFolderDragStart={startFolderDrag}
+        onOpenFolder={openFolderWindow}
+      />
 
-        {/* ① 背景图 bg1（最底层，铺满画布） */}
-        <image href="/intro/bg1.png" x="0" y="0" width={BG_W} height={BG_H} />
-
-        {/* ② 前景图 bg2（打开文件夹后淡出） */}
-        <image
-          href="/intro/bg2.png"
-          x="0" y="0" width={BG_W} height={BG_H}
-          style={{ opacity: openFolder ? 0 : 1, transition: 'opacity 0.6s ease' }}
-        />
-
-        <rect x="0" y="0" width={VB_W} height={VB_H} filter="url(#noise-subtle)" opacity="0.04" style={{ mixBlendMode: 'multiply' as const }} />
-        <rect x="0" y="0" width={VB_W} height={VB_H} fill="url(#scan-subtle)" />
-
-        {/* ③ 人物 + 眼睛（可拖动 / 滚轮缩放 / 眼睛跟随；打开文件夹后收缩到左下） */}
-        <g
-          ref={charGroupRef}
-          style={{
-            transform: `translate(${displayChar.x}px, ${displayChar.y}px) scale(${displayChar.scale})`,
-            transformOrigin: '0 0',
-            opacity: openFolder && displayChar.scale === 0 ? 0 : 1,
-            transition: layoutTransitioning
-              ? 'opacity 0.18s ease-out'
-              : isReturning
-                ? 'transform 1.2s cubic-bezier(0.16, 1, 0.3, 1)'
-              : dragging
-                ? 'none'
-                : 'transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)',
-            cursor: openFolder ? 'default' : 'grab',
-          }}
-          onMouseDown={(e) => { if (openFolder) return; e.stopPropagation(); e.preventDefault(); handleDragStart(e.clientX, e.clientY) }}
-          onTouchStart={(e) => { if (openFolder) return; e.stopPropagation(); if (e.touches.length >= 2) return; const t = e.touches[0]; handleDragStart(t.clientX, t.clientY) }}
+      {openFolder && (
+        <PortfolioWindow
+          title={windowTitle}
+          section={openFolder}
+          geometry={popGeom}
+          onClose={closeFolderWindow}
+          onBack={openItem ? () => setOpenItem(null) : undefined}
         >
-          <image href="/intro/onlygirl.png" x="0" y="0" width={CHAR_IMG_W} height={CHAR_IMG_H} />
-          <image href={eyeSrc} x={EYE_X} y={EYE_Y} width={EYE_W} height={EYE_H} />
-        </g>
-
-        {/* ④ 文件夹（可拖动 / 双击打开） */}
-        {FOLDERS.map(f => (
-          <g
-            key={f.key}
-            transform={`translate(${folderPos[f.key].x}, ${folderPos[f.key].y})`}
-            style={{
-              opacity: openFolder ? 0 : 1,
-              transition: 'opacity 0.4s ease',
-              pointerEvents: openFolder ? 'none' : 'auto',
-              cursor: 'grab',
-            }}
-            onMouseDown={(e) => { e.stopPropagation(); e.preventDefault(); startFolderDrag(f.key, e.clientX, e.clientY) }}
-            onDoubleClick={() => openFolderWindow(f.key)}
-          >
-            <image href={f.icon} x={-FOLDER_SIZE / 2} y={-FOLDER_SIZE / 2} width={FOLDER_SIZE} height={FOLDER_SIZE} />
-            <text x="0" y={FOLDER_SIZE / 2 + 44} className="folder-label">{f.label}</text>
-          </g>
-        ))}
-      </svg>
-
-      {/* 弹窗 popwindow（浏览器式窗口） */}
-      {openFolder && activeFolder && (
-        <div className="popwindow" style={{ width: `${popGeom.w}px`, height: `${popGeom.h}px`, left: `${popGeom.x}px`, top: `${popGeom.y}px` }}>
-          <div className="popwindow__titlebar" style={{ height: `${DEFAULT_POP.titlebarH}px` }}>
-            <span className="popwindow__dots"><span /><span /><span /></span>
-            <span className="popwindow__title">{activeItem ? `${activeFolder.title}\\${activeItem.title}` : activeFolder.title}</span>
-            <button className="popwindow__close" onClick={closeFolderWindow} aria-label="关闭">✕</button>
-          </div>
-          <div className="popwindow__content">
-            {activeItem ? (
-              activeStory ? (
-                <>
-                  <button className="popwindow__back" onClick={() => setOpenItem(null)}>← 返回</button>
-                  <StoryDetail story={activeStory} />
-                </>
-              ) : (
-                <>
-                  <button className="popwindow__back" onClick={() => setOpenItem(null)}>← 返回</button>
-                  {activeItem.metrics && (
-                    <div className="popwindow__metrics">
-                      {activeItem.metrics.map((m, i) => (
-                        <div key={i} className="popwindow__metric">
-                          <span className="popwindow__metric-value">{m.value}</span>
-                          <span className="popwindow__metric-label">{m.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  {activeItem.blocks?.map((b, i) => {
-                    if (b.type === 'heading') return <h3 key={i} className="popwindow__h">{b.text}</h3>
-                    if (b.type === 'list') return <ul key={i} className="popwindow__list">{b.items.map((it, j) => <li key={j}>{it}</li>)}</ul>
-                    return <p key={i} className="popwindow__p">{b.text}</p>
-                  })}
-                </>
-              )
-            ) : (
-              openFolder === 'aboutme' ? (
-                <AboutMe />
-              ) : activeFolder.items.some(it => it.storyId) ? (
-                <div className="work-grid">
-                  {activeFolder.items.map(it => {
-                    const story = it.storyId ? WORK_STORIES.find(s => s.id === it.storyId) : null
-                    if (!story) return null
-                    return (
-                      <button key={it.id} className="work-card" onClick={() => setOpenItem(it.id)}>
-                        <div className="work-card-cover" style={{ backgroundColor: story.coverBg }}>
-                          <img src={story.cover} alt={it.title} loading="lazy" />
-                        </div>
-                        <div className="work-card-body">
-                          <span className="work-card-kicker">{story.cardKicker}</span>
-                          <h3 className="work-card-title">{it.title}</h3>
-                          <p className="work-card-desc">{it.subtitle}</p>
-                          {it.metrics && it.metrics.length > 0 && (
-                            <div className="work-card-tags">
-                              {it.metrics.map((m, i) => (
-                                <span key={i} className="work-card-tag">
-                                  <em>{m.value}</em> {m.label}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                          <span className="work-card-link">View project →</span>
-                        </div>
-                      </button>
-                    )
-                  })}
-                </div>
-              ) : (
-                <div className={openFolder === 'research' ? 'research-grid' : 'popwindow__listview'}>
-                  {activeFolder.items.map(it => (
-                    <button key={it.id} className={openFolder === 'research' ? 'research-card' : 'popwindow__listitem'} onClick={() => setOpenItem(it.id)}>
-                      {it.eyebrow && <span className="research-card__eyebrow">{it.eyebrow}</span>}
-                      <span className="popwindow__listitem-title">{it.title}</span>
-                      <span className="popwindow__listitem-sub">{it.subtitle}</span>
-                      {it.tags && <span className="research-card__tags">{it.tags.join(' · ')}</span>}
-                      {it.metrics && it.metrics[0] && (
-                        <span className="popwindow__listitem-metric">{it.metrics[0].value} <em>{it.metrics[0].label}</em></span>
-                      )}
-                    </button>
-                  ))}
-                </div>
-              )
-            )}
-          </div>
-        </div>
+          {activeWorkStory ? (
+            <CaseStudyShell kind="work"><WorkStoryDetail story={activeWorkStory} /></CaseStudyShell>
+          ) : activeResearchStory ? (
+            <CaseStudyShell kind="research" layout={['healthcare-alerting', 'lawmate'].includes(activeResearchStory.id) ? 'editorial' : 'standard'}>
+              <ResearchDetail story={activeResearchStory} />
+            </CaseStudyShell>
+          ) : openFolder === 'aboutme' ? (
+            <AboutMe />
+          ) : openFolder === 'work' ? (
+            <div className="work-grid">
+              {WORK_STORIES.map(story => <WorkCard key={story.id} story={story} onOpen={() => setOpenItem(story.id)} />)}
+            </div>
+          ) : (
+            <div className="research-grid">
+              {RESEARCH_STORIES.map(story => <ResearchCard key={story.id} story={story} onOpen={() => setOpenItem(story.id)} />)}
+            </div>
+          )}
+        </PortfolioWindow>
       )}
 
     </div>

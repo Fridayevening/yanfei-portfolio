@@ -2,6 +2,7 @@
 
 ## 现在
 
+- [x] 按 [`visual-redesign-plan.md`](../decisions/visual-redesign-plan.md) 完成 Phase 1–7 视觉统一、性能优化、人物 overlay 原型与发布清理。
 - [x] 明确产品受众、转化目标与语言策略，填写 `PROJECT.md`。
 - [ ] 收集 About Me 的中英文简介、邮箱、LinkedIn 与中英文简历文件。
 - [ ] 在桌面与手机尺寸下人工检查 Work、Research 和弹窗滚动。

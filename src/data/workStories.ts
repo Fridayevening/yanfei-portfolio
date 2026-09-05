@@ -34,6 +34,9 @@ export type WorkSection =
 
 export interface WorkStory {
   id: string
+  cardTitle: string
+  cardSubtitle: string
+  cardMetrics: WorkMetric[]
   cover: string
   coverBg: string
   cardKicker: string
@@ -50,6 +53,13 @@ export const WORK_STORIES: WorkStory[] = [
   // ============================================================
   {
     id: 'workspace-saas',
+    cardTitle: 'Uniubi · International Product Line',
+    cardSubtitle: 'Hardware + software, built from zero · 16 countries',
+    cardMetrics: [
+      { value: '850K+', label: 'employees' },
+      { value: '5,381', label: 'organizations' },
+      { value: '7,610', label: 'devices' },
+    ],
     cover: '/works/uniubi.png',
     coverBg: 'rgba(227, 232, 228, 0.75)',
     cardKicker: 'B2B SaaS · 0→1',
@@ -204,6 +214,13 @@ export const WORK_STORIES: WorkStory[] = [
   // ============================================================
   {
     id: 'uzhi-space',
+    cardTitle: 'U智空间 · China Market Platform',
+    cardSubtitle: 'Validated abroad, then brought it home',
+    cardMetrics: [
+      { value: '294K', label: 'MAU' },
+      { value: '2,409', label: 'enterprise clients' },
+      { value: '15', label: 'admin modules' },
+    ],
     cover: '/works/uzhi-space.png',
     coverBg: 'rgba(223, 227, 236, 0.75)',
     cardKicker: 'China Market · 0→1',
@@ -320,6 +337,12 @@ export const WORK_STORIES: WorkStory[] = [
   // ============================================================
   {
     id: 'ops-analytics',
+    cardTitle: 'Operations Analytics & Supply Chain',
+    cardSubtitle: 'The system nobody had on their roadmap',
+    cardMetrics: [
+      { value: '100%', label: 'catalogue managed' },
+      { value: '3', label: 'core dashboards' },
+    ],
     cover: '/works/ops-analytics.png',
     coverBg: 'rgba(236, 232, 223, 0.75)',
     cardKicker: 'Internal Tools · B2B',
@@ -419,6 +442,12 @@ export const WORK_STORIES: WorkStory[] = [
   // ============================================================
   {
     id: 'kreai',
+    cardTitle: 'KreAI · AI Creator Business Platform',
+    cardSubtitle: 'Six versions in six months — then the users ran out',
+    cardMetrics: [
+      { value: '25%', label: 'adoption improvement' },
+      { value: '6', label: 'versions in 6 months' },
+    ],
     cover: '/works/kreai.png',
     coverBg: 'rgba(232, 226, 235, 0.75)',
     cardKicker: 'AI Startup · 0→1',

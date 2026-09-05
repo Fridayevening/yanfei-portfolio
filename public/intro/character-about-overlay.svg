@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 1696">
+  <g stroke="#1c1e18" stroke-width="18" stroke-linejoin="round">
+    <path fill="#f7f3dc" d="M1768 302q0-184 254-184t254 184q0 172-220 184l-126 112 28-122q-190-34-190-174z"/>
+    <path fill="none" stroke="#f04f4b" stroke-width="24" d="M1870 286q72-88 142 0 72-88 146 0" stroke-linecap="round"/>
+  </g>
+  <text x="2022" y="398" text-anchor="middle" fill="#1c1e18" font-family="Helvetica Neue, sans-serif" font-size="112" font-weight="700">HI!</text>
+  <g fill="#ee9fa7">
+    <path d="M1644 360h22v110h-22z"/><path d="M1600 404h110v22h-110z"/>
+    <circle cx="1704" cy="520" r="18"/>
+  </g>
+  <g fill="#98d8d0">
+    <path d="M2300 552h18v90h-18z"/><path d="M2264 588h90v18h-90z"/>
+  </g>
+</svg>
