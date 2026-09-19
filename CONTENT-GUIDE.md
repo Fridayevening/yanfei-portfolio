@@ -70,6 +70,29 @@ npm run check:content
 - 优先压缩后的 WebP/JPEG；删除敏感客户信息与未授权素材。
 - 待核查：`public/works/` 四张封面的授权情况。
 
+### ⚠️ 在 JS 里引用 `public/` 资源必须用 `asset()`
+
+本站部署在 GitHub Pages 的**子路径** `/yanfei-portfolio/` 下。**根绝对路径会解析到域名根并 404：**
+
+```text
+404  /intro/onlygirl.webp                       ← 写死 / 开头的路径
+200  /yanfei-portfolio/intro/onlygirl.webp      ← 正确
+```
+
+- `index.html` 和 CSS 里的路径由 Vite 在构建时自动加前缀，**不用管**。
+- **JS/JSX 里运行时拼接的路径，必须用 `asset()` 包一层：**
+
+```tsx
+import { asset } from '../../lib/asset'
+
+<img src={asset('/research/healthcare/page-19-19.jpg')} alt="…" />
+```
+
+约定：**数据文件里继续写原始路径**（`/research/...`），**在渲染处套 `asset()`**。
+`asset()` 会把 `import.meta.env.BASE_URL` 加在前面，dev 下是 `/`、构建时是 `/yanfei-portfolio/`，所以两边都对。
+
+2026-09-19 就是因为漏了这一层，导致 mascot 破图、27 张 Research 图 404、外框被顶出视口。
+
 ## About
 
 `src/components/about/AboutMe.tsx` 直接维护个人定位、简介、经历、能力、教育背景与联系链接。
