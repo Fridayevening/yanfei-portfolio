@@ -53,6 +53,16 @@ sibling directory. Point elsewhere with `NEWBOY_CONTENT=/path/to/source.ts`.
 Because routing is hash-based, no server rewrite or SPA fallback is required — the build can be served
 from any static host, including a subdirectory (`vite.config.ts` sets `base: './'`).
 
+## Deploy
+
+Pushing to `main` deploys automatically to GitHub Pages via
+[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
+
+**https://fridayevening.github.io/yanfei-portfolio/**
+
+The workflow runs `npm ci` and `npm run build`, then publishes `dist/`. Nothing else is required —
+no rewrite rules, no environment variables.
+
 ## Structure
 
 ```text
