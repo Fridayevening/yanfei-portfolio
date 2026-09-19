@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import { asset } from '../../lib/asset'
+
 const NEWBOY_URL = 'https://newboy-portfolio.vercel.app/'
 
 /** The NewBoy desktop needs a wide viewport to be usable, so the live iframe is
@@ -35,7 +37,7 @@ export function PlaygroundApp({ active }: { active: boolean }) {
       ) : active ? (
         <div className="os-playground__fallback">
           <img
-            src="/desktop/newboy-preview.webp"
+            src={asset('/desktop/newboy-preview.webp')}
             alt="Preview of the NewBoy Windows 95-style interactive desktop"
             width={1280}
             height={800}

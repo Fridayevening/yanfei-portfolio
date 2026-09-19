@@ -1,4 +1,5 @@
 import type { WorkStory } from '../../data/workStories'
+import { asset } from '../../lib/asset'
 
 interface WorkCardProps {
   story: WorkStory
@@ -9,7 +10,7 @@ export function WorkCard({ story, onOpen }: WorkCardProps) {
   return (
     <button type="button" className="work-card" onClick={onOpen}>
       <div className="work-card-cover" style={{ backgroundColor: story.coverBg }}>
-        <img src={story.cover} alt={story.title} loading="lazy" />
+        <img src={asset(story.cover)} alt={story.title} loading="lazy" />
       </div>
       <div className="work-card-body">
         <h3 className="work-card-title">{story.title}</h3>

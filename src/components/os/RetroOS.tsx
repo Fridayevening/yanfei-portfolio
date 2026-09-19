@@ -5,6 +5,7 @@ import { ResearchApp } from '../research/ResearchApp'
 import { WorkApp } from '../work/WorkApp'
 import { RESEARCH_STORIES } from '../../data/researchStories'
 import { WORK_STORIES } from '../../data/workStories'
+import { asset } from '../../lib/asset'
 import { workRowIndex } from '../../data/osChapters'
 import { researchRowIndex } from '../../data/osResearch'
 import { Dock } from './Dock'
@@ -130,7 +131,7 @@ export function RetroOS() {
         <div className="os-mascot">
           <img
             className="os-mascot__img"
-            src="/intro/onlygirl.webp"
+            src={asset('/intro/onlygirl.webp')}
             alt="Illustrated portrait of Yanfei Wang"
           />
           <span className="os-mascot__tag">Yanfei Wang</span>

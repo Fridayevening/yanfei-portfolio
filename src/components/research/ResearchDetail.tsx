@@ -1,4 +1,5 @@
 import type { ResearchEvidenceGroup, ResearchSection, ResearchStory } from '../../data/researchStories'
+import { asset } from '../../lib/asset'
 import { renderInline } from '../shared/inlineText'
 
 function HeroVisual({ id }: { id: string }) {
@@ -23,7 +24,7 @@ function HeroVisual({ id }: { id: string }) {
 
   return (
     <div className="hc-hero__visual">
-      <img src="/research/healthcare/page-36-36.jpg" alt="Mobile alert tracking prototype" />
+      <img src={asset('/research/healthcare/page-36-36.jpg')} alt="Mobile alert tracking prototype" />
     </div>
   )
 }
@@ -55,7 +56,7 @@ function ResearchSectionView({
         <div className="hc-evidence-grid hc-evidence-grid--process" key={group.afterHeading}>
           {group.items.map(item => (
             <figure className="hc-evidence-card" key={item.src}>
-              <img loading="lazy" src={item.src} alt={item.caption} />
+              <img loading="lazy" src={asset(item.src)} alt={item.caption} />
               <figcaption>{item.caption}</figcaption>
             </figure>
           ))}
