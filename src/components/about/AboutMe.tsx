@@ -6,10 +6,10 @@ export function AboutMe() {
       <p className="about-me__location">Dublin, Ireland</p>
       <p className="about-me__intro">
         I build products at the point where complex technology has to become clear, useful, and commercially viable.
-        Over 7+ years in product, I have taken enterprise platforms and AI products from early discovery through
-        roadmap, delivery, launch, and iteration. My experience spans a B2B SaaS platform serving 2,409 enterprise
-        clients and 294K monthly active users across 16 countries, and a 0-to-1 AI agent product that shipped six
-        versions in six months.
+        With 5+ years in product, I have taken enterprise platforms and AI products from early discovery through
+        roadmap, delivery, launch, and iteration. My experience spans the Uspace connected-enterprise portfolio,
+        serving 2,409 organisations and 29K monthly active users across 16 countries, and a 0-to-1 AI product that
+        shipped six versions in six months.
       </p>
 
       <p className="about-me__intro about-me__intro--secondary">
@@ -28,12 +28,12 @@ export function AboutMe() {
               <h4>AI Product Lead</h4>
               <p>KreAI · AI-powered creator business platform</p>
             </div>
-            <time>Jun 2025-Feb 2026</time>
+            <time>Jul 2025-Feb 2026</time>
           </div>
           <ul>
-            <li>Owned product strategy, roadmap, PRDs, backlog, sprint delivery, and launch as the sole Product Lead; shipped <strong>6 product versions in 6 months</strong> with a 10-person cross-functional team.</li>
-            <li>Designed a five-stage AI agent workflow, automating low-risk stages while retaining human approval for pricing and contracts.</li>
-            <li>Established an AI evaluation framework using golden-set benchmarking, hallucination monitoring, LLM-as-judge, and human review.</li>
+            <li>Owned product strategy, roadmap, PRDs, backlog, sprint delivery, and launch as the sole Product Lead; shipped <strong>6 product versions in 6 months</strong> with a 7-person cross-functional team.</li>
+            <li>Designed a five-stage AI-assisted workflow, automating low-risk stages while keeping human confirmation for pricing and contracts.</li>
+            <li>Designed the full product behind the workflow — email intelligence, real-time updates, auto-generated media kits, a brand opportunity database, and a Stripe-powered subscription system.</li>
             <li>Researched when creators trusted or overrode AI output, then used the findings to define automation boundaries and review flows.</li>
             <li>Analysed five competing platforms and identified negotiation automation as the product's core differentiation.</li>
           </ul>
@@ -48,11 +48,11 @@ export function AboutMe() {
             <time>Apr 2018-Aug 2023</time>
           </div>
           <ul>
-            <li>Owned strategy and end-to-end delivery for a six-module B2B SaaS platform serving <strong>2,409 enterprise clients</strong>, <strong>294K MAU</strong>, and customers across <strong>16 countries</strong>.</li>
+            <li>Owned product strategy and end-to-end delivery across the Uspace platform portfolio, serving <strong>2,409 enterprise organisations</strong>, <strong>29K monthly active users</strong>, and customers across <strong>16 countries</strong>.</li>
             <li>Led four product lines from 0 to 1 across desktop, cloud SaaS, and mobile.</li>
             <li>Redesigned pricing around devices, users, and modules, contributing to <strong>15% year-on-year revenue growth</strong>.</li>
-            <li>Led field research and redesigned attendance workflows, improving check-in completion by <strong>18%</strong> and admin efficiency by <strong>40%</strong>.</li>
-            <li>Designed GDPR-aligned biometric-data architecture and a reusable compliance framework for European expansion.</li>
+            <li>Led field research and redesigned attendance workflows across offices, factories and schools, improving daily check-in completion by <strong>18%</strong>.</li>
+            <li>Worked with the team to replace raw facial-image storage with feature-value processing and documented a reusable compliance template for European expansion.</li>
             <li>Aligned six stakeholder groups to deliver a government smart-campus programme on schedule.</li>
           </ul>
         </article>

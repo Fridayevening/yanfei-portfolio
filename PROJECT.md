@@ -2,7 +2,7 @@
 
 ## 产品定位
 
-这是 Yanfei 的交互式个人作品集，主要面向招聘人员与潜在合作伙伴。首页以可探索的“桌面”呈现，访客可通过 Work、Research 和 About Me 三个文件夹了解经历、项目方法与研究能力，并能直接联系 Yanfei、发起招聘或合作沟通。
+这是 Yanfei 的交互式个人作品集，主要面向招聘人员与潜在合作伙伴。整站以复古操作系统外壳呈现——顶部标签栏、底部 dock，内容在固定框架内滚动。访客可通过 About_me、Work、Research 与 Playground 四个应用了解经历、项目方法与研究能力，并能直接联系 Yanfei、发起招聘或合作沟通。
 
 ## 目标访客与转化
 
@@ -13,19 +13,22 @@
 ## 当前信息架构
 
 ```text
-Desktop
-├── Work      四个项目案例与完整叙事
-├── Research  两篇研究文本
-└── About Me  待补充
+Retro OS
+├── About_me    个人简介、经历、联系方式
+├── Work        Chapter 01（Uniubi 时期 3 个案例）+ Chapter 02（KreAI 1 个案例）
+├── Research    2 个案例
+└── Playground  iframe 嵌入 NewBoy 线上版
 ```
 
-About Me 将包含中英文简介、邮箱、LinkedIn 和简历下载入口。
+Work 与 Research 的文案与 NewBoy 逐字一致，由 `npm run check:content` 校验。
+
+About Me 提供个人定位、经历、能力与教育背景，以及邮箱和 LinkedIn；简历下载入口待补。
 
 ## 语言策略
 
-- 默认语言：英文。
-- 提供中文切换。
-- 每次新增或修改公开内容时，应同步准备中英文文案，避免出现半完成的语言版本。
+- 当前实现：**只做英文**。Work / Research 也只迁移了英文部分。
+- 若将来恢复双语：NewBoy 的 `portfolioContent.ts` 本身就是双语的（`{ en, zh }`），中文稿已存在，不必重写；
+  需要新做的是界面语言切换机制。
 
 ## 体验原则
 

@@ -241,7 +241,7 @@ export default function IntroScreen() {
   const activeResearchStory = openFolder === 'research' && openItem
     ? RESEARCH_STORIES.find(story => story.id === openItem)
     : undefined
-  const activeItemTitle = activeWorkStory?.cardTitle ?? activeResearchStory?.title
+  const activeItemTitle = activeWorkStory?.title ?? activeResearchStory?.title
   const windowTitle = openFolder
     ? `${FOLDER_TITLES[openFolder]}${activeItemTitle ? `\\${activeItemTitle}` : ''}`
     : ''

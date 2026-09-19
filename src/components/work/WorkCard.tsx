@@ -9,15 +9,14 @@ export function WorkCard({ story, onOpen }: WorkCardProps) {
   return (
     <button type="button" className="work-card" onClick={onOpen}>
       <div className="work-card-cover" style={{ backgroundColor: story.coverBg }}>
-        <img src={story.cover} alt={story.cardTitle} loading="lazy" />
+        <img src={story.cover} alt={story.title} loading="lazy" />
       </div>
       <div className="work-card-body">
-        <span className="work-card-kicker">{story.cardKicker}</span>
-        <h3 className="work-card-title">{story.cardTitle}</h3>
-        <p className="work-card-desc">{story.cardSubtitle}</p>
-        {story.cardMetrics.length > 0 && (
+        <h3 className="work-card-title">{story.title}</h3>
+        <p className="work-card-desc">{story.subtitle}</p>
+        {story.metrics && story.metrics.length > 0 && (
           <div className="work-card-tags">
-            {story.cardMetrics.map(metric => (
+            {story.metrics.map(metric => (
               <span key={`${metric.value}-${metric.label}`} className="work-card-tag">
                 <em>{metric.value}</em> {metric.label}
               </span>

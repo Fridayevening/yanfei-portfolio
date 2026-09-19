@@ -328,6 +328,59 @@
   font-size: var(--type-label);
 }
 
+.hc-list {
+  max-width: 72ch;
+  margin: var(--space-4) 0 0;
+  padding-left: 18px;
+  list-style: none;
+}
+
+.hc-list li {
+  position: relative;
+  margin-bottom: var(--space-2);
+  color: var(--color-ink-soft);
+  font-size: var(--type-body);
+  line-height: 1.7;
+}
+
+.hc-list li::before {
+  content: '—';
+  position: absolute;
+  left: -18px;
+  color: var(--color-line-strong);
+}
+
+.hc-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.hc-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-line);
+  background: var(--color-paper-soft);
+}
+
+.hc-metric strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--color-ink);
+}
+
+.hc-metric span {
+  font: 700 10.5px/1.5 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
 .hc-evidence-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

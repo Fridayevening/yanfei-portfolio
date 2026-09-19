@@ -47,8 +47,8 @@ html,
 body,
 #root {
   min-height: 100%;
-  background: var(--color-ink);
-  color: var(--ink);
+  background: #fff;
+  color: var(--color-ink);
 }
 
 body {
@@ -778,6 +778,27 @@ body {
 
 .ws-p strong {
   color: #1c1e18;
+}
+
+.ws-list {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  list-style: none;
+}
+
+.ws-list li {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(28, 30, 24, 0.85);
+  margin-bottom: 6px;
+}
+
+.ws-list li::before {
+  content: '—';
+  position: absolute;
+  left: -18px;
+  color: rgba(28, 30, 24, 0.45);
 }
 
 .ws-section-desc {

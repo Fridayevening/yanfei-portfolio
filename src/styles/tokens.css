@@ -1,23 +1,29 @@
 :root {
-  /* Visual System v1 — Paper / Ink / Signal / Field Blue / Glitch Note */
-  --color-canvas: #ece4d5;
-  --color-paper: #f7f3dc;
-  --color-paper-soft: #efe8d6;
-  --color-ink: #1c1e18;
-  --color-ink-soft: #55584f;
-  --color-line: rgba(28, 30, 24, 0.22);
-  --color-line-strong: rgba(28, 30, 24, 0.58);
-  --color-signal-red: #f04f4b;
-  --color-field-blue: #7e9bbc;
-  --color-note-cyan: #98d8d0;
-  --color-note-pink: #ee9fa7;
+  /* Visual System v2 — Retro OS
+     Paper screen / ink structure / one signal red / millennial pink for window
+     title bars. Flat fills, hard shadows, no gradients, square corners. */
+  --color-canvas: #e5e1d8;
+  --color-shell: #d1d1d1;
+  --color-paper: #f8f7f4;
+  --color-paper-soft: #efece4;
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #6b6b66;
+  --color-line: rgba(26, 26, 26, 0.18);
+  --color-line-strong: rgba(26, 26, 26, 0.62);
+  --color-signal-red: #e34a3d;
+  /* Deeper red for small text only, so it still passes AA against paper. */
+  --color-signal-red-ink: #c93a2c;
+  --color-note-pink: #e8b4e8;
+  --color-field-blue: #7d9bbf;
+  --color-note-cyan: #8fcfc6;
   --color-signal-yellow: #e9b949;
 
   --section-accent: var(--color-signal-red);
-  --section-accent-soft: rgba(240, 79, 75, 0.13);
+  --section-accent-soft: rgba(227, 74, 61, 0.11);
 
   --font-display: 'Cormorant Upright', 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', serif;
   --font-interface: 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-mono: 'Courier New', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
   --type-display-xl: clamp(3rem, 5vw, 5rem);
   --type-display-lg: clamp(2.25rem, 4vw, 3.75rem);
@@ -31,38 +37,49 @@
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
+  --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
+  --space-10: 40px;
   --space-12: 48px;
   --space-16: 64px;
   --space-20: 80px;
   --space-24: 96px;
 
-  --radius-paper: 8px;
-  --radius-card: 4px;
-  --radius-control: 999px;
-  --shadow-paper: 0 18px 45px rgba(24, 24, 18, 0.18);
-  --shadow-note: 0 8px 20px rgba(24, 24, 18, 0.12);
+  /* No rounded corners — this is a machine, not a card. */
+  --radius-paper: 0;
+  --radius-card: 0;
+  --radius-control: 0;
+  /* Hard offset shadows instead of soft blur. */
+  --shadow-paper: 8px 8px 0 rgba(26, 26, 26, 0.14);
+  --shadow-note: 4px 4px 0 rgba(26, 26, 26, 0.18);
 
-  --motion-fast: 140ms;
-  --motion-ui: 240ms;
-  --motion-enter: 420ms;
+  --motion-fast: 90ms;
+  --motion-ui: 140ms;
+  --motion-enter: 200ms;
   --motion-character: 900ms;
   --ease-paper: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-ui: cubic-bezier(0.2, 0, 0, 1);
 }
 
+/* Per-section accents are retired in the OS shell (one signal colour only),
+   but the old desktop implementation still relies on them for rollback. */
 [data-section='work'] {
   --section-accent: var(--color-signal-red);
-  --section-accent-soft: rgba(240, 79, 75, 0.13);
+  --section-accent-soft: rgba(227, 74, 61, 0.11);
 }
 
 [data-section='research'] {
-  --section-accent: var(--color-field-blue);
-  --section-accent-soft: rgba(126, 155, 188, 0.18);
+  --section-accent: var(--color-signal-red);
+  --section-accent-soft: rgba(227, 74, 61, 0.11);
 }
 
 [data-section='aboutme'] {
-  --section-accent: var(--color-note-pink);
-  --section-accent-soft: rgba(238, 159, 167, 0.17);
+  --section-accent: var(--color-signal-red);
+  --section-accent-soft: rgba(227, 74, 61, 0.11);
+}
+
+[data-section='desktop'] {
+  --section-accent: var(--color-signal-red);
+  --section-accent-soft: rgba(227, 74, 61, 0.11);
 }
