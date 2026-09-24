@@ -40,11 +40,14 @@ export function ResearchApp({ activeDocId, openItemIds, onOpenItem, onCloseItem 
               <span className="os-row__desc">{story.subtitle}</span>
             </span>
             <span className="os-row__out">
-              {story.metrics?.map(metric => (
-                <span key={`${metric.value}-${metric.label}`}>
-                  <b>{metric.value}</b> {metric.label}
-                </span>
-              ))}
+              <span className="os-row__stats" aria-label="Study highlights">
+                {story.metrics?.map(metric => (
+                  <span className="os-row__stat" key={`${metric.value}-${metric.label}`}>
+                    <b>{metric.value}</b>
+                    <span>{metric.label}</span>
+                  </span>
+                ))}
+              </span>
               <span className="os-row__open">Open →</span>
             </span>
           </button>
