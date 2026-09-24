@@ -49,7 +49,7 @@ export function AboutMe() {
           </div>
           <ul>
             <li>Owned product strategy and end-to-end delivery across the Uspace platform portfolio, serving <strong>2,409 enterprise organisations</strong>, <strong>29K monthly active users</strong>, and customers across <strong>16 countries</strong>.</li>
-            <li>Led four product lines from 0 to 1 across desktop, cloud SaaS, and mobile.</li>
+            <li>Led product work across four product lines spanning offline desktop, cloud SaaS, and mobile.</li>
             <li>Redesigned pricing around devices, users, and modules, contributing to <strong>15% year-on-year revenue growth</strong>.</li>
             <li>Led field research and redesigned attendance workflows across offices, factories and schools, improving daily check-in completion by <strong>18%</strong>.</li>
             <li>Worked with the team to replace raw facial-image storage with feature-value processing and documented a reusable compliance template for European expansion.</li>
