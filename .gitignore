@@ -7,3 +7,6 @@ dist/
 
 # Original high-res assets kept locally, not part of the build
 source-assets/
+
+# Obsidian vault 配置：软件自动生成，每次开合都变，不是内容。
+.obsidian/
