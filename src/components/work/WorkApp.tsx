@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { WORK_STORIES, type WorkStory } from '../../data/workStories'
 import { WORK_CHAPTERS, workPath } from '../../data/osChapters'
 import { renderInline } from '../shared/inlineText'
-import { WorkStorySections } from './WorkStoryDetail'
+import { WorkStoryLinks, WorkStoryMedia, WorkStorySections } from './WorkStoryDetail'
 
 interface WorkAppProps {
   activeDocId: string
@@ -120,6 +120,9 @@ function WorkDoc({ story, active, onClose }: WorkDocProps) {
             ))}
           </div>
         )}
+
+        <WorkStoryLinks story={story} />
+        <WorkStoryMedia story={story} />
 
         <div className="os-long">
           <div className="os-long__label">The long version</div>

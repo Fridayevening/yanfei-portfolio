@@ -142,6 +142,37 @@ function compareSections(label, siteSections, newboySections) {
   }
 }
 
+function compareLinks(label, siteLinks, newboyLinks) {
+  const site = siteLinks ?? []
+  const newboy = newboyLinks ?? []
+
+  if (site.length !== newboy.length) {
+    differences.push({ label: `${label} — link count`, site: `${site.length}`, newboy: `${newboy.length}` })
+    return
+  }
+
+  site.forEach((link, index) => {
+    compare(`${label} — link[${index}].label`, link.label, newboy[index].label.en)
+    compare(`${label} — link[${index}].url`, link.url, newboy[index].url)
+  })
+}
+
+function compareMedia(label, siteMedia, newboyMedia) {
+  const site = siteMedia ?? []
+  const newboy = newboyMedia ?? []
+
+  if (site.length !== newboy.length) {
+    differences.push({ label: `${label} — media count`, site: `${site.length}`, newboy: `${newboy.length}` })
+    return
+  }
+
+  site.forEach((media, index) => {
+    compare(`${label} — media[${index}].id`, media.id, newboy[index].id)
+    compare(`${label} — media[${index}].alt`, media.alt, newboy[index].alt.en)
+    compare(`${label} — media[${index}].caption`, media.caption, newboy[index].caption?.en)
+  })
+}
+
 function compareEntries(siteEntries, newboyEntries, idMap, kind) {
   for (const [siteId, newboyId] of Object.entries(idMap)) {
     const siteEntry = siteEntries.find(entry => entry.id === siteId)
@@ -161,6 +192,8 @@ function compareEntries(siteEntries, newboyEntries, idMap, kind) {
     compare(`${label}.subtitle`, siteEntry.subtitle, newboyEntry.subtitle.en)
     compareMetrics(label, siteEntry.metrics, newboyEntry.metrics)
     compareSections(label, siteEntry.sections, newboyEntry.sections)
+    compareLinks(label, siteEntry.links, newboyEntry.links)
+    compareMedia(label, siteEntry.media, newboyEntry.media)
     compare(`${label}.prototypeUrl`, siteEntry.prototypeUrl, newboyEntry.prototypeUrl)
   }
 }

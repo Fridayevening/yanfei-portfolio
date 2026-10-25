@@ -20,12 +20,25 @@ export interface WorkSection {
   items?: string[]
 }
 
+export interface WorkLink {
+  label: string
+  url: string
+}
+
+export interface WorkMedia {
+  id: string
+  alt: string
+  caption?: string
+}
+
 export interface WorkStory {
   id: string
   title: string
   subtitle: string
   metrics?: WorkMetric[]
   sections: WorkSection[]
+  links?: WorkLink[]
+  media?: WorkMedia[]
   /** Site-only presentation assets. Not part of the NewBoy content. */
   cover: string
   coverBg: string
@@ -168,47 +181,81 @@ export const WORK_STORIES: WorkStory[] = [
   // ============================================================
   {
     id: 'ops-analytics',
-    title: 'Operations analytics and supply-chain visibility',
+    title: 'Supply Chain Visibility & Supplier Performance',
     subtitle:
-      'Connecting hardware delivery, quality and product-use signals into a shared decision system.',
-    cover: '/works/ops-analytics.png',
+      'Connecting supplier delivery, two-stage quality loss, usable inventory and finished-product material constraints.',
+    metrics: [
+      { value: '8', label: 'relational tables' },
+      { value: '56', label: 'closed PO lines · synthetic population' },
+      { value: '94.2%', label: 'estimated usable yield' },
+      { value: '4/8', label: 'component SKUs below known demand' },
+    ],
+    links: [
+      {
+        label: 'View live Tableau dashboard ↗',
+        url: 'https://public.tableau.com/views/SupplyChainVisibilitySupplierPerformance/1?:language=zh-CN&:showVizHome=no',
+      },
+    ],
+    media: [
+      {
+        id: 'supply-chain-dashboard',
+        alt: 'Published Tableau dashboard showing supply-chain KPIs, supplier risk, component shortages and finished-product constraints',
+        caption: 'Published V2 Tableau dashboard. All records and analytical results shown are synthetic.',
+      },
+    ],
+    cover: '/works/supply-chain-dashboard.png',
     coverBg: 'rgba(236, 232, 223, 0.75)',
     sections: [
       {
-        heading: 'Context: an operational blind spot',
+        heading: 'Project disclosure',
         paragraphs: [
-          'While managing software products at Uniubi, I repeatedly saw hardware catalogue, supplier, delivery and quality information distributed across systems and teams. The data existed, but there was no shared view for examining how delivery and quality risks affected customers.',
-          'This was outside my formal roadmap. I proposed the opportunity and drove the construction of an operations-visibility system alongside my core product responsibilities.',
+          'The business context comes from my previous supply-chain product work at Uniubi. I defined the original problem, analytical requirements and decision workflow, then worked with operational stakeholders and developers to deliver a custom internal system. The production system was implemented by the development team.',
+          'I later reconstructed the analytical problem as a personal SQL and Tableau project using a deterministic synthetic dataset. All public supplier names, SKUs, quantities, KPI results and risk findings are synthetic and are not Uniubi operating results.',
         ],
       },
       {
-        heading: 'What the system connected',
+        heading: 'Business question',
+        paragraphs: [
+          'Which suppliers create delivery or quality risk, how much received material remains usable after recorded quality losses, and which component constraints require action first?',
+        ],
+      },
+      {
+        heading: 'Tools',
         items: [
-          'SKU and product-catalogue data and supplier information.',
-          'Order and delivery-stage tracking to make progress and delay risk visible.',
-          'Component- and supplier-level defect-rate monitoring and material-shortage alerts.',
-          'Tableau management dashboards for shared operational review.',
-          'Analysis linking hardware fault or quality data with software usage and customer-support signals.',
+          'SQLite and SQL for relational modelling, validation and reproducible analysis.',
+          'Tableau Public for decision-focused visualisation and public delivery.',
+          'Excel as the verified Tableau source package.',
         ],
       },
       {
-        heading: 'Decision: connect signals, not another isolated dashboard',
+        heading: 'Data model and quality',
         paragraphs: [
-          'A catalogue view alone could not explain delivery risk, and a defect dashboard alone could not show whether hardware problems changed software behaviour or support demand. The system joined these signals so teams could investigate relationships rather than isolated totals.',
-          'The system created a more coherent operational view, but it did not replace operational judgement or capture every process. Teams still needed to investigate the context behind shortages, defects and changes in support demand.',
+          'I modelled eight related tables covering suppliers, component SKUs, purchase orders, deliveries, two-stage quality records, inventory snapshots, finished products and BOM configurations. Before analysis, I tested keys, relationships, date logic and quantity rules, while retaining underfilled Closed PO lines as meaningful service exceptions rather than deleting them as errors.',
         ],
       },
       {
-        heading: 'How it changed the work',
+        heading: 'Analysis',
         paragraphs: [
-          'Product and operations teams gained a shared way to review delivery stages, shortage risks and quality trends. Supplier discussions could refer to observed patterns, while product teams could explore whether hardware issues were associated with software behaviour or support demand.',
+          'Using SQL, I defined KPI populations and exclusions, compared delivery reliability and fill rate, separated incoming and assembly-stage defects, estimated usable yield, adjusted Open PO supply using historical yield, and connected component availability to finished-product material constraints.',
         ],
       },
       {
-        heading: 'My role and reflection',
+        heading: 'Key findings',
         paragraphs: [
-          'I identified the recurring blind spot, made the case for the work and drove the system direction. The result depended on operational data and collaboration across the business; it was not the work of one person implementing every source and dashboard.',
-          'The project taught me to look for repeated decision failures caused by disconnected information, then test whether joining existing signals could improve the work before proposing another standalone tool.',
+          'Across 56 synthetic Closed PO lines, the on-time rate was 32.1% and the fill rate was 95.9%. Incoming and assembly-stage defect rates were 2.7% and 3.2%, producing an estimated usable yield of 94.2%.',
+          'BLUEPEAK was the first supplier-review priority because delivery risk coincided with the highest two-stage quality loss and the lowest usable yield. Four of eight component SKUs were below known demand, and two finished-product configurations had zero material-supported units at the snapshot date.',
+        ],
+      },
+      {
+        heading: 'Decision support',
+        paragraphs: [
+          'The analysis prioritises investigation rather than automating supplier decisions. It separates immediate component shortages from longer-term supplier improvement and makes clear where recovery depends on future inbound supply.',
+        ],
+      },
+      {
+        heading: 'Limitations',
+        paragraphs: [
+          'The results are synthetic. Incoming inspection is sampled, assembly defects are assumed to be traceable to a delivery batch, and risk-adjusted inbound is a scenario rather than a guaranteed receipt. Material-supported units exclude labour, machine capacity and production scheduling.',
         ],
       },
     ],

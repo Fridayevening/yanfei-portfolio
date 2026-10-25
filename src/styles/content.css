@@ -178,6 +178,53 @@
   transform: translateY(-1px);
 }
 
+.ws-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin: var(--space-5) 0;
+}
+
+.ws-link {
+  display: inline-block;
+  padding: 9px 12px;
+  border: 1px solid var(--color-ink);
+  background: var(--color-paper);
+  box-shadow: 3px 3px 0 var(--color-ink);
+  color: var(--color-ink);
+  font: 700 var(--type-label)/1.3 var(--font-interface);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ws-link:hover,
+.ws-link:focus-visible {
+  background: var(--color-note-pink);
+}
+
+.ws-media {
+  margin: var(--space-5) 0 var(--space-7);
+}
+
+.ws-media__figure {
+  margin: 0;
+  padding: var(--space-2);
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-paper);
+}
+
+.ws-media__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ws-media__figure figcaption {
+  margin-top: var(--space-2);
+  color: var(--color-ink-soft);
+  font: 400 var(--type-label)/1.45 var(--font-interface);
+}
+
 /* About Me uses the same paper, type and metric grammar. */
 .about-me {
   width: min(100%, 880px);
